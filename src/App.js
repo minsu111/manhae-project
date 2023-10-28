@@ -1,20 +1,29 @@
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import "./App.scss";
 import { Main } from "./pages/main/Main";
-import { CollectionInfo } from "./pages/collectionInfo/CollectionInfo";
+import { Collection } from "./pages/collection/Collection";
 import { Commentary } from "./pages/commentary/Commentary";
+import { CollectionDetail } from "./pages/collection/CollectionDetail";
+import { Layout } from "./components/common/layout/Layout";
+
+import "./App.scss";
+import "./styles/reset.scss";
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/collection" element={<CollectionInfo />} />
-        <Route path="/commentary" element={<Commentary />} />
-        {/* <Route path="/story" element={} />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/collection" element={<Collection />} />
+          <Route path="/collection/detail/:id" element={<CollectionDetail />} />
+          <Route path="/commentary" element={<Commentary />} />
+          {/* <Route path="/test" element={<ExcelDataImporter />} /> */}
+
+          {/* <Route path="/story" element={} />
         <Route path="/making" element={} />
         <Route path="/quiz" element={} /> */}
-      </Routes>
+        </Routes>
+      </Layout>
     </Router>
   );
 }

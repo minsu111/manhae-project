@@ -1,3 +1,25 @@
-.title {
-  color: purple;
+.main_page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  // background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.main_buttons_section {
+  width: 20vw;
+  position: absolute;
+  left: 66%;
+  top: 45%;
+
+  button {
+    all: unset;
+    padding-bottom: 12px;
+    img {
+      width: 100%;
+    }
+  }
 }
