@@ -1,6 +1,7 @@
 const MainList = [
   {
     mainId: 0,
+    category: 1,
     title: "황현 - 매천시집",
     thumbImg: "/assets/thumbnail/만해2172_thumbnail.png",
     description:
@@ -8,6 +9,7 @@ const MainList = [
   },
   {
     mainId: 1,
+    category: 1,
     title: "월남망국사",
     thumbImg: "/assets/thumbnail/만해2178_thumbnail.png",
     description:
@@ -15,6 +17,7 @@ const MainList = [
   },
   {
     mainId: 2,
+    category: 2,
     title: "음빙실문집",
     thumbImg: "/assets/thumbnail/만해2183_thumbnail.png",
     description:

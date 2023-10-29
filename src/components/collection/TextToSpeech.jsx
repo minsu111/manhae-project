@@ -23,9 +23,10 @@ const TextToSpeech = ({ text }) => {
 
     const handleVoicesChanged = () => {
       const voices = synth.getVoices();
+      console.log(voices);
 
       if (voices.length) {
-        u.voice = voices[168];
+        u.voice = voices.find((voice) => voice.name === "Google 한국의");
         setVoicesLoaded(true);
         setUtterance(u);
       }

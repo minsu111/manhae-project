@@ -2,6 +2,7 @@ import React from "react";
 import VideoList from "../../data/Video";
 
 import "./commentary.scss";
+import { VideoPlayer } from "../../components/commentary/VideoPlayer";
 
 export const Commentary = () => {
   return (
@@ -20,6 +21,7 @@ export const Commentary = () => {
           </div>
         );
       })}
+      <VideoPlayer />
     </section>
   );
 };

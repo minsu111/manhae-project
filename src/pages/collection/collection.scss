@@ -41,29 +41,41 @@
 
 .category {
   width: 70%;
-  height: 4%;
+  height: 5vh;
+  line-height: 5.5vh;
   display: flex;
   justify-content: center;
   background: linear-gradient(to bottom, rgb(231, 231, 231), white);
   position: relative;
   left: 13%;
-  padding: 10px;
   border: medium solid white;
   border-radius: 50px;
   box-shadow: 5px 8px 6px rgb(187, 187, 187);
 
-  button {
+  input {
     width: 20%;
-    height: 100%;
     all: unset;
     color: gray;
     padding: 5px 10px;
     margin: 5px;
     cursor: pointer;
-    font-size: 1.1em;
-
-    &:active {
-      background-color: blue;
+    font-size: 1.1vw;
+    display: none;
+    &:checked + span {
+      background-color: opacity($color: #000000);
+      color: white;
     }
   }
+  .category_item:has(:checked) {
+    background: linear-gradient(to bottom, #4669ae, #78bbd9);
+    color: white;
+  }
+  label {
+    text-align: center;
+    margin: 10px;
+  }
+}
+
+.category_item {
+  text-align: center;
 }

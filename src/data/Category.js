@@ -1,4 +1,4 @@
-const CategoryMap = [
+const CategoryList = [
   { code: 0, name: "ALL" },
   { code: 1, name: "안목을 세우다" },
   { code: 2, name: "불교인" },
@@ -9,4 +9,4 @@ const CategoryMap = [
   { code: 7, name: "만해가 떠난후" },
 ];
 
-export default CategoryMap;
+export default CategoryList;
