@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import collectionList from "../../data/CollectionData";
+import TextToSpeech from "../../components/collection/TextToSpeech";
 
 import "./collectionDetail.scss";
-import TextToSpeech from "../../components/collection/TextToSpeech";
 
 export const CollectionDetail = () => {
   const [innerInfo, setIneerInfo] = useState(null);

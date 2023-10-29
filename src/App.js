@@ -17,6 +17,7 @@ function App() {
           <Route path="/collection" element={<Collection />} />
           <Route path="/collection/detail/:id" element={<CollectionDetail />} />
           <Route path="/commentary" element={<Commentary />} />
+
           {/* <Route path="/test" element={<ExcelDataImporter />} /> */}
 
           {/* <Route path="/story" element={} />

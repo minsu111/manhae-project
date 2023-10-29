@@ -7,7 +7,7 @@ export const Layout = (props) => {
   const location = useLocation();
 
   return (
-    <div className="wrap">
+    <div className="all_container">
       {location.pathname !== "/" && <SideBar />}
       <div className="content">
         <main>{props.children}</main>

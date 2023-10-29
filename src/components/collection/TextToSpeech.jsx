@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 const TextToSpeech = ({ text }) => {
   const [utterance, setUtterance] = useState(null);
   const [voicesLoaded, setVoicesLoaded] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     const synth = window.speechSynthesis;
@@ -10,7 +11,17 @@ const TextToSpeech = ({ text }) => {
     let u = new SpeechSynthesisUtterance(textWithoutParentheses);
     u.rate = 1;
 
-    synth.onvoiceschanged = () => {
+    // synth.onvoiceschanged = () => {
+    //   const voices = synth.getVoices();
+
+    //   if (voices.length) {
+    //     u.voice = voices[168];
+    //     setVoicesLoaded(true);
+    //     setUtterance(u);
+    //   }
+    // };
+
+    const handleVoicesChanged = () => {
       const voices = synth.getVoices();
 
       if (voices.length) {
@@ -20,34 +31,39 @@ const TextToSpeech = ({ text }) => {
       }
     };
 
+    synth.onvoiceschanged = handleVoicesChanged;
+
     return () => {
       synth.cancel();
       synth.onvoiceschanged = null;
     };
   }, [text]);
 
-  const handlePlay = () => {
-    if (voicesLoaded) {
+  const handleTogglePlay = () => {
+    if (voicesLoaded && utterance) {
       const synth = window.speechSynthesis;
-      synth.speak(utterance);
+      if (isPlaying) {
+        synth.cancel();
+      } else {
+        synth.speak(utterance);
+      }
+      setIsPlaying(!isPlaying);
     }
-  };
-
-  const handleStop = () => {
-    const synth = window.speechSynthesis;
-    synth.cancel();
   };
 
   return (
     <div>
-      <button onClick={handlePlay} style={{ all: "unset" }}>
+      <button onClick={handleTogglePlay} style={{ all: "unset" }}>
         <img
-          src={"/image/soundOnBtn121.png"}
-          alt={"소리 버튼"}
+          src={
+            isPlaying
+              ? "/assets/image/soundOffBtn121.png"
+              : "/assets/image/soundOnBtn121.png"
+          }
+          alt={isPlaying ? "소리 끄기 버튼" : "소리 켜기 버튼"}
           style={{ width: "50px", height: "50px" }}
         />
       </button>
-      <button onClick={handleStop}>Stop</button>
     </div>
   );
 };

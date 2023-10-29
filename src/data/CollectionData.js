@@ -1,350 +1,77 @@
 const collectionList = [
   {
-    id: 1,
-    name: "조선불교유신론",
+    id: 0,
+    name: "황현 - 매천시집",
     description:
-      "1910년 백담사에서 탈고하고 서울 불교서관에서 1913년 5월 25일 발행한 책이다. 이 책은 인간정신의 각성을 통한 불교 개혁의 지침서이다. 석전 박한영 스님의 제자가 눈길을 끈다.",
+      "일제강점기 시절 만해 한용운이 즐겨 보았던 수택본 서적으로서 일본 제국주의자들은 이를 금서로 지정하여 조선인들은 읽을 수 없게 하였던 금서였다.",
     imgURL: "/assets/thumbnail/만해2172_thumbnail.png",
     subList: [
       {
-        subId: 1,
+        subId: 0,
         name: "조선불교유신론 속지1",
-        description: "조선불교유신론 속지입니다.",
         imgURL: "/assets/original/만해2175.webp",
       },
+    ],
+  },
+  {
+    id: 1,
+    name: "월남망국사",
+    description:
+      "1910년 일제는 조선을 무력으로 강점하니, 이 나라 잃은 설움을 월남의 경우에 대비하여 은연 중 독립정신을 고취시키기 위해 만해가 적극적으로 권장했던 도서이다. 1912년 통도사 강원에서 화엄경 강의 중 월남 망국의 한을 종종 인용하여 강의할 때면 무엇을 강의하는지 청중들은 더욱 숙연하게 강의를 청강하였다고 하였다.",
+    imgURL: "/assets/thumbnail/만해2178_thumbnail.png",
+    subList: [
       {
-        subId: 2,
-        name: "조선불교유신론 속지2",
-        description: "조선불교유신론 속지2입니다.",
-        imgURL: "/assets/original/만해2180.webp",
-      },
-      {
-        subId: 3,
-        name: "조선불교유신론 속지3",
-        description: "조선불교유신론 속지3입니다.",
-        imgURL: "/assets/original/만해2178.webp",
-      },
-      {
-        subId: 4,
-        name: "조선불교유신론 속지4",
-        description: "조선불교유신론 속지3입니다.",
-        imgURL: "/assets/original/만해2172.webp",
+        subId: 1,
+        name: "01-09-월남망국사-01",
+        imgURL: "/assets/thumbnail/만해2180_thumbnail.png",
       },
     ],
   },
   {
     id: 2,
-    name: "옥수수",
-    description: `심(心)은 심(心)이니라.
-    심(心)만 심이 아니라 비심(非心)도 심이니, 심외(心外)에는 하물(何物)도 무(無)하니라.
-    생도 심이요, 사도 심이니라.
-    무궁화도 심이요, 장미화도 심이니라.
-    호한(好漢)도 심이요, 천장부(賤丈夫)도 심이니라.
-    신루(蜃樓)도 심이요, 공화(空華)도 심이니라.
-    물질계도 심이요, 무형계도 심이니라.
-    공간도 심이요, 시간도 심이니라.
-    심이 생(生)하면 만유가 기하고 심이 식(息)하면 일공(一空)도 무하니라.
-    심은 무의 실재요, 유의 진공(眞空)이니라.
-    심은 인(人)에게 누(淚)도 여(輿)하고 소(笑)도 여하느니라.
-    심의 허(墟)에는 천당의 동량도 유하고, 지옥의 기초도 유하니라.
-    심의 야(野)에는 성공의 송덕비도 입(立)하고 , 퇴패(退敗)의 기념품도 진열하느니라.
-    심은 자연전쟁의 총사령관이며 강화사니라.
-    금강산의 산봉에는 어하(魚蝦)의 화석이 유하고, 대서양의 해저에는 분화구가 유하니라.
-    심은 하시(何時)라도 하사 하물(何事何物)에라도 심 자체뿐이니라.
-    심은 절대며 자유며 만능이니라.`,
-    imgURL:
-      "https://cdn.pixabay.com/photo/2020/05/25/20/14/holland-iris-5220407__340.jpg",
+    name: "음빙실문집",
+    description:
+      "청조 말 양계초의 저술이다. 만해 한용운은 이 책을 통하여 서구 근대사상에 접하게 되었으며 칸트, 루소, 데카르트를 인식하면서 근대 민족주의를 깨달아 갔다.",
+    imgURL: "/assets/thumbnail/만해2183_thumbnail.png",
     subList: [
       {
         subId: 1,
-        name: "옥수수 속지1",
-        description: "옥수수 속지입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2020/08/04/14/42/sky-5463015__340.jpg",
+        name: "02-06-음빙실문집-01",
+        imgURL: "/assets/thumbnail/만해2184_thumbnail.png",
       },
       {
         subId: 2,
-        name: "옥수수 속지2",
-        description: "옥수수 속지2입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2020/08/04/14/42/sky-5463015__340.jpg",
+        name: "02-06-음빙실문집-02",
+        imgURL: "/assets/thumbnail/만해2182_thumbnail.png",
       },
       {
         subId: 3,
-        name: "옥수수 속지3",
-        description: "옥수수 속지3입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2020/08/04/14/42/sky-5463015__340.jpg",
+        name: "02-06-음빙실문집-04",
+        imgURL: "/assets/thumbnail/만해2187_thumbnail.png",
       },
     ],
   },
   {
     id: 3,
-    name: "사과",
-    description: "사과입니다.",
-    imgURL:
-      "https://cdn.pixabay.com/photo/2020/06/15/01/06/sunset-5299957__340.jpg",
+    name: "조선상고문화사",
+    description:
+      "일강 신하수 선생의 친필로 남긴 단재 신채호의 조선상고문화사다. 만해는 이 책을 보관하기 위하여 단재 탑을 만들려다 밀고로 답전은 부서지고 곤욕을 치르게 하였던 사연들을 간직한 필사본이다.",
+    imgURL: "/assets/thumbnail/만해2189_thumbnail.png",
     subList: [
       {
         subId: 1,
-        name: "사과 속지1",
-        description: "사과 속지입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-      {
-        subId: 2,
-        name: "사과 속지2",
-        description: "사과 속지2입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
+        name: "06-04-조선상고문화사-01",
+        imgURL: "/assets/thumbnail/만해2191_thumbnail.png",
       },
       {
         subId: 3,
-        name: "사과 속지3",
-        description: "사과 속지3입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-    ],
-  },
-  {
-    id: 4,
-    name: "오이",
-    description: "오이입니다.",
-    imgURL:
-      "https://cdn.pixabay.com/photo/2020/10/08/17/39/waves-5638587__340.jpg",
-    subList: [
-      {
-        subId: 1,
-        name: "경헌집 속지1",
-        description: "경헌집 속지입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-      {
-        subId: 2,
-        name: "경헌집 속지2",
-        description: "경헌집 속지2입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
+        name: "06-04-조선상고문화사-02",
+        imgURL: "/assets/thumbnail/만해2193_thumbnail.png",
       },
       {
         subId: 3,
-        name: "경헌집 속지3",
-        description: "경헌집 속지3입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-    ],
-  },
-  {
-    id: 5,
-    name: "바나나",
-    description: "바나나입니다.",
-    imgURL:
-      "https://cdn.pixabay.com/photo/2019/01/30/11/17/zebra-3964360__340.jpg",
-    subList: [
-      {
-        subId: 1,
-        name: "경헌집 속지1",
-        description: "경헌집 속지입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-      {
-        subId: 2,
-        name: "경헌집 속지2",
-        description: "경헌집 속지2입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-      {
-        subId: 3,
-        name: "경헌집 속지3",
-        description: "경헌집 속지3입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-    ],
-  },
-  {
-    id: 6,
-    name: "포도",
-    description: "포도입니다.",
-    imgURL:
-      "https://cdn.pixabay.com/photo/2021/01/23/07/53/dogs-5941898__340.jpg",
-    subList: [
-      {
-        subId: 1,
-        name: "경헌집 속지1",
-        description: "경헌집 속지입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-      {
-        subId: 2,
-        name: "경헌집 속지2",
-        description: "경헌집 속지2입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-      {
-        subId: 3,
-        name: "경헌집 속지3",
-        description: "경헌집 속지3입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-    ],
-  },
-  {
-    id: 7,
-    name: "수박",
-    description: "수박입니다.",
-    imgURL:
-      "https://cdn.pixabay.com/photo/2021/01/30/12/19/couple-5963678__340.png",
-    subList: [
-      {
-        subId: 1,
-        name: "경헌집 속지1",
-        description: "경헌집 속지입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-      {
-        subId: 2,
-        name: "경헌집 속지2",
-        description: "경헌집 속지2입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-      {
-        subId: 3,
-        name: "경헌집 속지3",
-        description: "경헌집 속지3입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-    ],
-  },
-  {
-    id: 8,
-    name: "딸기",
-    description: "딸기입니다.",
-    imgURL:
-      "https://cdn.pixabay.com/photo/2020/01/09/01/00/the-eye-on-the-greek-4751572__340.png",
-    subList: [
-      {
-        subId: 1,
-        name: "경헌집 속지1",
-        description: "경헌집 속지입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-      {
-        subId: 2,
-        name: "경헌집 속지2",
-        description: "경헌집 속지2입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-      {
-        subId: 3,
-        name: "경헌집 속지3",
-        description: "경헌집 속지3입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-    ],
-  },
-  {
-    id: 9,
-    name: "레몬",
-    description: "레몬입니다.",
-    imgURL:
-      "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-    subList: [
-      {
-        subId: 1,
-        name: "경헌집 속지1",
-        description: "경헌집 속지입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-      {
-        subId: 2,
-        name: "경헌집 속지2",
-        description: "경헌집 속지2입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-      {
-        subId: 3,
-        name: "경헌집 속지3",
-        description: "경헌집 속지3입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-    ],
-  },
-  {
-    id: 10,
-    name: "대파",
-    description: "대파입니다.",
-    imgURL:
-      "https://cdn.pixabay.com/photo/2020/08/04/14/42/sky-5463015__340.jpg",
-    subList: [
-      {
-        subId: 1,
-        name: "경헌집 속지1",
-        description: "경헌집 속지입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-      {
-        subId: 2,
-        name: "경헌집 속지2",
-        description: "경헌집 속지2입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-      {
-        subId: 3,
-        name: "경헌집 속지3",
-        description: "경헌집 속지3입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-    ],
-  },
-  {
-    id: 11,
-    name: "쪽파",
-    description: "쪽파입니다.",
-    imgURL:
-      "https://cdn.pixabay.com/photo/2019/06/05/10/34/mimosa-4253396__340.jpg",
-    subList: [
-      {
-        subId: 1,
-        name: "경헌집 속지1",
-        description: "경헌집 속지입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-      {
-        subId: 2,
-        name: "경헌집 속지2",
-        description: "경헌집 속지2입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
-      },
-      {
-        subId: 3,
-        name: "경헌집 속지3",
-        description: "경헌집 속지3입니다.",
-        imgURL:
-          "https://cdn.pixabay.com/photo/2021/02/03/13/54/cupcake-5978060__340.jpg",
+        name: "06-04-조선상고문화사-03",
+        imgURL: "/assets/thumbnail/만해2195_thumbnail.png",
       },
     ],
   },

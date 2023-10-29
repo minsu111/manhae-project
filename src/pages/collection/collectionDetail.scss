@@ -1,6 +1,6 @@
 .detail_section {
   display: flex;
-  //   justify-content: flex-end;
+  /*justify-content: flex-end;*/
 }
 
 .text_wrapper {
@@ -33,6 +33,7 @@
   width: 60%;
   height: 80vh;
   object-fit: scale-down;
+  filter: drop-shadow(5px 5px 5px #000);
 }
 
 .inner_page_list {
@@ -47,7 +48,10 @@
 }
 
 .inner_figure {
-  //   text-align: center;
+  &::-webkit-scrollbar {
+    width: 2px;
+    height: 12px;
+  }
 }
 
 .inner_img {
