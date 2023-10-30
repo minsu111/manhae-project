@@ -1,6 +1,5 @@
 .list_section {
   width: 100vw;
-  // height: 400px;
 }
 
 .video_thumb_section {
@@ -12,7 +11,6 @@
   flex-wrap: wrap;
   justify-content: space-around;
   padding-bottom: 6%;
-  // column-count: 4;
   column-gap: 3em;
   overflow-y: scroll;
 
@@ -27,14 +25,11 @@
 }
 
 .video_thumb_items {
-  // justify-content: center;
-
   margin-bottom: 4em;
 }
 
 .video_thumb_img {
   width: 15vw;
-  // box-shadow: 4px 2px 10px 2px gray;
   filter: drop-shadow(5px 5px 5px #000);
   cursor: pointer;
   border-top-left-radius: 10px;
@@ -67,7 +62,7 @@
   flex-direction: column;
   border-radius: 20px;
   width: 50%;
-  height: 50%;
+  height: 40%;
   background-color: #ffffff;
   position: absolute;
   top: 50%;
@@ -88,6 +83,4 @@
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%); // display: flex;
-  // justify-content: center;
-  // align-items: center;
 }

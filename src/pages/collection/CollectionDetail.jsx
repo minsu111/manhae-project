@@ -6,7 +6,7 @@ import SubList from "../../data/Sub";
 
 import "./collectionDetail.scss";
 
-export const CollectionDetail = () => {
+export const CollectionDetail = ({fontSize}) => {
   const [subId, setSubId] = useState(null);
   const { id } = useParams();
 
@@ -26,7 +26,9 @@ export const CollectionDetail = () => {
   return (
     <section className="detail_section">
       <div className="text_wrapper">
-        <div className="text">{MainList[id].description}</div>
+        <div className="text" style={{ fontSize: `${fontSize}px` }}>
+          {MainList[id].description}
+        </div>
       </div>
       <div className="main_img_wrapper">
         {subId !== null && (

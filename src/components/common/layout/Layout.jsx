@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import SideBar from "../sideBar/SideBar";
 
 import "./layout.scss";
+import { ButtonBar } from "../buttonBar/ButtonBar";
 
 export const Layout = (props) => {
   const location = useLocation();
@@ -11,6 +12,7 @@ export const Layout = (props) => {
       {location.pathname !== "/" && <SideBar />}
       <div className="content">
         <main>{props.children}</main>
+        <ButtonBar />
       </div>
     </div>
   );

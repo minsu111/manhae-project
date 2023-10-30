@@ -53,7 +53,7 @@ const TextToSpeech = ({ text }) => {
   };
 
   return (
-    <div>
+    <div style={{ paddingTop: "15%" }}>
       <button onClick={handleTogglePlay} style={{ all: "unset" }}>
         <img
           src={
