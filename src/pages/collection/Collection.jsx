@@ -14,7 +14,7 @@ export const Collection = () => {
   };
 
   return (
-    <div>
+    <div className="collection_section">
       <div className="category">
         {CategoryList.map((c, i) => (
           <div key={i} className="category_item">
@@ -39,11 +39,7 @@ export const Collection = () => {
           <div key={i} className="items">
             <div className="figure">
               <Link to={`/collection/detail/${i}`}>
-                <img
-                  src={item.thumbImg}
-                  alt={"소장품 이미지"}
-                  className="image"
-                />
+                <img src={item.thumbImg} alt={"소장품"} className="image" />
               </Link>
               <div className="main_title">{item.title}</div>
             </div>

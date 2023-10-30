@@ -7,7 +7,7 @@ import SubList from "../../data/Sub";
 import "./collectionDetail.scss";
 
 export const CollectionDetail = () => {
-  const [subId, setSubId] = useState(0);
+  const [subId, setSubId] = useState(null);
   const { id } = useParams();
 
   const ClickInnerImg = (subId, e) => {
@@ -29,14 +29,16 @@ export const CollectionDetail = () => {
         <div className="text">{MainList[id].description}</div>
       </div>
       <div className="main_img_wrapper">
-        <img
-          src={SubList[subId].originImg}
-          alt={SubList[subId].title}
-          className="main_img"
-        />
+        {subId !== null && (
+          <img
+            src={SubList[subId].originImg}
+            alt={SubList[subId].title}
+            className="main_img"
+          />
+        )}
       </div>
 
-      <div style={{ width: "20%" }}>
+      <div className="right_contents_wrapper">
         <div className="inner_page_list">
           {SubList.map(
             (item, i) =>
@@ -53,15 +55,13 @@ export const CollectionDetail = () => {
                       alt={item.title}
                       className="inner_img"
                     />
-                    <div className="inner_text_wrapper">
-                      <div className="inner_text">{item.title}</div>
-                    </div>
+                    <div className="inner_text">{item.title}</div>
                   </div>
                 </div>
               )
           )}
         </div>
-        <TextToSpeech text={MainList[id].description} />
+        <TextToSpeech text={MainList[id].description} className="play_btn" />
       </div>
     </section>
   );
