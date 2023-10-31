@@ -8,13 +8,24 @@ export const Main = () => {
     navigate(`/${path}`);
   };
 
+  const storeMenu = (e) => {
+    sessionStorage.setItem("menu", e.target.alt);
+  };
+
   return (
     <div
       className="main_page"
       style={{ backgroundImage: 'url("/assets/image/mainImg.png")' }}
     >
       <div className="main_buttons_section">
-        <button onClick={() => goToSection("collection")}>
+        <button
+          value={1}
+          onClick={(e) => {
+            console.log(e);
+            goToSection("collection");
+            storeMenu(e);
+          }}
+        >
           <img src={"/assets/image/icon1-소장품감상.png"} alt={"메인버튼1"} />
         </button>
         <button onClick={() => goToSection("commentary")}>

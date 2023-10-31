@@ -4,10 +4,12 @@ import MainList from "../../data/Main";
 import CategoryList from "../../data/Category";
 
 import "./collection.scss";
+import { ToastNotification } from "../../components/common/toast/ToastNotification";
 
 export const Collection = () => {
   const [category, setCategory] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [openToast, setOpentToast] = useState(false);
 
   const handleCategory = (e) => {
     const selectedCategory = parseInt(e.target.value, 10);
@@ -17,16 +19,17 @@ export const Collection = () => {
   const imgSectionRef = useRef(null);
 
   useEffect(() => {
-    // 페이지 로드 시 스크롤 위치를 복원
     const storedScrollPosition = sessionStorage.getItem("scrollPosition");
     if (storedScrollPosition) {
       imgSectionRef.current.scrollTo(0, parseInt(storedScrollPosition));
+      sessionStorage.removeItem("scrollPosition");
     }
 
-    // 페이지 언마운트 시 스크롤 위치를 저장
-    // return () => {
-    //   sessionStorage.setItem("scrollPosition", scrollPosition);
-    // };
+    const menu = sessionStorage.getItem("menu");
+    if (menu) {
+      setOpentToast(true);
+      sessionStorage.removeItem("menu");
+    }
   }, []);
 
   const storeScrollTop = () => {
@@ -40,6 +43,12 @@ export const Collection = () => {
 
   return (
     <div className="collection_section">
+      {openToast && (
+        <ToastNotification
+          openToast={openToast}
+          setOpentToast={setOpentToast}
+        />
+      )}
       <div className="category">
         {CategoryList.map((c, i) => (
           <div key={i} className="category_item">
