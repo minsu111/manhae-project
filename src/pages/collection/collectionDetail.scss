@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
 
-  overflow-y: scroll;
+  // overflow-y: scroll;
 }
 
 .text_wrapper {
@@ -18,6 +18,7 @@
 }
 
 .text {
+  font-size: medium;
   word-break: break-all;
   white-space: pre-wrap; // 줄바꿈 요소 적용 가능
   height: 40%;
@@ -61,7 +62,7 @@
   height: 70vh;
   margin-top: 30%;
   margin-right: 10%;
-  padding-right: 36%;
+  padding-right: 34%;
   overflow-y: scroll;
 }
 
@@ -74,12 +75,6 @@
   background-color: rgb(152, 152, 152);
   background-clip: padding-box;
   border: 2px solid transparent;
-}
-
-.inner_page_list::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background-color: transparent;
-  width: 0.5px;
 }
 
 .inner_pages {
