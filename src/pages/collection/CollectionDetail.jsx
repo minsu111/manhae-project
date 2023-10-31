@@ -6,7 +6,7 @@ import SubList from "../../data/Sub";
 
 import "./collectionDetail.scss";
 
-export const CollectionDetail = ({fontSize}) => {
+export const CollectionDetail = ({ fontSize }) => {
   const [subId, setSubId] = useState(null);
   const { id } = useParams();
 
@@ -22,6 +22,22 @@ export const CollectionDetail = ({fontSize}) => {
       }
     }
   }, [id]);
+
+  // const handleNext = () => {
+  //   if (subId < SubList.length - 1) {
+  //     setSubId(subId + 1);
+  //   } else {
+  //     setSubId(0);
+  //   }
+  // };
+
+  // const handlePrev = () => {
+  //   if (subId > 0) {
+  //     setSubId(subId - 1);
+  //   } else {
+  //     setSubId(SubList.length - 1);
+  //   }
+  // };
 
   return (
     <section className="detail_section">
@@ -64,6 +80,8 @@ export const CollectionDetail = ({fontSize}) => {
           )}
         </div>
         <TextToSpeech text={MainList[id].description} className="play_btn" />
+        <button>up</button>
+        <button>down</button>
       </div>
     </section>
   );

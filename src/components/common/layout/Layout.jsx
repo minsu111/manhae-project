@@ -12,7 +12,7 @@ export const Layout = (props) => {
       {location.pathname !== "/" && <SideBar />}
       <div className="content">
         <main>{props.children}</main>
-        <ButtonBar />
+        {location.pathname !== "/" && <ButtonBar />}
       </div>
     </div>
   );

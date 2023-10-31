@@ -10,7 +10,7 @@ const SideBar = () => {
   if (location.pathname.includes("/commentary")) {
     imageUrl = "/assets/image/sideBar2.png";
   }
-  // else if (location.pathname === "/route2") {
+  // else if (location.pathname === "/route3") {
   //   imageUrl = "/image/sideBar3.png";
   // }
 
