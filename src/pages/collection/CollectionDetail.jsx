@@ -27,11 +27,11 @@ export const CollectionDetail = ({ fontSize }) => {
   return (
     <section className="detail_section">
       <div className="text_wrapper">
-        <div className="text" style={{ fontSize: `${fontSize}px` }}>
+        <div className="description" style={{ fontSize: `${fontSize}px` }}>
           {MainList[id].description}
         </div>
       </div>
-      <Suspense fallback={<p>사용자 정보 로딩중...</p>}>
+      <Suspense fallback={Spinner}>
         <div className="main_img_wrapper">
           {subId !== null && (
             <img

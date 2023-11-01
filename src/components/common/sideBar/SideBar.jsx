@@ -9,10 +9,9 @@ const SideBar = () => {
   let imageUrl = "/assets/image/sideBar1.png";
   if (location.pathname.includes("/commentary")) {
     imageUrl = "/assets/image/sideBar2.png";
+  } else if (location.pathname === "/manhaeStory") {
+    imageUrl = "/image/sideBar3imsi.png";
   }
-  // else if (location.pathname === "/route3") {
-  //   imageUrl = "/image/sideBar3.png";
-  // }
 
   return (
     <div className="side_bar">
