@@ -33,7 +33,7 @@ export const Main = () => {
         <button onClick={() => goToSection("commentary")}>
           <img src={"/assets/image/icon2-소장품해설.png"} alt={"메인버튼2"} />
         </button>
-        <button onClick={() => goToSection("")}>
+        <button onClick={() => goToSection("manhaeStory")}>
           <img src={"/assets/image/icon3-만해지혜.png"} alt={"메인버튼3"} />
         </button>
         <button onClick={() => goToSection("")}>

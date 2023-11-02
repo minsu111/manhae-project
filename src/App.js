@@ -1,10 +1,11 @@
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Layout } from "./components/common/layout/Layout";
 import { Main } from "./pages/main/Main";
 import { Collection } from "./pages/collection/Collection";
 import { Commentary } from "./pages/commentary/Commentary";
 import { CollectionDetail } from "./pages/collection/CollectionDetail";
 import { ManhaeStory } from "./pages/manhaeStory/ManhaeStory";
-import { Layout } from "./components/common/layout/Layout";
+import { ManhaeStoryDetail } from "./pages/manhaeStory/ManhaeStoryDetail";
 
 import "./App.scss";
 import "./styles/reset.scss";
@@ -19,6 +20,10 @@ function App() {
           <Route path="/collection/detail/:id" element={<CollectionDetail />} />
           <Route path="/commentary" element={<Commentary />} />
           <Route path="/manhaeStory" element={<ManhaeStory />} />
+          <Route
+            path="/manhaeStory/detail/:id"
+            element={<ManhaeStoryDetail />}
+          />
           manhae_story
         </Routes>
       </Layout>

@@ -1,17 +1,19 @@
 import React, { useEffect, Suspense, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { ToastNotification } from "../../components/common/toast/ToastNotification";
+import { Spinner } from "../../components/common/spinner/Spinner";
+
 import MainList from "../../data/Main";
 import CategoryList from "../../data/Category";
 
 import "./collection.scss";
-import { ToastNotification } from "../../components/common/toast/ToastNotification";
-import { Spinner } from "../../components/common/spinner/Spinner";
 
 export const Collection = () => {
   const [category, setCategory] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [openToast, setOpentToast] = useState(false);
 
+  // 카테고리 이벤트 핸들러
   const handleCategory = (e) => {
     const selectedCategory = parseInt(e.target.value, 10);
     setCategory(selectedCategory);
@@ -21,12 +23,14 @@ export const Collection = () => {
   const imgSectionRef = useRef(null);
 
   useEffect(() => {
+    // 디테일 페이지에서 이전버튼 눌러 되돌아올 시 시작페이지의 기존 스크롤 위치 유지
     const storedScrollPosition = sessionStorage.getItem("scrollPosition");
     if (storedScrollPosition) {
       imgSectionRef.current.scrollTo(0, parseInt(storedScrollPosition));
       sessionStorage.removeItem("scrollPosition");
     }
 
+    // 메인페이지에서 진입했을 시에만 토스트 알림 표시
     const menu = sessionStorage.getItem("menu");
     if (menu) {
       setOpentToast(true);
@@ -34,6 +38,7 @@ export const Collection = () => {
     }
   }, []);
 
+  // 디테일 페이지 진입 시 scrollTop 값을 세션스토리지에 저장
   const storeScrollTop = () => {
     sessionStorage.setItem("scrollPosition", scrollPosition);
   };
@@ -44,7 +49,7 @@ export const Collection = () => {
   };
 
   return (
-    <React.Suspense fallback={<Spinner />}>
+    <Suspense fallback={<Spinner />}>
       <div className="collection_section">
         {openToast && (
           <ToastNotification
@@ -89,6 +94,6 @@ export const Collection = () => {
           ))}
         </section>
       </div>
-    </React.Suspense>
+    </Suspense>
   );
 };
