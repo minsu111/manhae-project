@@ -30,3 +30,16 @@
     }
   }
 }
+
+.lang_btn_wrapper {
+  margin: 40px 45% 40px 45%;
+  padding: 10px;
+  background: var(--grey-background);
+  border-radius: 2em;
+  position: absolute;
+  bottom: 10%;
+
+  input {
+    all: unset;
+  }
+}

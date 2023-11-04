@@ -13,6 +13,11 @@ export const Collection = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [openToast, setOpentToast] = useState(false);
 
+  // 다국어 처리
+  const language = sessionStorage.getItem("language");
+  const title = "title" + language;
+  const name = "name" + language;
+
   // 카테고리 이벤트 핸들러
   const handleCategory = (e) => {
     const selectedCategory = parseInt(e.target.value, 10);
@@ -32,10 +37,10 @@ export const Collection = () => {
 
     // 메인페이지에서 진입했을 시에만 토스트 알림 표시
     const menu = sessionStorage.getItem("menu");
-    if (menu) {
+    if (menu === "collection") {
       setOpentToast(true);
-      sessionStorage.removeItem("menu");
     }
+    sessionStorage.removeItem("menu");
   }, []);
 
   // 디테일 페이지 진입 시 scrollTop 값을 세션스토리지에 저장
@@ -69,7 +74,7 @@ export const Collection = () => {
                   onChange={handleCategory}
                   checked={category === c.code}
                 />
-                <span>{c.name}</span>
+                <span>{c[name]}</span>
               </label>
             </div>
           ))}
@@ -86,9 +91,13 @@ export const Collection = () => {
             <div key={i} className="items">
               <div className="figure">
                 <Link to={`/collection/detail/${i}`} onClick={storeScrollTop}>
-                  <img src={item.thumbImg} alt={"소장품"} className="image" />
+                  <img
+                    src={item.thumbImg}
+                    alt={item[title]}
+                    className="image"
+                  />
                 </Link>
-                <div className="main_title">{item.title}</div>
+                <div className="main_title">{item[title]}</div>
               </div>
             </div>
           ))}

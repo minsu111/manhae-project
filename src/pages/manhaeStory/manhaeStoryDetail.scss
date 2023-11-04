@@ -1,14 +1,20 @@
 .story_detail_section {
+  height: 100vh;
+  margin-top: -5%;
+  padding-top: 8%;
+  background-color: #fff;
+
   h1 {
     padding-left: 18%;
     font-size: 3vw;
     margin: 0 2%;
+    color: #595757;
   }
 }
 
 .animation_content {
   width: auto;
-  height: 60vh;
+  height: 50vh;
   text-align: center;
   line-height: 60vh;
 }

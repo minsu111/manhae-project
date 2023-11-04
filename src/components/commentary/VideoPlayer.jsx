@@ -11,6 +11,8 @@ export const VideoPlayer = ({ videoURL }) => {
         url={videoURL}
         playing
         controls={true}
+        width="50vw"
+        height="50%"
       />
     </div>
   );

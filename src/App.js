@@ -9,8 +9,11 @@ import { ManhaeStoryDetail } from "./pages/manhaeStory/ManhaeStoryDetail";
 
 import "./App.scss";
 import "./styles/reset.scss";
+import { MakingMedal } from "./pages/makingMedal/MakingMedal";
 
 function App() {
+  sessionStorage.setItem("language", "Ko");
+
   return (
     <Router>
       <Layout>
@@ -24,7 +27,7 @@ function App() {
             path="/manhaeStory/detail/:id"
             element={<ManhaeStoryDetail />}
           />
-          manhae_story
+          <Route path="/medal" element={<MakingMedal />} />
         </Routes>
       </Layout>
     </Router>

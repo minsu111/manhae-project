@@ -15,6 +15,10 @@ export const CollectionDetail = ({ fontSize }) => {
     setSubId(subId);
   };
 
+  const language = sessionStorage.getItem("language");
+  const description = "desc" + language;
+  const title = "title" + language;
+
   useEffect(() => {
     for (let i = 0; i < SubList.length; i++) {
       if (SubList[i].mainId === Number(id)) {
@@ -28,7 +32,7 @@ export const CollectionDetail = ({ fontSize }) => {
     <section className="detail_section">
       <div className="text_wrapper">
         <div className="description" style={{ fontSize: `${fontSize}px` }}>
-          {MainList[id].description}
+          {MainList[id][description]}
         </div>
       </div>
       <Suspense fallback={Spinner}>
@@ -36,7 +40,7 @@ export const CollectionDetail = ({ fontSize }) => {
           {subId !== null && (
             <img
               src={SubList[subId].originImg}
-              alt={SubList[subId].title}
+              alt={SubList[subId][title]}
               className="main_img"
             />
           )}
@@ -56,16 +60,16 @@ export const CollectionDetail = ({ fontSize }) => {
                     >
                       <img
                         src={item.thumbImg}
-                        alt={item.title}
+                        alt={item[title]}
                         className="inner_img"
                       />
-                      <div className="inner_text">{item.title}</div>
+                      <div className="inner_text">{item[title]}</div>
                     </div>
                   </div>
                 )
             )}
           </div>
-          <TextToSpeech text={MainList[id].description} className="play_btn" />
+          <TextToSpeech text={MainList[id][description]} className="play_btn" />
         </div>
       </Suspense>
     </section>

@@ -5,18 +5,9 @@ const TextToSpeech = ({ text }) => {
   const [voicesLoaded, setVoicesLoaded] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const splitTextIntoChunks = (text, chunkSize) => {
-    const chunks = [];
-    const sentences = text.text.match(/[^.!?]+[.!?]+/g);
-
-    if (sentences) {
-      sentences.forEach((sentence) => {
-        chunks.push(sentence);
-      });
-    } else {
-      chunks.push(text);
-    }
-    return chunks;
+  const splitTextIntoChunks = (text) => {
+    const sentences = text.text.match(/[^.!?]+[.!?]+/g) || [text];
+    return sentences;
   };
 
   const speakChunks = (chunks) => {
@@ -46,6 +37,9 @@ const TextToSpeech = ({ text }) => {
   };
 
   useEffect(() => {
+    if (text === null || text === undefined) {
+      return;
+    }
     const synth = window.speechSynthesis;
     const textWithoutParentheses = text.replace(
       /\([^()]*\)|\[[^\]]*\]|[\p{Script=Han}]/gu,
@@ -77,7 +71,7 @@ const TextToSpeech = ({ text }) => {
   const handleTogglePlay = () => {
     if (voicesLoaded && utterance) {
       const synth = window.speechSynthesis;
-      const chunks = splitTextIntoChunks(utterance, 15);
+      const chunks = splitTextIntoChunks(utterance);
       if (isPlaying) {
         synth.cancel();
       } else {

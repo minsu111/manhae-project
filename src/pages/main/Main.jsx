@@ -1,15 +1,26 @@
-import React from "react";
-import "./main.scss";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import MenuList from "../../data/Menu";
+
+import "./main.scss";
+
 export const Main = () => {
+  const sessionLang = sessionStorage.getItem("language");
+
+  const [languageType, setLanguageType] = useState(sessionLang);
+  const [btnImgUrl, setBtnImgUrl] = useState("btnImg" + sessionLang);
   const navigate = useNavigate();
+
   const goToSection = (path) => {
     navigate(`/${path}`);
+    sessionStorage.setItem("menu", path);
   };
 
-  const storeMenu = (e) => {
-    sessionStorage.setItem("menu", e.target.alt);
+  const handleLanguage = (e) => {
+    sessionStorage.setItem("language", e.target.value);
+    setLanguageType(e.target.value);
+    setBtnImgUrl("btnImg" + e.target.value);
   };
 
   return (
@@ -20,28 +31,40 @@ export const Main = () => {
         alt={"메인페이지"}
       />
       <div className="main_buttons_section">
-        <button
-          value={1}
-          onClick={(e) => {
-            console.log(e);
-            goToSection("collection");
-            storeMenu(e);
-          }}
-        >
-          <img src={"/assets/image/icon1-소장품감상.png"} alt={"메인버튼1"} />
-        </button>
-        <button onClick={() => goToSection("commentary")}>
-          <img src={"/assets/image/icon2-소장품해설.png"} alt={"메인버튼2"} />
-        </button>
-        <button onClick={() => goToSection("manhaeStory")}>
-          <img src={"/assets/image/icon3-만해지혜.png"} alt={"메인버튼3"} />
-        </button>
-        <button onClick={() => goToSection("")}>
-          <img src={"/assets/image/icon4-나만의훈장.png"} alt={"메인버튼4"} />
-        </button>
-        <button onClick={() => goToSection("")}>
-          <img src={"/assets/image/icon5-전시연계퀴즈.png"} alt={"메인버튼5"} />
-        </button>
+        {MenuList.map((c, i) => (
+          <button
+            key={i}
+            onClick={() => {
+              goToSection(c.path);
+            }}
+          >
+            <img src={c[btnImgUrl]} alt={c.sectionName} />
+          </button>
+        ))}
+      </div>
+      <div>
+        <div className="lang_btn_wrapper">
+          <label className="left_side">
+            <input
+              type="radio"
+              name="language"
+              value="Ko"
+              onChange={handleLanguage}
+              checked={languageType === "Ko"}
+            />
+            <span>korean</span>
+          </label>
+          <label className="right_side">
+            <input
+              type="radio"
+              name="language"
+              value="En"
+              onChange={handleLanguage}
+              checked={languageType === "En"}
+            />
+            <span>English</span>
+          </label>
+        </div>
       </div>
     </div>
   );

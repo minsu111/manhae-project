@@ -9,6 +9,10 @@ export const Commentary = () => {
   const [openModal, setOpenModal] = useState(false);
   const [selectedVideoUrl, setSelectedVideoUrl] = useState(null);
 
+  // 다국어 처리
+  const language = sessionStorage.getItem("language");
+  const title = "title" + language;
+
   const openModalHandler = (videoUrl) => {
     setSelectedVideoUrl(videoUrl);
     setOpenModal(!openModal);
@@ -27,7 +31,7 @@ export const Commentary = () => {
                 alt={"영상 섬네일"}
                 className="video_thumb_img"
               />
-              <div className="video_title">{v.title}</div>
+              <div className="video_title">{v[title]}</div>
             </div>
           </div>
         );
