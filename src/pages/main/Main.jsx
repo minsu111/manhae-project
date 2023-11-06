@@ -24,12 +24,15 @@ export const Main = () => {
   };
 
   return (
-    <div className="main_page">
-      <img
+    <div
+      className="main_page"
+      style={{ backgroundImage: 'url("/assets/image/mainImg.png")' }}
+    >
+      {/* <img
         className="main_page_img"
         src={"/assets/image/mainImg.png"}
         alt={"메인페이지"}
-      />
+      /> */}
       <div className="main_buttons_section">
         {MenuList.map((c, i) => (
           <button
@@ -44,26 +47,40 @@ export const Main = () => {
       </div>
       <div>
         <div className="lang_btn_wrapper">
-          <label className="left_side">
-            <input
-              type="radio"
-              name="language"
-              value="Ko"
-              onChange={handleLanguage}
-              checked={languageType === "Ko"}
-            />
-            <span>korean</span>
-          </label>
-          <label className="right_side">
-            <input
-              type="radio"
-              name="language"
-              value="En"
-              onChange={handleLanguage}
-              checked={languageType === "En"}
-            />
-            <span>English</span>
-          </label>
+          <div className="ko_btn">
+            <label>
+              <input
+                type="radio"
+                name="language"
+                value="Ko"
+                onChange={handleLanguage}
+                checked={languageType === "Ko"}
+              />
+              <span
+                style={{ color: languageType === "Ko" ? "#3281BC" : "#534E4E" }}
+              >
+                Korean
+              </span>
+            </label>
+          </div>
+          <div className="en_btn">
+            <label>
+              <input
+                type="radio"
+                name="language"
+                value="En"
+                onChange={handleLanguage}
+                checked={languageType === "En"}
+              />
+              <span
+                style={{
+                  color: languageType === "En" ? "#3281BC" : "#534E4E",
+                }}
+              >
+                English
+              </span>
+            </label>
+          </div>
         </div>
       </div>
     </div>

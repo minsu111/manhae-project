@@ -4,10 +4,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+
+  background-size: cover;
+  background-position: center;
 }
 
 .main_page_img {
@@ -32,12 +31,20 @@
 }
 
 .lang_btn_wrapper {
-  margin: 40px 45% 40px 45%;
+  width: 20%;
   padding: 10px;
-  background: var(--grey-background);
   border-radius: 2em;
   position: absolute;
-  bottom: 10%;
+  left: 85%;
+  bottom: 4%;
+  display: flex;
+  gap: 10%;
+  float: right;
+
+  label {
+    font-size: 1.5vw;
+    font-weight: 700;
+  }
 
   input {
     all: unset;

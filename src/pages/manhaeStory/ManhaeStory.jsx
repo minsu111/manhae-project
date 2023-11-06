@@ -7,6 +7,10 @@ import "./manhaeStory.scss";
 export const ManhaeStory = () => {
   const navigate = useNavigate();
 
+  // 다국어 처리
+  const language = sessionStorage.getItem("language");
+  const title = "title" + language;
+
   return (
     <div className="manhae_story_wrapper">
       <img
@@ -31,7 +35,7 @@ export const ManhaeStory = () => {
               src={"/assets/image/manhaeStoryBg.png"}
               alt={"만해이야기"}
             />
-            <p>{c.title}</p>
+            <p>{c[title]}</p>
           </div>
         ))}
       </div>

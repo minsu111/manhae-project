@@ -8,6 +8,11 @@ import "./manhaeStoryDetail.scss";
 export const ManhaeStoryDetail = () => {
   const { id } = useParams();
 
+  // 다국어 처리
+  const language = sessionStorage.getItem("language");
+  const title = "title" + language;
+  const text = "text" + language;
+
   return (
     <div className="story_detail_section">
       <img
@@ -15,10 +20,10 @@ export const ManhaeStoryDetail = () => {
         src={"/assets/image/manhaeStoryObject.png"}
         alt={"만해"}
       />
-      <h1>{ManhaeStoryList[id].title}</h1>
+      <h1>{ManhaeStoryList[id][title]}</h1>
       <div className="animation_content">애니메이션 콘텐츠 들어갈 자리</div>
       <div className="text_content">
-        <p>{ManhaeStoryList[id].text}</p>
+        <p>{ManhaeStoryList[id][text]}</p>
         <p>{ManhaeStoryList[id].source}</p>
       </div>
     </div>

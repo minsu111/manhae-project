@@ -1,10 +1,10 @@
 [
   { "code": 0, "nameKo": "ALL", "nameEn": "ALL" },
-  { "code": 1, "nameKo": "안목을 세우다", "nameEn": "ALL" },
-  { "code": 2, "nameKo": "불교인", "nameEn": "ALL" },
-  { "code": 3, "nameKo": "삼일운동", "nameEn": "ALL" },
-  { "code": 4, "nameKo": "침묵의 미학", "nameEn": "ALL" },
-  { "code": 5, "nameKo": "설중매화", "nameEn": "ALL" },
-  { "code": 6, "nameKo": "심우장의 정절", "nameEn": "ALL" },
-  { "code": 7, "nameKo": "만해가 떠난후", "nameEn": "ALL" }
+  { "code": 1, "nameKo": "안목을 세우다", "nameEn": "1" },
+  { "code": 2, "nameKo": "불교인", "nameEn": "2" },
+  { "code": 3, "nameKo": "삼일운동", "nameEn": "3" },
+  { "code": 4, "nameKo": "침묵의 미학", "nameEn": "4" },
+  { "code": 5, "nameKo": "설중매화", "nameEn": "5" },
+  { "code": 6, "nameKo": "심우장의 정절", "nameEn": "6" },
+  { "code": 7, "nameKo": "만해가 떠난후", "nameEn": "7" }
 ]

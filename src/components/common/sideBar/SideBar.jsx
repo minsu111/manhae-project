@@ -6,16 +6,18 @@ import "./sideBar.scss";
 const SideBar = () => {
   const location = useLocation();
 
-  let imageUrl = "/assets/image/sideBar1.png";
+  let imageUrl = "/assets/image/sideBar3.png";
   if (location.pathname.includes("/commentary")) {
-    imageUrl = "/assets/image/sideBar2.png";
+    imageUrl = "/assets/image/sideBar3.png";
   } else if (location.pathname.includes("/manhaeStory")) {
-    imageUrl = "/assets/image/sideBar3imsi.png";
+    imageUrl = "/assets/image/sideBar3.png";
+  } else if (location.pathname.includes("/medal")) {
+    imageUrl = "/assets/image/sideBar4.png";
   }
 
   return (
     <div className="side_bar">
-      <img src={imageUrl} alt={"사이드바 이미지"} className="side_bar_img" />
+      <img src={imageUrl} alt={"사이드바 이미지"} />
     </div>
   );
 };

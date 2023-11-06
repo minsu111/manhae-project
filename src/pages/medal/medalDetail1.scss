@@ -1,0 +1,32 @@
+.medal_main_container {
+  width: 100%;
+  height: 100vh;
+  margin-top: -10%;
+  padding-top: 8%;
+}
+
+.section_wrapper1 {
+  width: 50%;
+  padding: 1% 8%;
+}
+
+.medal_detail1_seciton {
+  margin: 5% 0;
+
+  h2 {
+    font-size: 2vw;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 1.5vw;
+    padding: 2% 0;
+  }
+}
+
+.dividing_line {
+  background-color: #2ea6df;
+  width: 100%;
+  height: 0.35vh;
+  border: none;
+}

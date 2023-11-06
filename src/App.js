@@ -6,10 +6,14 @@ import { Commentary } from "./pages/commentary/Commentary";
 import { CollectionDetail } from "./pages/collection/CollectionDetail";
 import { ManhaeStory } from "./pages/manhaeStory/ManhaeStory";
 import { ManhaeStoryDetail } from "./pages/manhaeStory/ManhaeStoryDetail";
+import { MedalMain } from "./pages/medal/MedalMain";
+import { MakingMedal } from "./pages/medal/MakingMedal";
+import { MedalDetail1 } from "./pages/medal/MedalDetail1";
+import { MedalDetail2 } from "./pages/medal/MedalDetail2";
+import { MedalDetail3 } from "./pages/medal/MedalDetail3";
 
 import "./App.scss";
 import "./styles/reset.scss";
-import { MakingMedal } from "./pages/makingMedal/MakingMedal";
 
 function App() {
   sessionStorage.setItem("language", "Ko");
@@ -27,7 +31,11 @@ function App() {
             path="/manhaeStory/detail/:id"
             element={<ManhaeStoryDetail />}
           />
-          <Route path="/medal" element={<MakingMedal />} />
+          <Route path="/medal" element={<MedalMain />} />
+          <Route path="/medal/1" element={<MedalDetail1 />} />
+          <Route path="/medal/2" element={<MedalDetail2 />} />
+          <Route path="/medal/3" element={<MedalDetail3 />} />
+          <Route path="/medal/making" element={<MakingMedal />} />
         </Routes>
       </Layout>
     </Router>

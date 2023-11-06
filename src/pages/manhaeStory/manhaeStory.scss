@@ -74,7 +74,6 @@
 .story_item {
   position: relative;
   cursor: pointer;
-
   img {
     width: 100%;
     aspect-ratio: 1/0.5;
@@ -83,12 +82,16 @@
   p {
     width: 70%;
     position: absolute;
-    top: 35%;
-    left: 5%;
+    top: 30%;
+    left: 10%;
     padding: 0 6%;
 
     font-size: 1.6vw;
     font-family: "Nanum Pen Script", cursive;
     text-align: left;
+
+    word-break: break-all;
+    white-space: pre-wrap; // 줄바꿈 요소 적용 가능
+    vertical-align: middle;
   }
 }
