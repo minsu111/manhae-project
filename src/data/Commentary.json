@@ -2,232 +2,267 @@
   {
     "id": 1,
     "titleKo": "28독립선언서",
-    "titleEn": "english",
+    "titleEn": "28Declaration of Independence ",
     "thumbImg": "/video/28독립선언서.jpg",
-    "video": "/video/2.8독립선언서 한글.mp4"
+    "videoKo": "/video/2.8독립선언서 한글.mp4"
   },
   {
     "id": 2,
     "titleKo": "건봉사본말사적기",
-    "titleEn": "english",
+    "titleEn": "Geonbongsa Temple Historical Records ",
     "thumbImg": "/video/건봉사본말사적기.jpg",
-    "video": "/video/건봉사본말사적기 한글.mp4"
+    "videoKo": "/video/건봉사본말사적기 한글.mp4"
   },
   {
     "id": 3,
     "titleKo": "경허집",
-    "titleEn": "english",
+    "titleEn": "Gyeongheo Collection ",
     "thumbImg": "/video/경허집.jpg",
-    "video": "/video/경허집 한글.mp4"
+    "videoKo": "/video/경허집 한글.mp4"
   },
   {
     "id": 4,
     "titleKo": "공소불수리 판결문",
+    "titleEn": "Verdict of Non-Prosecution ",
     "thumbImg": "/video/공소불수리 판결문.jpg",
-    "video": "/video/공소불수리 판결문 한글.mp4"
+    "videoKo": "/video/공소불수리 판결문 한글.mp4"
   },
   {
     "id": 5,
     "titleKo": "금경-님의침묵",
+    "titleEn": "Gold Mirror - Silence of Nim ",
     "thumbImg": "/video/금경 님의침묵.jpg",
-    "video": "/video/금경 님의침묵 한글.mp4"
+    "videoKo": "/video/금경 님의침묵 한글.mp4"
   },
   {
     "id": 6,
     "titleKo": "기타 독립선언서",
+    "titleEn": "Other Independence Declarations ",
     "thumbImg": "/video/기타 독립선언서.jpg",
-    "video": "/video/기타 독립선언서 한글.mp4"
+    "videoKo": "/video/기타 독립선언서 한글.mp4"
   },
   {
     "id": 7,
     "titleKo": "나룻배와 행인 병풍",
+    "titleEn": "The Boat and the Traveler Screen ",
     "thumbImg": "/video/나룻배와 행인 병풍.jpg",
-    "video": "/video/나룻배와 행인 병풍 한글.mp4"
+    "videoKo": "/video/나룻배와 행인 병풍 한글.mp4"
   },
   {
     "id": 8,
     "titleKo": "님의 침묵 전편해설",
+    "titleEn": "Complete Explanation of Silence of Nim ",
     "thumbImg": "/video/님의 침묵 전편해설.jpg",
-    "video": "/video/님의 침묵 전편해설 한글.mp4"
+    "videoKo": "/video/님의 침묵 전편해설 한글.mp4"
   },
   {
     "id": 9,
     "titleKo": "님의침묵",
+    "titleEn": "Silence of Nim ",
     "thumbImg": "/video/님의침묵.jpg",
-    "video": "/video/님의침묵 한글.mp4"
+    "videoKo": "/video/님의침묵 한글.mp4"
   },
   {
     "id": 10,
     "titleKo": "담원시조집",
+    "titleEn": "Damwon Collection of Sijo Poems ",
     "thumbImg": "/video/담원시조집.jpg",
-    "video": "/video/담원시조집 한글.mp4"
+    "videoKo": "/video/담원시조집 한글.mp4"
   },
   {
     "id": 11,
     "titleKo": "독립선언서 원본",
+    "titleEn": "Original Independence Declaration ",
     "thumbImg": "/video/독립선언서 원본.jpg",
-    "video": "/video/독립선언서 원본 한글.mp4"
+    "videoKo": "/video/독립선언서 원본 한글.mp4"
   },
   {
     "id": 12,
     "titleKo": "만해 영정",
+    "titleEn": "Manhae's Portrait ",
     "thumbImg": "/video/만해 영정.jpg",
-    "video": "/video/만해 영정 한글.mp4"
+    "videoKo": "/video/만해 영정 한글.mp4"
   },
   {
     "id": 13,
     "titleKo": "만해 진영",
+    "titleEn": "True Portrait of Manhae ",
     "thumbImg": "/video/만해 진영.jpg",
-    "video": "/video/만해 진영 한글.mp4"
+    "videoKo": "/video/만해 진영 한글.mp4"
   },
   {
     "id": 14,
     "titleKo": "만해선생시집",
+    "titleEn": "Collection of Manhae's Poems ",
     "thumbImg": "/video/만해선생시집.jpg",
-    "video": "/video/만해선생시집 한글.mp4"
+    "videoKo": "/video/만해선생시집 한글.mp4"
   },
   {
     "id": 15,
     "titleKo": "만해시비-무제",
+    "titleEn": "Manhae's Poem Stele - Untitled ",
     "thumbImg": "/video/만해시비-무제.jpg",
-    "video": "/video/만해시비-무제 한글.mp4"
+    "videoKo": "/video/만해시비-무제 한글.mp4"
   },
   {
     "id": 16,
     "titleKo": "만해시비-알수없어요",
+    "titleEn": "Manhae's Poem Stele - Unknowable ",
     "thumbImg": "/video/만해시비-알수없어요.jpg",
-    "video": "/video/만해시비-알수없어요 한글.mp4"
+    "videoKo": "/video/만해시비-알수없어요 한글.mp4"
   },
   {
     "id": 17,
     "titleKo": "만해추모시비-꽃한송이",
+    "titleEn": "Manhae's Poem Stele - A Single Flower ",
     "thumbImg": "/video/만해추모시비-꽃한송이.jpg",
-    "video": "/video/만해추모시비-꽃한송이 한글.mp4"
+    "videoKo": "/video/만해추모시비-꽃한송이 한글.mp4"
   },
   {
     "id": 18,
     "titleKo": "만해추모시비-즉사",
+    "titleEn": "Manhae's Poem Stele - As felt ",
     "thumbImg": "/video/만해추모시비-즉사.jpg",
-    "video": "/video/만해추모시비-즉사 한글.mp4"
+    "videoKo": "/video/만해추모시비-즉사 한글.mp4"
   },
   {
     "id": 19,
     "titleKo": "만해친필시-회갑맞이",
+    "titleEn": "Manhae's Poem Stele - 60th Birthday ",
     "thumbImg": "/video/만해친필시-회갑맞이.jpg",
-    "video": "/video/만해친필시-회갑맞이 한글.mp4"
+    "videoKo": "/video/만해친필시-회갑맞이 한글.mp4"
   },
   {
     "id": 20,
     "titleKo": "만해한용운선사십우송",
+    "titleEn": "Manhae  Han Yong-un Sibusong ",
     "thumbImg": "/video/만해한용운선사십우송.jpg",
-    "video": "/video/만해한용운선사십우송 한글.mp4"
+    "videoKo": "/video/만해한용운선사십우송 한글.mp4"
   },
   {
     "id": 21,
     "titleKo": "만해한용운연구",
+    "titleEn": "Research on Manhae Han Yong-un ",
     "thumbImg": "/video/만해한용운연구.jpg",
-    "video": "/video/만해한용운연구 한글.mp4"
+    "videoKo": "/video/만해한용운연구 한글.mp4"
   },
   {
     "id": 22,
     "titleKo": "만해흉상",
+    "titleEn": "Manhae's Bust ",
     "thumbImg": "/video/만해흉상.jpg",
-    "video": "/video/만해흉상 한글.mp4"
+    "videoKo": "/video/만해흉상 한글.mp4"
   },
   {
     "id": 23,
     "titleKo": "불교대전",
+    "titleEn": "Bulgyo Daejeon ",
     "thumbImg": "/video/불교대전.jpg",
-    "video": "/video/불교대전 한글.mp4"
+    "videoKo": "/video/불교대전 한글.mp4"
   },
   {
     "id": 24,
     "titleKo": "상해임정 독립선언서",
+    "titleEn": "Shanghai Provisional Government's Declaration of Independence ",
     "thumbImg": "/video/상해임정 독립선언서.jpg",
-    "video": "/video/상해임정 독립선언서 한글.mp4"
+    "videoKo": "/video/상해임정 독립선언서 한글.mp4"
   },
   {
     "id": 25,
     "titleKo": "심우장 현판",
+    "titleEn": "Simujang House's Plaque ",
     "thumbImg": "/video/심우장 현판.jpg",
-    "video": "/video/심우장 현판 한글.mp4"
+    "videoKo": "/video/심우장 현판 한글.mp4"
   },
   {
     "id": 26,
     "titleKo": "심우찻잔",
+    "titleEn": "Simu-Teacup ",
     "thumbImg": "/video/심우찻잔.jpg",
-    "video": "/video/심우찻잔 한글.mp4"
+    "videoKo": "/video/심우찻잔 한글.mp4"
   },
   {
     "id": 27,
     "titleKo": "십현담주해",
+    "titleEn": "Sibhyeondamjuhae ",
     "thumbImg": "/video/십현담주해.jpg",
-    "video": "/video/십현담주해 한글.mp4"
+    "videoKo": "/video/십현담주해 한글.mp4"
   },
   {
     "id": 28,
     "titleKo": "약전",
+    "titleEn": "Brief Biography ",
     "thumbImg": "/video/약전.jpg",
-    "video": "/video/약전 한글.mp4"
+    "videoKo": "/video/약전 한글.mp4"
   },
   {
     "id": 29,
     "titleKo": "영환지략",
+    "titleEn": "Yeonghwanjilyag ",
     "thumbImg": "/video/영환지략.jpg",
-    "video": "/video/영환지략 한글.mp4"
+    "videoKo": "/video/영환지략 한글.mp4"
   },
   {
     "id": 30,
     "titleKo": "오도송",
+    "titleEn": "Odosong ",
     "thumbImg": "/video/오도송.jpg",
-    "video": "/video/오도송 한글.mp4"
+    "videoKo": "/video/오도송 한글.mp4"
   },
   {
     "id": 31,
     "titleKo": "월남망국사",
+    "titleEn": "History of the Fall of Vietnam ",
     "thumbImg": "/video/월남망국사.jpg",
-    "video": "/video/월남망국사 한글.mp4"
+    "videoKo": "/video/월남망국사 한글.mp4"
   },
   {
     "id": 32,
     "titleKo": "유심",
+    "titleEn": "Yusim ",
     "thumbImg": "/video/유심.jpg",
-    "video": "/video/유심 한글.mp4"
+    "videoKo": "/video/유심 한글.mp4"
   },
   {
     "id": 33,
     "titleKo": "음빙실문집",
+    "titleEn": "Eumbingsil Collection of Writings ",
     "thumbImg": "/video/음빙실문집.jpg",
-    "video": "/video/음빙실문집 한글.mp4"
+    "videoKo": "/video/음빙실문집 한글.mp4"
   },
   {
     "id": 34,
     "titleKo": "정본 님의침묵",
+    "titleEn": "Authentic Edition of Silence of Nim ",
     "thumbImg": "/video/정본 님의침묵.jpg",
-    "video": "/video/정본 님의침묵 한글.mp4"
+    "videoKo": "/video/정본 님의침묵 한글.mp4"
   },
   {
     "id": 35,
     "titleKo": "조선불교유신론",
+    "titleEn": "The Restoration of Korean Buddhism ",
     "thumbImg": "/video/조선불교유신론.jpg",
-    "video": "/video/조선불교유신론 한글.mp4"
+    "videoKo": "/video/조선불교유신론 한글.mp4"
   },
   {
     "id": 36,
     "titleKo": "조선상고문화사",
+    "titleEn": "Ancient History of Korea ",
     "thumbImg": "/video/조선상고문화사.jpg",
-    "video": "/video/조선상고문화사 한글.mp4"
+    "videoKo": "/video/조선상고문화사 한글.mp4"
   },
   {
     "id": 37,
     "titleKo": "채근담 서문",
+    "titleEn": "Preface to Chaekundam ",
     "thumbImg": "/video/채근담 서문.jpg",
-    "video": "/video/채근담 서문 한글.mp4"
+    "videoKo": "/video/채근담 서문 한글.mp4"
   },
   {
     "id": 38,
     "titleKo": "채근담",
+    "titleEn": "Chaekundam",
     "thumbImg": "/video/채근담.jpg",
-    "video": "/video/채근담 한글.mp4"
+    "videoKo": "/video/채근담 한글.mp4"
   }
 ]

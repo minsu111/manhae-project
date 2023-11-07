@@ -8,21 +8,13 @@ export const MedalDetail2 = () => {
     <div className="medal_main_container">
       <div className="section_wrapper2">
         <div className="medal_detail2_seciton">
-          <h2>대한민국 훈장</h2>
+          <h2>건국훈장 ‒ 대통령장(Presidential Medal)</h2>
           <hr className="dividing_line" />
           <p>
-            우리나라는 무궁화대훈장을 정점으로 건국훈장, 국민훈장, 무공훈장,
-            근정훈장, 보국훈장, 수교훈장, 산업훈장, 새마을훈장, 문화훈장,
-            체육훈장, 과학기술훈장 등 총 가지의 훈장이 있습니다.
-          </p>
-        </div>
-        <div className="medal_detail2_seciton">
-          <h2>건국훈장</h2>
-          <hr className="dividing_line" />
-          <p>
-            건국훈장 건국훈장은 대한민국의 건국에 공로가 뚜렷하거나, 국기를
-            공고히 함에 기여한 공적이 뚜렷한 자에게 수여됩니다. 그리고
-            건국훈장은 등급으로 나누어 집니다.
+            건국훈장에서 2등급인 대통령장에는 한글 대중화와 근대화 개척자 주시경
+            선생, 한국독립군 총사령관 지청천 장군, 한인애국단 이봉창 의사, 단재
+            신채호, 평민 의병장 신돌석, 종로경찰서에 폭탄을 투척했던 김상옥 열사
+            등의 위인분들이 수여 받았습니다.
           </p>
         </div>
       </div>

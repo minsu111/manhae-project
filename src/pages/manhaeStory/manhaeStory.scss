@@ -16,7 +16,7 @@
   margin-top: -7%;
 
   position: absolute;
-  left: 24%;
+  left: 25%;
 }
 
 .title_section {
@@ -40,25 +40,9 @@
   }
 }
 
-// .story_title_section {
-//   margin-top: -20%;
-//   padding-top: 10%;
-//   width: 75%;
-//   display: grid;
-//   grid-template-columns: repeat(3, 1fr);
-//   place-items: center;
-//   gap: 6%;
-
-//   overflow-y: scroll;
-//   &::-webkit-scrollbar {
-//     display: none;
-//   }
-// }
-
 .story_title_section {
   width: 76%;
   height: 100vh;
-  // padding: 10% 10% 0 10%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 4vw;

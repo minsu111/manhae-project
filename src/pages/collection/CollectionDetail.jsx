@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import TextToSpeech from "../../components/collection/TextToSpeech";
-import MainList from "../../data/Main";
+import CollectionList from "../../data/Collection";
 import SubList from "../../data/Sub";
 
 import "./collectionDetail.scss";
@@ -15,6 +15,7 @@ export const CollectionDetail = ({ fontSize }) => {
     setSubId(subId);
   };
 
+  // 다국어 처리
   const language = sessionStorage.getItem("language");
   const description = "desc" + language;
   const title = "title" + language;
@@ -32,11 +33,12 @@ export const CollectionDetail = ({ fontSize }) => {
     <section className="detail_section">
       <div className="text_wrapper">
         <div className="description" style={{ fontSize: `${fontSize}px` }}>
-          {MainList[id][description]}
+          {CollectionList[id][description]}
         </div>
       </div>
       <Suspense fallback={Spinner}>
         <div className="main_img_wrapper">
+          <div className="detail_main_title">{CollectionList[id][title]}</div>
           {subId !== null && (
             <img
               src={SubList[subId].originImg}
@@ -63,13 +65,18 @@ export const CollectionDetail = ({ fontSize }) => {
                         alt={item[title]}
                         className="inner_img"
                       />
-                      <div className="inner_text">{item[title]}</div>
+                      <div className="inner_text">
+                        {String(item.subId + 1).padStart(2, "0")}
+                      </div>
                     </div>
                   </div>
                 )
             )}
           </div>
-          <TextToSpeech text={MainList[id][description]} className="play_btn" />
+          <TextToSpeech
+            text={CollectionList[id][description]}
+            className="play_btn"
+          />
         </div>
       </Suspense>
     </section>

@@ -40,13 +40,16 @@
   text-align: center;
 }
 
+.detail_main_title {
+  font-size: 1.8vw;
+  font-weight: 600;
+  margin: 0 5% 2% 0;
+  text-align: center;
+}
+
 .main_img {
-  // position: absolute;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-40%, -50%);
   padding-right: 5%;
-  width: 80%;
+  width: 74%;
   height: 80vh;
   object-fit: scale-down;
   filter: drop-shadow(5px 5px 5px #000);

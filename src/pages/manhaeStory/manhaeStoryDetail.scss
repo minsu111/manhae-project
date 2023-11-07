@@ -21,18 +21,30 @@
 
 .text_content {
   width: auto;
+  margin-top: 7%;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
   p {
-    width: 40%;
+    width: 44%;
     font-size: 1.5vw;
+    word-break: break-all;
+    white-space: pre-wrap;
 
     &:last-child {
       padding: 4% 0;
       text-align: end;
     }
   }
+}
+
+.animation_content {
+  width: 40vw;
+  height: 40vh;
+  position: relative;
+  top: 5%;
+  left: 24%;
+  // box-shadow: 4px 4px 10px 4px rgba(90, 90, 90, 0.584);
 }

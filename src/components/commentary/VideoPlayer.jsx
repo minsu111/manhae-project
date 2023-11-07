@@ -4,8 +4,15 @@ import ReactPlayer from "react-player";
 import "./videoPlayer.scss";
 
 export const VideoPlayer = ({ videoURL }) => {
+  const pathname = window.location.pathname;
+
+  const shouldAddNoBoxShadowClass = pathname.includes("/manhaeStory");
+
+  const wrapperClassName = `video_wrapper ${
+    shouldAddNoBoxShadowClass ? "no-box-shadow" : ""
+  }`;
   return (
-    <div className="video_wrapper">
+    <div className={wrapperClassName}>
       <ReactPlayer
         className="react-player"
         url={videoURL}

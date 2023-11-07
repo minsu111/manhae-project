@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ToastNotification } from "../../components/common/toast/ToastNotification";
 import { Spinner } from "../../components/common/spinner/Spinner";
 
-import MainList from "../../data/Main";
+import CollectionList from "../../data/Collection";
 import CategoryList from "../../data/Category";
 
 import "./collection.scss";
@@ -74,7 +74,7 @@ export const Collection = () => {
                   onChange={handleCategory}
                   checked={category === c.code}
                 />
-                <span>{c[name]}</span>
+                <span className="category_name">{c[name]}</span>
               </label>
             </div>
           ))}
@@ -85,7 +85,7 @@ export const Collection = () => {
           ref={imgSectionRef}
           onScroll={handleScroll}
         >
-          {MainList.filter(
+          {CollectionList.filter(
             (item) => category === 0 || category === item.category
           ).map((item, i) => (
             <div key={i} className="items">

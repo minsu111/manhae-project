@@ -28,11 +28,6 @@ export const Main = () => {
       className="main_page"
       style={{ backgroundImage: 'url("/assets/image/mainImg.png")' }}
     >
-      {/* <img
-        className="main_page_img"
-        src={"/assets/image/mainImg.png"}
-        alt={"메인페이지"}
-      /> */}
       <div className="main_buttons_section">
         {MenuList.map((c, i) => (
           <button
@@ -57,7 +52,9 @@ export const Main = () => {
                 checked={languageType === "Ko"}
               />
               <span
-                style={{ color: languageType === "Ko" ? "#3281BC" : "#534E4E" }}
+                style={{
+                  color: languageType === "Ko" ? "#3281BC" : "#534E4E",
+                }}
               >
                 Korean
               </span>

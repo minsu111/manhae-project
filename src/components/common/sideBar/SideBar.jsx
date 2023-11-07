@@ -6,9 +6,9 @@ import "./sideBar.scss";
 const SideBar = () => {
   const location = useLocation();
 
-  let imageUrl = "/assets/image/sideBar3.png";
+  let imageUrl = "/assets/image/sideBar1.png";
   if (location.pathname.includes("/commentary")) {
-    imageUrl = "/assets/image/sideBar3.png";
+    imageUrl = "/assets/image/sideBar2.png";
   } else if (location.pathname.includes("/manhaeStory")) {
     imageUrl = "/assets/image/sideBar3.png";
   } else if (location.pathname.includes("/medal")) {

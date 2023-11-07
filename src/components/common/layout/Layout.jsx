@@ -14,7 +14,7 @@ export const Layout = (props) => {
     <div className="all_container">
       {location.pathname !== "/" && <SideBar />}
       <div className="content">
-        <main>{props.children}</main>
+        {props.children}
         {location.pathname !== "/" &&
           (zoomPage ? (
             <ButtonBar isZoomEnabled={isZoomEnabled} />

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import VideoList from "../../data/Video";
+import VideoList from "../../data/Commentary";
 
 import "./commentary.scss";
 import { VideoPlayer } from "../../components/commentary/VideoPlayer";
@@ -12,6 +12,7 @@ export const Commentary = () => {
   // 다국어 처리
   const language = sessionStorage.getItem("language");
   const title = "title" + language;
+  const video = "video" + language;
 
   const openModalHandler = (videoUrl) => {
     setSelectedVideoUrl(videoUrl);
@@ -25,7 +26,7 @@ export const Commentary = () => {
       {VideoList.map((v, i) => {
         return (
           <div key={i} className="video_thumb_items">
-            <div onClick={() => openModalHandler(v.video)} className="figure">
+            <div onClick={() => openModalHandler(v[video])} className="figure">
               <img
                 src={v.thumbImg}
                 alt={"영상 섬네일"}

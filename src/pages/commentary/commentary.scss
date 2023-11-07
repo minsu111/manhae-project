@@ -3,14 +3,13 @@
 }
 
 .video_thumb_section {
-  height: 100vh;
+  height: 80vh;
   margin: 0 50px;
-  padding-top: 5%;
-  padding-left: 5%;
+  margin-top: 4%;
+  padding-left: 4%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 3em;
-  padding-bottom: 6%;
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
@@ -44,7 +43,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.709);
+  background-color: rgba(0, 0, 0, 0.676);
   top: 0;
   left: 20%;
 }

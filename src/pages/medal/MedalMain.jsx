@@ -45,14 +45,13 @@ export const MedalMain = () => {
           </Link>
           <Link to="/medal/3" className="medal_main_btn">
             <img
-              src={"/assets/image/button_blue_2.jpeg"}
+              src={"/assets/image/button_blue_2.png"}
               alt={"3등급, 4등급, 5등급"}
             />
             <span className="medal_main_btn_2_text">
               3등급 - 대통령장
               <br /> 4등급 - 대통령장
               <br /> 4등급 - 대통령장
-              <br /> *버튼 이미지 교체 필요
             </span>
           </Link>
           <Link to="/medal/making" className="medal_main_btn">
