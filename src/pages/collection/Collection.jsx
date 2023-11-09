@@ -53,6 +53,11 @@ export const Collection = () => {
     setScrollPosition(e.target.scrollTop);
   };
 
+  const categoryClass = language === "Ko" ? "category category_ko" : "category";
+
+  const categoryItemClass =
+    language === "Ko" ? "category_item_ko" : "category_item_en";
+
   return (
     <Suspense fallback={<Spinner />}>
       <div className="collection_section">
@@ -62,9 +67,10 @@ export const Collection = () => {
             setOpentToast={setOpentToast}
           />
         )}
-        <div className="category">
+        {/* 카테고리 영역 */}
+        <div className={categoryClass}>
           {CategoryList.map((c, i) => (
-            <div key={i} className="category_item">
+            <div key={i} className={categoryItemClass}>
               <label>
                 <input
                   type="radio"

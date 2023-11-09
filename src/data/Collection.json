@@ -6,7 +6,7 @@
     "titleEn": "abc1",
     "thumbImg": "/assets/thumbnail/만해2172_thumbnail.png",
     "descKo": "일제강점기 시절 만해 한용운이 즐겨 보았던 수택본 서적으로서 일본 제국주의자들은 이를 금서로 지정하여 조선인들은 읽을 수 없게 하였던 금서였다.",
-    "descEn": "hi this is no.0 collection"
+    "descEn": "During the Japanese colonial period, the book that Manhae Han Yong-un often read was designated as a prohibited book by Japanese imperialists, making it illegal for Koreans to read."
   },
   {
     "mainId": 1,
@@ -15,7 +15,7 @@
     "titleEn": "abc2",
     "thumbImg": "/assets/thumbnail/만해2178_thumbnail.png",
     "descKo": "1910년 일제는 조선을 무력으로 강점하니, 이 나라 잃은 설움을 월남의 경우에 대비하여 은연 중 독립정신을 고취시키기 위해 만해가 적극적으로 권장했던 도서이다. 1912년 통도사 강원에서 화엄경 강의 중 월남 망국의 한을 종종 인용하여 강의할 때면 무엇을 강의하는지 청중들은 더욱 숙연하게 강의를 청강하였다고 하였다.",
-    "descEn": "hi this is no.1 collection"
+    "descEn": "In 1910, when Japan forcibly annexed Korea, Manhae actively recommended books that subtly encouraged the spirit of independence by comparing the sorrow of losing the country to the case of Vietnam. It is said that during his lectures on the Avatamsaka Sutra at Tongdo Temple in 1912, he often cited the sorrow of Vietnam's fall, and the audience listened to his lectures with even greater solemnity, deeply reflecting on what was being taught."
   },
   {
     "mainId": 2,
@@ -23,14 +23,15 @@
     "titleKo": "음빙실문집",
     "thumbImg": "/assets/thumbnail/만해2183_thumbnail.png",
     "descKo": "청조 말 양계초의 저술이다. 만해 한용운은 이 책을 통하여 서구 근대사상에 접하게 되었으며 칸트, 루소, 데카르트를 인식하면서 근대 민족주의를 깨달아 갔다.",
-    "descEn": "hi this is no.2 collection"
+    "descEn": "The book by Yang Kui-jae from the late Qing dynasty was a significant source for Manhae Han Yong-un. Through this book, Manhae was exposed to Western modern thought and came to understand figures such as Kant, Rousseau, and Descartes, which led him to a realization of modern nationalism."
   },
   {
     "mainId": 3,
     "category": 6,
     "titleKo": "조선상고문화사",
     "thumbImg": "/assets/thumbnail/만해2189_thumbnail.png",
-    "descKo": "일강 신하수 선생의 친필로 남긴 단재 신채호의 조선상고문화사다. 만해는 이 책을 보관하기 위하여 단재 탑을 만들려다 밀고로 답전은 부서지고 곤욕을 치르게 하였던 사연들을 간직한 필사본이다"
+    "descKo": "일강 신하수 선생의 친필로 남긴 단재 신채호의 조선상고문화사다. 만해는 이 책을 보관하기 위하여 단재 탑을 만들려다 밀고로 답전은 부서지고 곤욕을 치르게 하였던 사연들을 간직한 필사본이다",
+    "descEn": "The manuscript of \"Joseon Sanggo Munhwa-sa\" (History of Ancient Korean Culture) by Danjae Shin Chae-ho, handwritten by Ilgang Shin Ha-su, is a treasured document that Manhae Han Yong-un sought to preserve. Manhae intended to build a stupa (Danjae Tap) to safeguard this book, but the attempt led to the destruction of the manuscript and caused him much distress. This story is part of the legacy of the manuscript, reflecting the turbulent times and the efforts to preserve Korean history and culture."
   },
   {
     "mainId": 4,

@@ -2,42 +2,17 @@ import React, { useState } from "react";
 import Object from "./Object";
 import { useDrop } from "react-dnd";
 
-import "./dragDrop.scss";
+import ObjectList from "../../data/MedalObjects";
 
-const ObjectList = [
-  {
-    id: 1,
-    url: "/assets/medal/medal_1.png",
-    location: "",
-    groupId: 1,
-  },
-  {
-    id: 7,
-    url: "/assets/medal/medal_2.png",
-    groupId: 1,
-  },
-  {
-    id: 2,
-    url: "/assets/medal/medal_2.png",
-    groupId: 2,
-  },
-  {
-    id: 3,
-    url: "/assets/medal/medal_3.png",
-    groupId: 3,
-  },
-  {
-    id: 4,
-    url: "/assets/medal/medal_4.png",
-    groupId: 4,
-  },
-];
+import "./dragDrop.scss";
 
 function DragDrop() {
   const [medal, setMedal] = useState(null);
   const [middleRibon, setMiddleRibon] = useState(null);
   const [bottomRibon, setBottomRibon] = useState(null);
   const [extraItems, setExtraItems] = useState([]);
+
+  const [position, setPosition] = useState({ left: 0, top: 0 });
 
   const [{ isOver }, drop] = useDrop(() => ({
     accept: "image",
@@ -47,10 +22,11 @@ function DragDrop() {
     }),
   }));
 
-  const addImageToBoard = (id) => {
+  const addImageToBoard = (id, monitor) => {
     const objectList = ObjectList.filter((object) => id === object.id);
-    //setBoard((board) => [...board, objectList[0]]);
+
     const item = objectList[0];
+
     switch (item.groupId) {
       case 1:
         setMedal(item);
@@ -63,10 +39,21 @@ function DragDrop() {
         break;
       case 4:
         setExtraItems((board) => [...board, item]);
+
+        if (monitor) {
+          const delta = monitor.getDifferenceFromInitialOffset();
+          const left = Math.round(item.left + delta.x);
+          const top = Math.round(item.top + delta.y);
+          moveItem(left, top);
+        }
         break;
       default:
         break;
     }
+  };
+
+  const moveItem = (left, top) => {
+    setPosition({ left, top });
   };
 
   return (
@@ -82,40 +69,48 @@ function DragDrop() {
           </p>
         </div>
         <div className="objects_wrapper">
-          <div className="objects">
+          <div className="objects1">
             {ObjectList.map((object) => {
               return (
                 object.groupId === 1 && (
-                  <Object url={object.url} id={object.id} width={"10%"} />
+                  <span className="medal_objects_group1">
+                    <Object url={object.url} id={object.id} width={"15%"} />
+                  </span>
                 )
               );
             })}
           </div>
           <hr />
-          <div className="objects">
+          <div className="objects2">
             {ObjectList.map((object) => {
               return (
                 object.groupId === 2 && (
-                  <Object url={object.url} id={object.id} width={"10%"} />
+                  <span className="medal_objects_group2">
+                    <Object url={object.url} id={object.id} width={"15%"} />
+                  </span>
                 )
               );
             })}
           </div>
-          <div className="objects">
+          <div className="objects3">
             {ObjectList.map((object) => {
               return (
                 object.groupId === 3 && (
-                  <Object url={object.url} id={object.id} width={"10%"} />
+                  <span className="medal_objects_group3">
+                    <Object url={object.url} id={object.id} width={"7%"} />
+                  </span>
                 )
               );
             })}
           </div>
           <hr />
-          <div className="objects">
+          <div className="objects4">
             {ObjectList.map((object) => {
               return (
                 object.groupId === 4 && (
-                  <Object url={object.url} id={object.id} width={"10%"} />
+                  <span className="medal_objects_group4">
+                    <Object url={object.url} id={object.id} width={"5%"} />
+                  </span>
                 )
               );
             })}
@@ -125,39 +120,67 @@ function DragDrop() {
       <div className="right_section">
         <div className="boards" ref={drop}>
           {medal !== null && (
-            <div style={{ position: "absolute", top: "50%", left: "10%" }}>
-              <Object url={medal.url} id={medal.id} width={"40%"} />
+            <div
+              style={{
+                position: "absolute",
+                top: `${medal.top}%`,
+                left: `${medal.left}%`,
+                zIndex: "3",
+              }}
+            >
+              <Object url={medal.url} id={medal.id} width={`${medal.width}%`} />
             </div>
           )}
           {middleRibon !== null && (
             <div
               style={{
                 position: "absolute",
-                top: "30%",
-                left: "20%",
-                zIndex: "11",
+                top: `${middleRibon.top}%`,
+                left: `${middleRibon.left}%`,
+                zIndex: "2",
               }}
             >
-              <Object url={middleRibon.url} id={middleRibon.id} width={"40%"} />
+              <Object
+                url={middleRibon.url}
+                id={middleRibon.id}
+                width={`${middleRibon.width}%`}
+              />
             </div>
           )}
           {bottomRibon !== null && (
             <div
               style={{
                 position: "absolute",
-                top: "30%",
-                left: "30%",
-                width: "20%",
-                zIndex: "12",
+                top: `${bottomRibon.top}%`,
+                left: `${bottomRibon.left}%`,
+                zIndex: "1",
               }}
             >
-              <Object url={bottomRibon.url} id={bottomRibon.id} />
+              <Object
+                url={bottomRibon.url}
+                id={bottomRibon.id}
+                width={`${bottomRibon.width}%`}
+              />
             </div>
           )}
           {extraItems.map((object) => {
             return (
-              <div style={{ position: "relative", top: "30%", left: "40%" }}>
-                <Object url={object.url} id={object.id} width={"20%"} />
+              <div
+                style={{
+                  // position: "relative",
+                  // top: "30%",
+                  // left: "40%",
+                  position: "relative",
+                  left: position.left,
+                  top: position.top,
+                  zIndex: "4",
+                }}
+              >
+                <Object
+                  url={object.url}
+                  id={object.id}
+                  width={`${object.width}%`}
+                />
               </div>
             );
           })}

@@ -1,0 +1,203 @@
+[
+  {
+    "id": 1,
+    "url": "/assets/medal/medal_object_02.png",
+    "location": "",
+    "top": 30,
+    "left": 30,
+    "width": 200,
+    "groupId": 1
+  },
+  {
+    "id": 2,
+    "url": "/assets/medal/medal_object_03.png",
+    "location": "",
+    "top": 30,
+    "left": 30,
+    "width": 195,
+    "groupId": 1
+  },
+  {
+    "id": 3,
+    "url": "/assets/medal/medal_object_04.png",
+    "location": "",
+    "top": 30,
+    "left": 27,
+    "width": 200,
+    "groupId": 1
+  },
+  {
+    "id": 4,
+    "url": "/assets/medal/medal_object_05.png",
+    "location": "",
+    "top": 47,
+    "left": 21.5,
+    "width": 180,
+    "groupId": 2
+  },
+  {
+    "id": 5,
+    "url": "/assets/medal/medal_object_06.png",
+    "location": "",
+    "top": 47,
+    "left": 21,
+    "width": 180,
+    "groupId": 2
+  },
+  {
+    "id": 6,
+    "url": "/assets/medal/medal_object_07.png",
+    "location": "",
+    "top": 46,
+    "left": 20,
+    "width": 180,
+    "groupId": 2
+  },
+  {
+    "id": 7,
+    "url": "/assets/medal/medal_object_08.png",
+    "location": "",
+    "top": 45,
+    "left": 29,
+    "width": 180,
+    "groupId": 2
+  },
+  {
+    "id": 8,
+    "url": "/assets/medal/medal_object_09.png",
+    "location": "",
+    "top": 48,
+    "left": 32,
+    "width": 220,
+    "groupId": 3
+  },
+  {
+    "id": 9,
+    "url": "/assets/medal/medal_object_10.png",
+    "location": "",
+    "top": 50,
+    "left": 38.2,
+    "width": 250,
+    "groupId": 3
+  },
+  {
+    "id": 10,
+    "url": "/assets/medal/medal_object_11.png",
+    "location": "",
+    "top": 48,
+    "left": 42,
+    "width": 250,
+    "groupId": 3
+  },
+  {
+    "id": 11,
+    "url": "/assets/medal/medal_object_12.png",
+    "location": "",
+    "top": 48,
+    "left": 42,
+    "width": 250,
+    "groupId": 3
+  },
+  {
+    "id": 12,
+    "url": "/assets/medal/medal_object_13.png",
+    "location": "",
+    "top": 50,
+    "left": 41.5,
+    "width": 200,
+    "groupId": 3
+  },
+  {
+    "id": 13,
+    "url": "/assets/medal/medal_object_14.png",
+    "location": "",
+    "top": 48,
+    "left": 42,
+    "width": 250,
+    "groupId": 3
+  },
+  {
+    "id": 14,
+    "url": "/assets/medal/medal_object_15.png",
+    "location": "",
+    "width": 10,
+    "groupId": 4
+  },
+  {
+    "id": 15,
+    "url": "/assets/medal/medal_object_16.png",
+    "location": "",
+    "width": 10,
+    "groupId": 4
+  },
+  {
+    "id": 16,
+    "url": "/assets/medal/medal_object_17.png",
+    "location": "",
+    "width": 10,
+    "groupId": 4
+  },
+  {
+    "id": 17,
+    "url": "/assets/medal/medal_object_18.png",
+    "location": "",
+    "width": 10,
+    "groupId": 4
+  },
+  {
+    "id": 18,
+    "url": "/assets/medal/medal_object_19.png",
+    "location": "",
+    "width": 10,
+    "groupId": 4
+  },
+  {
+    "id": 19,
+    "url": "/assets/medal/medal_object_20.png",
+    "location": "",
+    "width": 10,
+    "groupId": 4
+  },
+  {
+    "id": 20,
+    "url": "/assets/medal/medal_object_21.png",
+    "location": "",
+    "width": 10,
+    "groupId": 4
+  },
+  {
+    "id": 21,
+    "url": "/assets/medal/medal_object_22.png",
+    "location": "",
+    "width": 10,
+    "groupId": 4
+  },
+  {
+    "id": 22,
+    "url": "/assets/medal/medal_object_23.png",
+    "location": "",
+    "width": 10,
+    "groupId": 4
+  },
+  {
+    "id": 23,
+    "url": "/assets/medal/medal_object_24.png",
+    "location": "",
+    "width": 10,
+    "groupId": 4
+  },
+  {
+    "id": 24,
+    "url": "/assets/medal/medal_object_25.png",
+    "location": "",
+    "width": 10,
+    "groupId": 4
+  },
+  {
+    "id": 25,
+    "url": "/assets/medal/medal_object_26.png",
+    "location": "",
+    "width": 10,
+    "groupId": 4
+  }
+]

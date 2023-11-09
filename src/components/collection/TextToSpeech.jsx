@@ -5,6 +5,9 @@ const TextToSpeech = ({ text }) => {
   const [voicesLoaded, setVoicesLoaded] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
 
+  // 다국어 처리
+  const language = sessionStorage.getItem("language");
+
   const splitTextIntoChunks = (text) => {
     const sentences = text.text.match(/[^.!?]+[.!?]+/g) || [text];
     return sentences;
@@ -20,7 +23,11 @@ const TextToSpeech = ({ text }) => {
 
         const voices = synth.getVoices();
         if (voices.length) {
-          u.voice = voices.find((voice) => voice.name === "Google 한국의");
+          u.voice = voices.find((voice) =>
+            language === "Ko"
+              ? voice.name === "Google 한국의"
+              : voice.name === "Google UK English Male"
+          );
         }
 
         synth.speak(u);
@@ -52,7 +59,7 @@ const TextToSpeech = ({ text }) => {
       const voices = synth.getVoices();
 
       if (voices.length) {
-        u.voice = voices.find((voice) => voice.name === "Google 한국의");
+        // u.voice = voices.find((voice) => voice.name === "Google 한국의");
         setVoicesLoaded(true);
         setUtterance(u);
       }
