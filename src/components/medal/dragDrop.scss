@@ -56,6 +56,19 @@
     border: 0.5px solid darkgray;
   }
 }
+.objects1,
+.objects2,
+.objects3,
+.objects4 {
+  display: flex;
+  justify-content: center;
+  width: 38vw;
+}
+
+.objects4 {
+  flex-wrap: wrap;
+  row-gap: 5vh;
+}
 
 .medal_objects_group1 {
   margin: 0 9%;
@@ -78,9 +91,13 @@
 }
 
 .medal_objects_group4 {
-  width: 5%;
+  width: 6%;
   height: auto;
   margin: 0 5%;
+
+  &:nth-child(9) {
+    width: 4%;
+  }
 
   img {
     width: 5%;
@@ -90,10 +107,85 @@
 
 .boards {
   width: 70%;
-  height: 70%;
+  height: 72%;
   border: 1px solid darkgray;
-  margin-top: 26%;
+  margin-top: 24%;
   margin-left: 4%;
   overflow: hidden;
   position: relative;
+}
+
+.medal_btn_section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+
+  position: absolute;
+  bottom: 1%;
+  vertical-align: baseline;
+
+  input {
+    width: 4.8vw;
+    height: 3vh;
+    font-size: 1vw;
+    color: #fff;
+    font-weight: 500;
+
+    border: none;
+    border-radius: 5px;
+
+    &:nth-child(1) {
+      background-color: #2ea6df;
+    }
+
+    &:nth-child(2) {
+      background-color: #ec7451;
+    }
+
+    &:nth-child(3) {
+      background-color: #8ec21f;
+    }
+
+    &:nth-child(4) {
+      background-color: #e3007e;
+    }
+
+    &:nth-child(5) {
+      background-color: #5a5ea1;
+    }
+  }
+  .double_height {
+    height: 6vh;
+  }
+}
+
+.board_top_object {
+  position: absolute;
+  margin-top: 8%;
+  left: 72.5%;
+  z-index: 1;
+
+  img {
+    width: 18vw;
+  }
+}
+
+.board_title {
+  font-size: 1.5vw;
+  font-weight: 500;
+  color: #595757;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.refresh_btn {
+  width: 70%;
+  background-color: #ffffff00;
+  margin: 2% 0 2% 4%;
+  text-align: end;
+
+  img {
+    width: 2.5vw;
+  }
 }

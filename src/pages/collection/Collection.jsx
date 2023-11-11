@@ -53,7 +53,7 @@ export const Collection = () => {
     setScrollPosition(e.target.scrollTop);
   };
 
-  const categoryClass = language === "Ko" ? "category category_ko" : "category";
+  const categoryClass = ` category ${language === "Ko" ? "category_ko" : ""}`;
 
   const categoryItemClass =
     language === "Ko" ? "category_item_ko" : "category_item_en";
@@ -98,7 +98,7 @@ export const Collection = () => {
               <div className="figure">
                 <Link to={`/collection/detail/${i}`} onClick={storeScrollTop}>
                   <img
-                    src={item.thumbImg}
+                    src={`/assets/thumbnail/${item.thumbImg}`}
                     alt={item[title]}
                     className="image"
                   />

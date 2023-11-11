@@ -6,7 +6,7 @@ import "./medalDetail1.scss";
 export const MedalDetail1 = () => {
   return (
     <div className="medal_main_container">
-      <div className="section_wrapper1">
+      <div className="detail1_section_wrapper1">
         <div className="medal_detail1_seciton">
           <h2>건국훈장 ‒ 대한민국장(Republic of Korea Medal)</h2>
           <hr className="dividing_line" />
@@ -27,6 +27,28 @@ export const MedalDetail1 = () => {
             조병세, 조소앙, 진과부, 진기미, 최익현, 한용운, 허위, 홍범도
           </p>
         </div>
+        <div className="medal_detail1_img_1">
+          <img
+            src={"/assets/medal/medal_detail1_2.png"}
+            alt={"훈장 설명 이미지"}
+          />
+          <p>
+            1. 무궁화엽환(無窮花葉環): 대한민국의 번영을 표시 <br />
+            2. 태양지(太陽支): 국위 선양을 상징 <br />
+            3. 대지(大支): 국민의 높은 기개를 의미 <br />
+            4. 서지(瑞支): 노고가 찬연히 빛남을 의미 <br />
+            5. 자옥(紫玉): 노고의 결실을 의미 <br />
+            6. 승환(繩環): 민족의 결속을 표시 <br />
+            7. 태극(太極): 대한민국을 뜻함 <br />
+            ※수의 홍색은 정력적 투지력을, 황색은 단결을 상징
+          </p>
+        </div>
+      </div>
+      <div className="detail1_section_wrapper2">
+        <img
+          src={"/assets/medal/medal_detail1_1.jpeg"}
+          alt={"훈장 설명 이미지"}
+        />
       </div>
     </div>
   );

@@ -11,7 +11,8 @@ body {
 
   position: fixed;
   overflow: hidden;
-  touch-action: none;
+  touch-action: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 code {

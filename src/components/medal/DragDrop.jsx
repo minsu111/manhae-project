@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Object from "./Object";
 import { useDrop } from "react-dnd";
 
@@ -11,16 +11,22 @@ function DragDrop() {
   const [middleRibon, setMiddleRibon] = useState(null);
   const [bottomRibon, setBottomRibon] = useState(null);
   const [extraItems, setExtraItems] = useState([]);
+  const [subject, setSubject] = useState(
+    "아래 버튼을 눌러 주제를 선택해주세요."
+  );
+  const [subjectCliked, setSubjectClicked] = useState(false);
 
-  const [position, setPosition] = useState({ left: 0, top: 0 });
+  // const [position, setPosition] = useState({ left: 0, top: 0 });
 
-  const [{ isOver }, drop] = useDrop(() => ({
+  const [, drop] = useDrop(() => ({
     accept: "image",
-    drop: (item, monitor) => addImageToBoard(item.id),
+    drop: (item, monitor) => addImageToBoard(item.id, monitor),
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
     }),
   }));
+
+  const [lastDraggedPosition, setLastDraggedPosition] = useState({});
 
   const addImageToBoard = (id, monitor) => {
     const objectList = ObjectList.filter((object) => id === object.id);
@@ -38,22 +44,19 @@ function DragDrop() {
         setBottomRibon(item);
         break;
       case 4:
-        setExtraItems((board) => [...board, item]);
-
-        if (monitor) {
-          const delta = monitor.getDifferenceFromInitialOffset();
-          const left = Math.round(item.left + delta.x);
-          const top = Math.round(item.top + delta.y);
-          moveItem(left, top);
-        }
+        setExtraItems((board) => [
+          ...board,
+          { ...item, ...lastDraggedPosition[id] },
+        ]);
         break;
       default:
         break;
     }
   };
 
-  const moveItem = (left, top) => {
-    setPosition({ left, top });
+  const handleSubjectBtn = (e) => {
+    setSubject(e.target.value + " 훈장 만들기");
+    // setSubjectClicked(true);
   };
 
   return (
@@ -117,18 +120,29 @@ function DragDrop() {
           </div>
         </div>
       </div>
+      {/* board 섹션 */}
       <div className="right_section">
+        <div className="board_top_object">
+          <img
+            src={"/assets/medal/medal_board_object.png"}
+            alt={"훈장 만들기 보드"}
+          />
+        </div>
         <div className="boards" ref={drop}>
+          <div className="board_title">
+            <p>{subject}</p>
+          </div>
           {medal !== null && (
             <div
               style={{
                 position: "absolute",
-                top: `${medal.top}%`,
-                left: `${medal.left}%`,
+                top: `${medal.top}vh`,
+                left: `${medal.left}vw`,
+                width: `${medal.width}vw`,
                 zIndex: "3",
               }}
             >
-              <Object url={medal.url} id={medal.id} width={`${medal.width}%`} />
+              <Object url={medal.url} id={medal.id} width={medal.width} />
             </div>
           )}
           {middleRibon !== null && (
@@ -137,14 +151,10 @@ function DragDrop() {
                 position: "absolute",
                 top: `${middleRibon.top}%`,
                 left: `${middleRibon.left}%`,
-                zIndex: "2",
+                width: `${middleRibon.width}vw`,
               }}
             >
-              <Object
-                url={middleRibon.url}
-                id={middleRibon.id}
-                width={`${middleRibon.width}%`}
-              />
+              <Object url={middleRibon.url} id={middleRibon.id} />
             </div>
           )}
           {bottomRibon !== null && (
@@ -153,7 +163,8 @@ function DragDrop() {
                 position: "absolute",
                 top: `${bottomRibon.top}%`,
                 left: `${bottomRibon.left}%`,
-                zIndex: "1",
+                width: `${bottomRibon.width}vw`,
+                zIndex: "2",
               }}
             >
               <Object
@@ -166,13 +177,11 @@ function DragDrop() {
           {extraItems.map((object) => {
             return (
               <div
+                key={object.id}
                 style={{
-                  // position: "relative",
-                  // top: "30%",
-                  // left: "40%",
-                  position: "relative",
-                  left: position.left,
-                  top: position.top,
+                  position: "absolute",
+                  left: `${object.left}%`,
+                  top: `${object.top}%`,
                   zIndex: "4",
                 }}
               >
@@ -184,6 +193,42 @@ function DragDrop() {
               </div>
             );
           })}
+
+          <div className="medal_btn_section">
+            <input
+              type="button"
+              className={`${subject.includes("애국심") && "double_height"}`}
+              value="애국심"
+              onClick={handleSubjectBtn}
+            />
+            <input
+              type="button"
+              className={`${subject.includes("건강") && "double_height"}`}
+              value="건강"
+              onClick={handleSubjectBtn}
+            />
+            <input
+              type="button"
+              className={`${subject.includes("정직") && "double_height"}`}
+              value="정직"
+              onClick={handleSubjectBtn}
+            />
+            <input
+              type="button"
+              className={`${subject.includes("성실") && "double_height"}`}
+              value="성실"
+              onClick={handleSubjectBtn}
+            />
+            <input
+              type="button"
+              className={`${subject.includes("효도") && "double_height"}`}
+              value="효도"
+              onClick={handleSubjectBtn}
+            />
+          </div>
+        </div>
+        <div className="refresh_btn" onClick={() => {}}>
+          <img src={"/assets/medal/refresh_btn.png"} alt={"다시 만들기"} />
         </div>
       </div>
     </div>

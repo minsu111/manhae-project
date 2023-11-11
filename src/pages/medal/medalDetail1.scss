@@ -3,11 +3,23 @@
   height: 100vh;
   margin-top: -10%;
   padding-top: 8%;
+
+  display: flex;
 }
 
-.section_wrapper1 {
+.detail1_section_wrapper1 {
   width: 50%;
-  padding: 1% 8%;
+  padding: 4% 0 1% 6%;
+}
+
+.detail1_section_wrapper2 {
+  width: 40%;
+  padding: 6% 0 0 4%;
+
+  img {
+    width: 90%;
+    height: 85%;
+  }
 }
 
 .medal_detail1_seciton {
@@ -29,4 +41,21 @@
   width: 100%;
   height: 0.35vh;
   border: none;
+}
+
+.medal_detail1_img_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2vw;
+  margin-top: 10%;
+
+  img {
+    width: 16vw;
+  }
+
+  p {
+    font-size: 1.1vw;
+    line-height: 1.7em;
+  }
 }
