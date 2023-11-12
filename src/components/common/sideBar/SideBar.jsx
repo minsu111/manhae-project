@@ -13,6 +13,8 @@ const SideBar = () => {
     imageUrl = "/assets/image/sideBar3.png";
   } else if (location.pathname.includes("/medal")) {
     imageUrl = "/assets/image/sideBar4.png";
+  } else if (location.pathname.includes("/quiz")) {
+    imageUrl = "/assets/image/sideBar5.png";
   }
 
   return (
