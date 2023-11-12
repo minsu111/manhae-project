@@ -14,19 +14,29 @@ function DragDrop() {
   const [subject, setSubject] = useState(
     "아래 버튼을 눌러 주제를 선택해주세요."
   );
-  const [subjectCliked, setSubjectClicked] = useState(false);
 
   // const [position, setPosition] = useState({ left: 0, top: 0 });
 
   const [, drop] = useDrop(() => ({
     accept: "image",
+    //canDrop: (item, monitor) => canDropImageToBoard(item.id, monitor),
     drop: (item, monitor) => addImageToBoard(item.id, monitor),
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
     }),
   }));
 
-  const [lastDraggedPosition, setLastDraggedPosition] = useState({});
+  // const canDropImageToBoard = (id, monitor) => {
+  //   var location = monitor.getSourceClientOffset();
+  //   console.log(location);
+  //   if (location.x < 1000 || location.x > 2000) {
+  //     return false;
+  //   } else if (location.y < 400 || location.y > 800) {
+  //     return false;
+  //   } else {
+  //     return true;
+  //   }
+  // };
 
   const addImageToBoard = (id, monitor) => {
     const objectList = ObjectList.filter((object) => id === object.id);
@@ -44,10 +54,66 @@ function DragDrop() {
         setBottomRibon(item);
         break;
       case 4:
-        setExtraItems((board) => [
-          ...board,
-          { ...item, ...lastDraggedPosition[id] },
-        ]);
+        const imageboxPos = document
+          .getElementById("imagebox")
+          .getBoundingClientRect();
+        const dragStartPos = monitor.getInitialClientOffset();
+        const itemPos = monitor.getClientOffset();
+        // if (imageboxPos.x < dragStartPos.x && imageboxPos.y < dragStartPos.y) {
+        //   // 박스안에서 드래그시작일 경우 기존 아이템 삭제
+        //   const x = dragStartPos.x - imageboxPos.x;
+        //   const y = dragStartPos.y - imageboxPos.y;
+        //   let list = [...extraItems];
+        //   setExtraItems(
+        //     // list.filter(
+        //     //   (object) =>
+        //     //     id !== object.id || x !== object.left || y !== object.top
+        //     // )
+        //     list.filter(
+        //       (object) =>
+        //         id !== object.id ||
+        //         Math.abs(x - object.left) > Number.EPSILON ||
+        //         Math.abs(y - object.top) > Number.EPSILON
+        //     )
+        //   );
+        // }
+        // let itemExtra = JSON.parse(JSON.stringify(item));
+        // itemExtra.left = itemPos.x - imageboxPos.x;
+        // itemExtra.top = itemPos.y - imageboxPos.y;
+        // // setExtraItems((extraItems) => [...extraItems, itemExtra]);
+        // setExtraItems((prevExtraItems) => {
+        //   const updatedItems = prevExtraItems.filter(
+        //     (object) => id !== object.id
+        //   );
+        //   return [...updatedItems, itemExtra];
+        // });
+        if (imageboxPos.x < dragStartPos.x && imageboxPos.y < dragStartPos.y) {
+          // 박스안에서 드래그시작일 경우 기존 아이템 유지
+          setExtraItems((prevExtraItems) => {
+            const updatedItems = prevExtraItems.map((object) => {
+              if (id === object.id) {
+                return {
+                  ...object,
+                  left: itemPos.x - imageboxPos.x,
+                  top: itemPos.y - imageboxPos.y,
+                };
+              }
+              return object;
+            });
+            return updatedItems;
+          });
+        } else {
+          // 새로운 아이템 추가
+          setExtraItems((prevExtraItems) => [
+            ...prevExtraItems,
+            {
+              ...item,
+              left: itemPos.x - imageboxPos.x,
+              top: itemPos.y - imageboxPos.y,
+            },
+          ]);
+        }
+
         break;
       default:
         break;
@@ -56,7 +122,6 @@ function DragDrop() {
 
   const handleSubjectBtn = (e) => {
     setSubject(e.target.value + " 훈장 만들기");
-    // setSubjectClicked(true);
   };
 
   return (
@@ -128,7 +193,7 @@ function DragDrop() {
             alt={"훈장 만들기 보드"}
           />
         </div>
-        <div className="boards" ref={drop}>
+        <div className="boards" id="imagebox" ref={drop}>
           <div className="board_title">
             <p>{subject}</p>
           </div>
@@ -142,7 +207,7 @@ function DragDrop() {
                 zIndex: "3",
               }}
             >
-              <Object url={medal.url} id={medal.id} width={medal.width} />
+              <Object url={medal.url} id={medal.id} />
             </div>
           )}
           {middleRibon !== null && (
@@ -167,11 +232,7 @@ function DragDrop() {
                 zIndex: "2",
               }}
             >
-              <Object
-                url={bottomRibon.url}
-                id={bottomRibon.id}
-                width={`${bottomRibon.width}%`}
-              />
+              <Object url={bottomRibon.url} id={bottomRibon.id} />
             </div>
           )}
           {extraItems.map((object) => {
@@ -180,16 +241,13 @@ function DragDrop() {
                 key={object.id}
                 style={{
                   position: "absolute",
-                  left: `${object.left}%`,
-                  top: `${object.top}%`,
+                  left: `calc(${object.left}px - ${object.width / 2}vw)`,
+                  top: `calc(${object.top}px - ${object.width / 2}vw)`,
+                  width: `${object.width}vw`,
                   zIndex: "4",
                 }}
               >
-                <Object
-                  url={object.url}
-                  id={object.id}
-                  width={`${object.width}%`}
-                />
+                <Object url={object.url} id={object.id} />
               </div>
             );
           })}
@@ -227,7 +285,15 @@ function DragDrop() {
             />
           </div>
         </div>
-        <div className="refresh_btn" onClick={() => {}}>
+        <div
+          className="refresh_btn"
+          onClick={() => {
+            setMedal(null);
+            setMiddleRibon(null);
+            setBottomRibon(null);
+            setExtraItems([]);
+          }}
+        >
           <img src={"/assets/medal/refresh_btn.png"} alt={"다시 만들기"} />
         </div>
       </div>

@@ -14,6 +14,7 @@ export const ManhaeStoryDetail = () => {
   const language = sessionStorage.getItem("language");
   const title = "title" + language;
   const text = "text" + language;
+  const videoURL = "video" + language;
 
   return (
     <div className="story_detail_section">
@@ -26,7 +27,7 @@ export const ManhaeStoryDetail = () => {
       <div className="animation_content">
         {/* <VideoPlayer videoURL={ManhaeStoryList[id].videoKo} /> */}
         <ReactPlayer
-          url={ManhaeStoryList[id].videoKo}
+          url={ManhaeStoryList[id][videoURL]}
           playing
           controls={false}
           width="100%"

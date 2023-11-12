@@ -35,7 +35,9 @@ export const ManhaeStory = () => {
               src={"/assets/image/manhaeStoryBg.png"}
               alt={"만해이야기"}
             />
-            <p>{c[title]}</p>
+            <p className={language === "Ko" ? "" : "story_title_en"}>
+              {c[title]}
+            </p>
           </div>
         ))}
       </div>

@@ -48,7 +48,7 @@
   column-gap: 4vw;
   align-items: center;
   overflow-y: scroll;
-  margin-bottom: 7%;
+  margin-bottom: 10%;
 
   &::-webkit-scrollbar {
     display: none;
@@ -77,5 +77,10 @@
     word-break: break-all;
     white-space: pre-wrap; // 줄바꿈 요소 적용 가능
     vertical-align: middle;
+  }
+
+  .story_title_en {
+    padding: 0;
+    line-height: 2.7vh;
   }
 }

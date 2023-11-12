@@ -1,25 +1,13 @@
-// import React from "react";
-// import { useDrag } from "react-dnd";
-
-// function Object({ id, url, width }) {
-//   const [{ isDragging }, drag] = useDrag(() => ({
-//     type: "image",
-//     item: { id: id },
-//     collect: (monitor) => ({
-//       isDragging: !!monitor.isDragging(),
-//     }),
-//   }));
-//   return <img ref={drag} src={url} alt={"object"} style={{ width: "100%" }} />;
-// }
-
-// export default Object;
-
 import React, { useState } from "react";
 import { useDrag } from "react-dnd";
+import ObjectList from "../../data/MedalObjects";
 
 function Object({ id, url }) {
   const [isDragging, setIsDragging] = useState(false);
   const [draggingPosition, setDraggingPosition] = useState({ x: 0, y: 0 });
+
+  const objectList = ObjectList.filter((object) => id === object.id);
+  const ghostImageSize = objectList[0].width;
 
   const [{ isDragging: isDraggingMonitor }, drag, preview] = useDrag(() => ({
     type: "image",
@@ -36,15 +24,16 @@ function Object({ id, url }) {
 
     const touch = e.touches[0];
     const { clientX, clientY } = touch;
-    setDraggingPosition({ x: clientX, y: clientY });
+    setDraggingPosition({
+      x: clientX,
+      y: clientY,
+    });
     setIsDragging(true);
   };
 
   const handleTouchEnd = () => {
     setIsDragging(false);
   };
-
-  const ghostImageSize = 25;
 
   return (
     <>
@@ -53,12 +42,13 @@ function Object({ id, url }) {
           src={url}
           alt={"object ghost"}
           style={{
-            position: "fixed",
-            top: draggingPosition.y - ghostImageSize / 2,
-            left: draggingPosition.x - ghostImageSize / 2,
+            position: "absolute",
+            top: `calc(${draggingPosition.y}px - ${ghostImageSize / 2}vw)`,
+            left: `calc(${draggingPosition.x}px - ${ghostImageSize / 2}vw)`,
             opacity: 0.5,
             pointerEvents: "none",
-            width: "5vw",
+            width: `${ghostImageSize}vw`,
+            zIndex: 10,
           }}
         />
       )}
