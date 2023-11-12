@@ -4,7 +4,7 @@ import { useDrop } from "react-dnd";
 
 import ObjectList from "../../data/MedalObjects";
 
-import "./dragDrop.scss";
+import "./makingMedal.scss";
 
 function DragDrop() {
   const [medal, setMedal] = useState(null);
@@ -40,7 +40,6 @@ function DragDrop() {
 
   const addImageToBoard = (id, monitor) => {
     const objectList = ObjectList.filter((object) => id === object.id);
-
     const item = objectList[0];
 
     switch (item.groupId) {
@@ -59,34 +58,6 @@ function DragDrop() {
           .getBoundingClientRect();
         const dragStartPos = monitor.getInitialClientOffset();
         const itemPos = monitor.getClientOffset();
-        // if (imageboxPos.x < dragStartPos.x && imageboxPos.y < dragStartPos.y) {
-        //   // 박스안에서 드래그시작일 경우 기존 아이템 삭제
-        //   const x = dragStartPos.x - imageboxPos.x;
-        //   const y = dragStartPos.y - imageboxPos.y;
-        //   let list = [...extraItems];
-        //   setExtraItems(
-        //     // list.filter(
-        //     //   (object) =>
-        //     //     id !== object.id || x !== object.left || y !== object.top
-        //     // )
-        //     list.filter(
-        //       (object) =>
-        //         id !== object.id ||
-        //         Math.abs(x - object.left) > Number.EPSILON ||
-        //         Math.abs(y - object.top) > Number.EPSILON
-        //     )
-        //   );
-        // }
-        // let itemExtra = JSON.parse(JSON.stringify(item));
-        // itemExtra.left = itemPos.x - imageboxPos.x;
-        // itemExtra.top = itemPos.y - imageboxPos.y;
-        // // setExtraItems((extraItems) => [...extraItems, itemExtra]);
-        // setExtraItems((prevExtraItems) => {
-        //   const updatedItems = prevExtraItems.filter(
-        //     (object) => id !== object.id
-        //   );
-        //   return [...updatedItems, itemExtra];
-        // });
         if (imageboxPos.x < dragStartPos.x && imageboxPos.y < dragStartPos.y) {
           // 박스안에서 드래그시작일 경우 기존 아이템 유지
           setExtraItems((prevExtraItems) => {
@@ -108,6 +79,7 @@ function DragDrop() {
             ...prevExtraItems,
             {
               ...item,
+              index: prevExtraItems.length,
               left: itemPos.x - imageboxPos.x,
               top: itemPos.y - imageboxPos.y,
             },

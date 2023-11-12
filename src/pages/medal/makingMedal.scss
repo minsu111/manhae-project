@@ -1,9 +1,196 @@
 .making_medal_container {
+  width: 94%;
+  height: 100vh;
+  padding-left: 6%;
+  margin-top: -5%;
+  padding-top: 5%;
+
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.left_section,
+.right_section {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.making_description {
+  width: 100%;
+  height: 20%;
+  margin: 5% 0;
+
+  h1 {
+    font-size: 2.8vw;
+    font-weight: 600;
+    color: #595757;
+  }
+
+  hr {
+    background-color: #2ea6df;
+    width: 100%;
+    height: 0.35vh;
+    border: none;
+  }
+
+  p {
+    font-size: 1.3vw;
+    padding: 2% 0;
+    line-height: 1.5em;
+  }
+}
+
+.objects_wrapper {
+  width: 100%;
+  height: 80%;
+  margin-top: 2%;
+
+  hr {
+    margin: 6% 0;
+    border: 0.5px solid darkgray;
+  }
+}
+.objects1,
+.objects2,
+.objects3,
+.objects4 {
+  display: flex;
+  justify-content: center;
+  width: 38vw;
+}
+
+.objects4 {
+  flex-wrap: wrap;
+  row-gap: 5vh;
+}
+
+.medal_objects_group1 {
+  margin: 0 9%;
+}
+
+.medal_objects_group2 {
+  margin: 0 5%;
+}
+
+.objects3 {
+  margin-top: 8%;
+}
+
+.medal_objects_group3 {
+  margin: 0 4.5%;
+
+  img {
+    width: 7%;
+  }
+}
+
+.medal_objects_group4 {
+  width: 6%;
+  height: auto;
+  margin: 0 5%;
+
+  &:nth-child(9) {
+    width: 4%;
+  }
+
+  img {
+    width: 5%;
+    margin-bottom: 5%;
+  }
+}
+
+.boards {
+  width: 70%;
+  height: 72%;
+  border: 1px solid darkgray;
+  margin-top: 24%;
+  margin-left: 4%;
+  overflow: hidden;
+  position: relative;
 }
 
 .drop_section {
-  width: 30vw;
-  aspect-ratio: 2/3;
-  border: 1px solid #000;
+  width: 100%;
+  height: 80%;
+}
+
+.medal_btn_section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+
+  position: absolute;
+  bottom: 1%;
+  vertical-align: baseline;
+
+  input {
+    width: 4.8vw;
+    height: 3vh;
+    font-size: 1vw;
+    color: #fff;
+    font-weight: 500;
+
+    border: none;
+    border-radius: 5px;
+
+    &:nth-child(1) {
+      background-color: #2ea6df;
+    }
+
+    &:nth-child(2) {
+      background-color: #ec7451;
+    }
+
+    &:nth-child(3) {
+      background-color: #8ec21f;
+    }
+
+    &:nth-child(4) {
+      background-color: #e3007e;
+    }
+
+    &:nth-child(5) {
+      background-color: #5a5ea1;
+    }
+  }
+  .double_height {
+    height: 6vh;
+    margin-top: -3vh;
+  }
+}
+
+.board_top_object {
+  position: absolute;
+  margin-top: 8%;
+  left: 72.5%;
+  z-index: 1;
+
+  img {
+    width: 18vw;
+  }
+}
+
+.board_title {
+  font-size: 1.5vw;
+  font-weight: 500;
+  color: #595757;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.refresh_btn {
+  width: 70%;
+  background-color: #ffffff00;
+  margin: 2% 0 2% 4%;
+  text-align: end;
+
+  img {
+    width: 2.5vw;
+  }
 }

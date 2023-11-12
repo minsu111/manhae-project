@@ -2,20 +2,26 @@ import React, { useState } from "react";
 import { useDrag } from "react-dnd";
 import ObjectList from "../../data/MedalObjects";
 
-function Object({ id, url }) {
+function Object({ medalItem }) {
+  const id = medalItem.id;
+  const url = medalItem.url;
+  const index = medalItem.index || 0;
   const [isDragging, setIsDragging] = useState(false);
   const [draggingPosition, setDraggingPosition] = useState({ x: 0, y: 0 });
+  const [dragStartPos, setDragStartPos] = useState({ x: 0, y: 0 });
 
   const objectList = ObjectList.filter((object) => id === object.id);
   const ghostImageSize = objectList[0].width;
 
-  const [{ isDragging: isDraggingMonitor }, drag, preview] = useDrag(() => ({
-    type: "image",
-    item: { id: id },
-    collect: (monitor) => ({
-      isDragging: !!monitor.isDragging(),
-    }),
-  }));
+  const [{ isDragging: isDraggingMonitor }, drag, drop, preview] = useDrag(
+    () => ({
+      type: "image",
+      item: { id: id, index: index },
+      collect: (monitor) => ({
+        isDragging: !!monitor.isDragging(),
+      }),
+    })
+  );
 
   const handleTouchMove = (e) => {
     if (!isDraggingMonitor) {
@@ -24,6 +30,7 @@ function Object({ id, url }) {
 
     const touch = e.touches[0];
     const { clientX, clientY } = touch;
+
     setDraggingPosition({
       x: clientX,
       y: clientY,
@@ -42,21 +49,21 @@ function Object({ id, url }) {
           src={url}
           alt={"object ghost"}
           style={{
-            position: "absolute",
+            position: "fixed",
             top: `calc(${draggingPosition.y}px - ${ghostImageSize / 2}vw)`,
             left: `calc(${draggingPosition.x}px - ${ghostImageSize / 2}vw)`,
-            opacity: 0.5,
+            opacity: index ? 1 : 0.5,
             pointerEvents: "none",
             width: `${ghostImageSize}vw`,
             zIndex: 10,
           }}
         />
       )}
+
       <img
-        ref={(node) => preview(node)}
         src={url}
         alt={"object"}
-        style={{ width: "100%" }}
+        style={{ width: "100%", opacity: isDragging && index !== 0 ? 0 : 1 }}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
         ref={drag}
