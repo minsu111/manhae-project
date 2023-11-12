@@ -26,7 +26,10 @@ export const Commentary = () => {
       {VideoList.map((v, i) => {
         return (
           <div key={i} className="video_thumb_items">
-            <div onClick={() => openModalHandler(v[video])} className="figure">
+            <div
+              onClick={() => openModalHandler(`/video/commentary/${v[video]}`)}
+              className="figure"
+            >
               <img
                 src={v.thumbImg}
                 alt={"영상 섬네일"}

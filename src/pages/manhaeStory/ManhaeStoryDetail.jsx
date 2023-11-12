@@ -27,7 +27,7 @@ export const ManhaeStoryDetail = () => {
       <div className="animation_content">
         {/* <VideoPlayer videoURL={ManhaeStoryList[id].videoKo} /> */}
         <ReactPlayer
-          url={ManhaeStoryList[id][videoURL]}
+          url={`/video/manhaeStory/${ManhaeStoryList[id][videoURL]}`}
           playing
           controls={false}
           width="100%"
