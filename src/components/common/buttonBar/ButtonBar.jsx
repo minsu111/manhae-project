@@ -28,13 +28,13 @@ export const ButtonBar = ({ isZoomEnabled, isModal }) => {
           <>
             <button>
               <img
-                src={"/assets/image/아이콘 확대01 77x67.png"}
+                src={"/assets/image/plus_icon01 77x67.png"}
                 alt={"확대버튼"}
               />
             </button>
             <button>
               <img
-                src={"/assets/image/아이콘 축소01 77x67.png"}
+                src={"/assets/image/minus_icon01 77x67.png"}
                 alt={"축소버튼"}
               />
             </button>

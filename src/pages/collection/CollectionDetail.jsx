@@ -9,6 +9,7 @@ import { Spinner } from "../../components/common/spinner/Spinner";
 
 export const CollectionDetail = ({ fontSize }) => {
   const [subId, setSubId] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const { id } = useParams();
 
   const ClickInnerImg = (subId, e) => {
@@ -26,6 +27,10 @@ export const CollectionDetail = ({ fontSize }) => {
         setSubId(i);
         break;
       }
+    }
+
+    if (CollectionList.length > 0) {
+      setIsLoading(false);
     }
   }, [id]);
 

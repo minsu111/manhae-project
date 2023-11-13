@@ -182,6 +182,11 @@
   color: #595757;
   text-align: center;
   margin-top: 10%;
+  padding: 0 5%;
+
+  p {
+    white-space: pre-wrap;
+  }
 }
 
 .refresh_btn {

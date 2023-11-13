@@ -16,10 +16,7 @@ export const ToastNotification = ({ openToast, setOpentToast }) => {
   const toastClasses = `toast_alert ${openToast ? "show" : ""}`;
   return (
     <div className={toastClasses}>
-      <img
-        src="/assets/image/소장품감상 시작페이지 중앙.png"
-        alt="토스트 안내창"
-      />
+      <img src="/assets/image/collection_toast.png" alt="토스트 안내창" />
     </div>
   );
 };

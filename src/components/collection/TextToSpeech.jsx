@@ -99,7 +99,7 @@ const TextToSpeech = ({ text }) => {
                 : "/assets/image/soundOnBtn121.png"
             }
             alt={isPlaying ? "소리 끄기 버튼" : "소리 켜기 버튼"}
-            style={{ width: "50px", height: "50px" }}
+            style={{ width: "3vw" }}
           />
         </button>
       ) : null}

@@ -41,7 +41,8 @@ export const Quiz1 = () => {
                 />
               </div>
               <div className="quiz1_img_desc">
-                송나라의 사마광이 영종의 명에 따라 펴낸 중국의 편년체 역사서
+                유교• 불교• 도교에서 마음 수양에 필요한 중요한 어록을 모은 심신
+                수양서
               </div>
             </div>
             <div className="dot">
@@ -51,14 +52,10 @@ export const Quiz1 = () => {
           <div className="quiz1_content">
             <div className="quiz1_img_wrapper">
               <div className="quiz1_img">
-                <img
-                  src={"/assets/thumbnail/만해2208_thumbnail.png"}
-                  alt={"자치통감"}
-                />
+                <img src={"/assets/quiz/quiz1_img.png"} alt={"자치통감"} />
               </div>
               <div className="quiz1_img_desc">
-                청나라 말 근대사상가 양계초가 서양사상을 소개 및 현실을 비판한
-                계몽서적
+                송나라의 사마광이 영종의 명에 따라 펴낸 중국의 편년체 역사서
               </div>
             </div>
             <div className="dot">
@@ -75,8 +72,8 @@ export const Quiz1 = () => {
                 />
               </div>
               <div className="quiz1_img_desc">
-                유교• 불교• 도교에서 마음 수양에 필요한 중요한 어록을 모은 심신
-                수양서
+                청나라 말 근대사상가 양계초가 서양사상을 소개 및 현실을 비판한
+                계몽서적
               </div>
             </div>
             <div className="dot">
