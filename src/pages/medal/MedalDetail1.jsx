@@ -49,36 +49,39 @@ export const MedalDetail1 = () => {
           </div>
         </div>
       ) : (
-        <div className="detail1_section_wrapper1 detail1_en">
-          <div className="medal_detail1_seciton">
-            <h2>
-              Order of Merit for National Foundation - Republic of Korea Medal
-            </h2>
-            <hr className="dividing_line" />
-            <div className="detail1_en_desc">
-              Among the Order of Merit for National Foundation, the highest
-              grade is the Republic of Korea Medal, which was awarded to 33
-              distinguished individuals including Provisional Government
-              President Kim Gu, General Kim Jwa-jin of the Cheongsan-ri Battle,
-              An Chang-ho, Ahn Jung-geun who assassinated Ito Hirobumi,
-              resistance writer Han Yong-un, and Yu Gwan-sun, a martyr of the
-              March 1st Movement.
+        <div className="detail1_section_wrapper1">
+          <div className="detail1_en_wrapper">
+            <div className="medal_detail1_seciton">
+              <h2 className="en_title">
+                Order of Merit for National Foundation - Republic of Korea Medal
+              </h2>
+              <hr className="dividing_line" />
+              <div className="detail1_en_desc">
+                Among the Order of Merit for National Foundation, the highest
+                grade is the Republic of Korea Medal, which was awarded to 33
+                distinguished individuals including Provisional Government
+                President Kim Gu, General Kim Jwa-jin of the Cheongsan-ri
+                Battle, An Chang-ho, Ahn Jung-geun who assassinated Ito
+                Hirobumi, resistance writer Han Yong-un, and Yu Gwan-sun, a
+                martyr of the March 1st Movement.
+              </div>
+            </div>
+            <div className="medal_detail1_seciton detail1_en">
+              <h2>The full list of 33 honorees</h2>
+              <hr className="dividing_line" />
+              <div className="detail1_en_desc">
+                The full list of 33 honorees is as follows: Kang Woo-kyu, Kim
+                Gu, Kim Kyu-sik, Kim Jwa-jin, Kim Chang-sook, Min Yeong-hwan,
+                Seo Jae-pil, Sohn Moon, Sohn Byung-hee, Song Mi-ryeong, Shin
+                Ik-hee, Ahn Jung-geun, Ahn Chang-ho, Yeo Un-hyeong, Oh Dong-jin,
+                Yu Gwan-sun, Yun Bong-gil, Lee Gang-nyeon, Syngman Rhee, Lee
+                Seung-hoon, Lee Si-young, Lee Jun, Lim Byeong-jik, Chiang
+                Kai-shek, Jo Man-sik, Cho Byeong-se, Cho So-ang, Jin Gwa-bu, Jin
+                Ki-mi, Choi Ik-hyeon, Han Yong-un, Heo Wui, Hong Beom-do
+              </div>
             </div>
           </div>
-          <div className="medal_detail1_seciton detail1_en">
-            <h2>The full list of 33 honorees</h2>
-            <hr className="dividing_line" />
-            <div className="detail1_en_desc">
-              The full list of 33 honorees is as follows: Kang Woo-kyu, Kim Gu,
-              Kim Kyu-sik, Kim Jwa-jin, Kim Chang-sook, Min Yeong-hwan, Seo
-              Jae-pil, Sohn Moon, Sohn Byung-hee, Song Mi-ryeong, Shin Ik-hee,
-              Ahn Jung-geun, Ahn Chang-ho, Yeo Un-hyeong, Oh Dong-jin, Yu
-              Gwan-sun, Yun Bong-gil, Lee Gang-nyeon, Syngman Rhee, Lee
-              Seung-hoon, Lee Si-young, Lee Jun, Lim Byeong-jik, Chiang
-              Kai-shek, Jo Man-sik, Cho Byeong-se, Cho So-ang, Jin Gwa-bu, Jin
-              Ki-mi, Choi Ik-hyeon, Han Yong-un, Heo Wui, Hong Beom-do
-            </div>
-          </div>
+
           <div className="medal_detail1_img_1">
             <img
               src={"/assets/medal/medal_detail1_2.png"}

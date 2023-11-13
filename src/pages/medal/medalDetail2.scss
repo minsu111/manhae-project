@@ -22,13 +22,14 @@
   padding-right: 5%;
 
   h2 {
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: 500;
+    margin-bottom: 1%;
   }
 
   p {
-    font-size: 1.4vw;
-    line-height: 1.4em;
+    font-size: 1vw;
+    line-height: 1.8vw;
     padding: 2% 0;
   }
 }
@@ -46,22 +47,5 @@
   img {
     width: 95%;
     text-align: center;
-  }
-}
-
-.detail1_en {
-  h2 {
-    font-size: 2vw;
-  }
-
-  p {
-    font-size: 1.3vw;
-    line-height: 1.2em;
-    padding: 2% 0;
-  }
-
-  .en_desc_wrapper {
-    height: 10vh;
-    overflow-y: scroll;
   }
 }

@@ -1,7 +1,9 @@
 .video_wrapper {
   position: absolute;
 
-  box-shadow: 3px -1px 6px 6px rgb(230, 230, 230);
+  border: 2px solid #e7e7e7;
+
+  // box-shadow: 3px -1px 3px 3px rgb(230, 230, 230);
 
   &.no-box-shadow {
     box-shadow: none;

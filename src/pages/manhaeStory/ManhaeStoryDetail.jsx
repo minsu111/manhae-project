@@ -20,23 +20,23 @@ export const ManhaeStoryDetail = () => {
     <div className="story_detail_section">
       <img
         className="top_img"
-        src={"/assets/image/manhaeStoryObject.png"}
+        src={"/assets/image/manhaeStory_object.png"}
         alt={"만해"}
       />
       <h1>{ManhaeStoryList[id][title]}</h1>
-      <div className="animation_content">
-        {/* <VideoPlayer videoURL={ManhaeStoryList[id].videoKo} /> */}
+      <div className="story_content_wrapper">
         <ReactPlayer
           url={`/video/manhaeStory/${ManhaeStoryList[id][videoURL]}`}
           playing
           controls={false}
-          width="100%"
+          width="40vw"
           height="100%"
         />
-      </div>
-      <div className="text_content">
-        <p>{ManhaeStoryList[id][text]}</p>
-        <p>{ManhaeStoryList[id].source}</p>
+
+        <div className="text_content">
+          <p>{ManhaeStoryList[id][text]}</p>
+          <p>{ManhaeStoryList[id].source}</p>
+        </div>
       </div>
     </div>
   );

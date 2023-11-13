@@ -17,13 +17,15 @@
   margin: 5% 0;
 
   h1 {
-    font-size: 2.8vw;
+    font-size: 2vw;
     font-weight: 800;
     color: #595757;
+    margin-bottom: 1%;
   }
 
   p {
-    font-size: 1.5vw;
+    font-size: 1vw;
+    line-height: 1.8vw;
     padding: 2% 0;
   }
 }
@@ -32,12 +34,14 @@
   margin: 5% 0;
 
   h2 {
-    font-size: 2.2vw;
+    font-size: 1.5vw;
     font-weight: 500;
+    margin-bottom: 1%;
   }
 
   p {
-    font-size: 1.5vw;
+    font-size: 1vw;
+    line-height: 1.8vw;
     padding: 2% 0;
   }
 }
@@ -65,12 +69,13 @@
   span {
     position: absolute;
     left: 10%;
-    font-size: 1.4vw;
-    padding-top: 3%;
+    font-size: 1.2vw;
+    padding-top: 4.5%;
   }
 }
 
 .medal_main_btn_2_text {
-  margin-top: 2vh;
-  line-height: 4.5vh;
+  font-size: 1.2vw;
+  margin-top: 1.5vh;
+  line-height: 4.6vh;
 }

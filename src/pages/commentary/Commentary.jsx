@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import VideoList from "../../data/Commentary";
+
+import VideoList from "../../data/Commentary";
 
 import "./commentary.scss";
 import { VideoPlayer } from "../../components/commentary/VideoPlayer";

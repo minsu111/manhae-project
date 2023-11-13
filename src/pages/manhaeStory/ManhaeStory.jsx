@@ -15,7 +15,7 @@ export const ManhaeStory = () => {
     <div className="manhae_story_wrapper">
       <img
         className="top_img"
-        src={"/assets/image/manhaeStoryObject.png"}
+        src={"/assets/image/manhaeStory_object.png"}
         alt={"만해"}
       />
       <div className="title_section">
