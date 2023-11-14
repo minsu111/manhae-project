@@ -6,6 +6,10 @@ import "./videoPlayer.scss";
 export const VideoPlayer = ({ videoURL }) => {
   const pathname = window.location.pathname;
 
+  const onError = (error) => {
+    console.error("Video error:", error);
+  };
+
   const shouldAddNoBoxShadowClass = pathname.includes("/manhaeStory");
 
   const wrapperClassName = `video_wrapper ${
@@ -20,6 +24,7 @@ export const VideoPlayer = ({ videoURL }) => {
         controls={true}
         width="50vw"
         height="50%"
+        onError={onError}
       />
     </div>
   );

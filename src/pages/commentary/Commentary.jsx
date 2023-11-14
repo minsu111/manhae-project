@@ -26,7 +26,7 @@ export const Commentary = () => {
     <section className="video_thumb_section">
       {VideoList.map((v, i) => {
         return (
-          <div key={i} className="video_thumb_items">
+          <div key={i + language} className="video_thumb_items">
             <div
               onClick={() =>
                 openModalHandler(

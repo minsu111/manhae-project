@@ -25,16 +25,13 @@ export const ManhaeStory = () => {
       <div className="story_title_section">
         {ManhaeStoryList.map((c, i) => (
           <div
+            key={c.id}
             className="story_item"
             onClick={() => {
               navigate(`/manhaeStory/detail/${i}`);
             }}
           >
-            <img
-              key={i}
-              src={"/assets/image/manhaeStoryBg.png"}
-              alt={"만해이야기"}
-            />
+            <img src={"/assets/image/manhaeStoryBg.png"} alt={"만해이야기"} />
             <p className={language === "Ko" ? "" : "story_title_en"}>
               {c[title]}
             </p>

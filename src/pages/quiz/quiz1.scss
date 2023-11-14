@@ -13,8 +13,8 @@
   color: #595757;
 
   h1 {
-    font-size: 2.8vw;
-    font-weight: 500;
+    font-size: 2.3vw;
+    font-weight: 600;
   }
 
   hr {
@@ -22,11 +22,12 @@
     width: 100%;
     height: 0.35vh;
     border: none;
-    margin: 1em 0;
+    margin: 1% 0;
   }
 
   p {
-    font-size: 1.4vw;
+    font-size: 1vw;
+    line-height: 1.8vw;
     padding: 2% 0;
   }
 }
@@ -81,8 +82,8 @@
   .quiz1_img_desc {
     width: 100%;
     height: 30%;
-    font-size: 1.1vw;
-    line-height: 1.1em;
+    font-size: 0.9vw;
+    line-height: 1.2vw;
     text-align: left;
   }
 }
@@ -128,10 +129,10 @@
 
     p {
       width: 100%;
-      font-size: 1.3vw;
+      font-size: 1vw;
       font-weight: 600;
       position: absolute;
-      top: 20%;
+      top: 22%;
       text-align: center;
     }
   }
@@ -164,9 +165,9 @@
     p {
       text-align: center;
       font-weight: 700;
-      font-size: 1.2vw;
+      font-size: 1.1vw;
       position: absolute;
-      top: 34%;
+      top: 30%;
       left: 20%;
     }
   }
