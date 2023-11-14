@@ -25,6 +25,7 @@ import { HTML5toTouch } from "rdndmb-html5-to-touch";
 
 import "./App.scss";
 import "./styles/reset.scss";
+import { Quiz2 } from "./pages/quiz/Quiz2";
 
 function App() {
   sessionStorage.setItem("language", "Ko");
@@ -51,7 +52,10 @@ function App() {
             <Route path="/medal/2" element={<MedalDetail2 />} />
             <Route path="/medal/3" element={<MedalDetail3 />} />
             <Route path="/medal/making" element={<MakingMedal />} />
+
             <Route path="/quiz/1" element={<Quiz1 />} />
+            <Route path="/quiz/2" element={<Quiz2 />} />
+            {/* <Route path="/quiz/3" element={<Quiz3 />} /> */}
           </Routes>
         </Layout>
       </Router>
