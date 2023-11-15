@@ -54,7 +54,7 @@ function App() {
             <Route path="/medal/making" element={<MakingMedal />} />
 
             <Route path="/quiz/1" element={<Quiz1 />} />
-            <Route path="/quiz/2" element={<Quiz2 />} />
+            <Route path="/quiz/:id" element={<Quiz2 />} />
             {/* <Route path="/quiz/3" element={<Quiz3 />} /> */}
           </Routes>
         </Layout>

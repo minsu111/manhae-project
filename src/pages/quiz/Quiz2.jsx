@@ -1,50 +1,68 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+
+import QuizList from "../../data/QuizKo.json";
+import QuizListEn from "../../data/QuizEn.json";
 
 import "./quiz2.scss";
+import { useNavigate, useParams } from "react-router-dom";
 
 export const Quiz2 = () => {
   const [result, setResult] = useState(null);
   const [btnActive, setBtnActive] = useState("");
 
+  const { id } = useParams();
+  // 다국어 처리
+  const language = sessionStorage.getItem("language");
+
+  const quizList =
+    language === "Ko"
+      ? QuizList.filter((object) => id === object.id)
+      : QuizListEn.filter((object) => id === object.id);
+  const quizItem = quizList[0];
+
+  const navigate = useNavigate();
+
   const handleQuizBtn = (e) => {
-    setBtnActive((prev) => {
-      return e.target.value;
-    });
+    // setBtnActive((prev) => {
+    //   return e.target.value;
+    // });
+    setBtnActive(e.target.value);
     setTimeout(() => {
-      e.target.value === "안중근" ? setResult("correct") : setResult("wrong");
-    }, 1000);
+      e.target.value === quizItem.answer
+        ? setResult("correct")
+        : setResult("wrong");
+    }, 500);
+
+    setTimeout(() => {
+      e.target.value === quizItem.answer
+        ? navigate(`/quiz/${Number(id) + 1}`)
+        : setResult(null);
+      setBtnActive("");
+    }, 3000);
   };
-
-  // const answerBtnClass = result !== null ? "cliked" : "quiz2_btn";
-
-  const BtnList = ["안중근", "김구", "유관순", "신채호"];
 
   return (
     <div className="quiz1_container">
-      <div className="quiz1_title_section">
-        <h1>뜻을 세우다</h1>
-        <hr />
-        <p>
-          만해 한용운 선생이 지은 "안해주"라는 시는 하얼빈에서 행해진 그 분의
-          의거를 기리며 지온 시입니다. 이 시를 읽어 보면서 그 분의 성함을 맞춰
-          보세요!
-        </p>
+      <div className="quiz_title_wrapper">
+        <div className="quiz2_title_section">
+          <h1>{quizItem.title}</h1>
+          <hr />
+          <p>{quizItem.question}</p>
+        </div>
       </div>
       <div className="quiz2_section">
         <div className="quiz2_img">
-          <img src={"/assets/original/만해2786.png"} alt={"안해주"} />
-          <p>
-            만 섬의 끓는 피여! 열 말의 담력이여!
-            <br />
-            벼르고 벼른 기상 서릿발이 시퍼렇다.
-            <br />
-            별안간 벼락이 치듯 천지를 뒤흔드니
-            <br />
-            총탄이 쏜아지는데 늠름한 그대 모습이여!
-          </p>
+          <img
+            className={`quiz_img ${
+              quizItem.description !== "" ? "withDesc" : ""
+            }`}
+            src={quizItem.quizImageURL}
+            alt={quizItem.title}
+          />
+          {quizItem.description ? <p>{quizItem.description}</p> : null}
         </div>
         <div className="quiz2_btn">
-          {BtnList.map((item) => {
+          {quizItem.answerBtnList.map((item) => {
             return (
               <button
                 value={item}
@@ -52,6 +70,13 @@ export const Quiz2 = () => {
                 className={
                   "quiz_btn_object" + (item === btnActive ? " active" : "")
                 }
+                style={{
+                  backgroundImage: `url("${
+                    item === btnActive
+                      ? "/assets/quiz/quiz_btn_active_bg.png" // 활성화 상태일 때의 이미지
+                      : "/assets/quiz/quiz_btn_bg.png" // 디폴트 이미지
+                  }")`,
+                }}
               >
                 {item}
               </button>

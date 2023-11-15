@@ -25,7 +25,7 @@
   },
   {
     "sectionName": "전시 연계 퀴즈",
-    "path": "quiz/1",
+    "path": "quiz/2",
     "btnImgKo": "/assets/image/main_btn_5.png",
     "btnImgEn": "/assets/image/EnglishBtn_test.png"
   }

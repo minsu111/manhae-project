@@ -1,0 +1,89 @@
+[
+  {
+    "id": "2",
+    "title": "뜻을 세우다",
+    "question": "Master Manhae Han Yong-un wrote a poem called 'Anhaeju' in honor of the act of resistance carried out in Harbin. As you read this poem, try to match the name of the person it commemorates!",
+    "quizImageURL": "/assets/original/만해2786.png",
+    "description": "A boiling sea of blood from a thousand isles! Ten measures of courage! The long-held valor is sharp as frostbite. Suddenly, like lightning striking, it shakes heaven and earth, Amidst the pouring bullets stands your gallant figure!",
+    "answerBtnList": ["Ahn Jung-geun", "Kim Gu", "Yu Gwan-sun", "Shin Chae-ho"],
+    "answer": "Ahn Jung-geun"
+  },
+  {
+    "id": "4",
+    "title": "불교인으로의 지향",
+    "question": "On the night of December 3, 1917, around 10 PM, while meditating in seated Zen, Manhae Han Yong-un suddenly heard the sound of the wind blowing something over, and he attained enlightenment. As you appreciate the poem he wrote upon gaining enlightenment, try to guess the name of the poem!",
+    "quizImageURL": "",
+    "description": "Wherever a man may go,\nEverywhere is his home.\nHow many\nhave fallen Into the sorrow of being a wanderer?\nWith one loud shout,\nHe shakes the three thousand worlds. In the snow, the peach blossoms Flutter vividly red.",
+    "answerBtnList": ["Anhaeju", "Jeungbyeol", "OdoSong", "Chuhoe"],
+    "answer": "OdoSong"
+  },
+  {
+    "id": "5",
+    "title": "3•1 운동의 선봉에 서서",
+    "question": "The picture on the left shows representatives of our nation gathered to declare independence from Japan after our country was annexed. Try to match the location and the number of people who gathered for the meeting!",
+    "quizImageURL": "",
+    "description": "",
+    "answerBtnList": [
+      "Taehwagwan, 32 people",
+      "Tapgol Park, 33 people",
+      "Taehwagwan, 33 people",
+      "Tapgol Park, 32 people"
+    ],
+    "answer": "Taehwagwan, 33 people"
+  },
+  {
+    "id": "6",
+    "title": "3.1운동의 선봉에 서서",
+    "question": "Before being detained by the Japanese police after reading The Independence Declaration, Master Han Yong-un made a promise with the national representatives to steadfastly uphold three principles even in prison, known as the 'Three Principles of Prison Struggle.' Identify which of the following is not one of those principles.",
+    "quizImageURL": "",
+    "description": "",
+    "answerBtnList": [
+      "Do not request bail.",
+      "Do not bring in blankets and clothes.",
+      "Do not hire a lawyer.",
+      "Do not accept food from outside."
+    ],
+    "answer": "Do not bring in blankets and clothes."
+  },
+  {
+    "id": "7",
+    "title": "3·1운동의 선봉에 서서",
+    "question": "Master Han Yong-un's 'An Overview of Thoughts on Korean Independence,' which he wrote in prison, embodies the ideals of freedom, equality, and peace. One copy was handed over to the Japanese prosecutor, and another was secretly transmitted to the Provisional Government of the Republic of Korea established in Shanghai on April 13, 1919, to be published in the government's official newspaper. What is the name of this newspaper?",
+    "quizImageURL": "",
+    "description": "",
+    "answerBtnList": ["The ChoSunilbo", "The DongAilbo", "THE INDEPENDENT", ""],
+    "answer": "THE INDEPENDENT"
+  },
+  {
+    "id": "9",
+    "title": "설중매화",
+    "question": "The artwork on the left is a piece of calligraphy featuring a poem by Master Manhae Han Yong-un. Try to match the national heroes that Master Manhae wished to take as boatmen and coachmen in his search for the ‘Nim'!",
+    "quizImageURL": "/assets/quiz/quiz_9.png",
+    "description": "",
+    "answerBtnList": [
+      "Gang Gam-chan, Eulji Mundeok",
+      "Yeon Gaesomun, Gang Gam-chan",
+      "Yi Sun-sin, Gang Gam-chan",
+      "Yi Sun-sin, Eulji Mundeok"
+    ],
+    "answer": "Yi Sun-sin, Eulji Mundeok"
+  },
+  {
+    "id": "10",
+    "title": "심우장의 정절",
+    "question": "In his later years, Master Manhae Han Yong-un lived in this house in Seongbuk-dong, Seoul, which is named with the meaning of 'a house for studying to find the true seat of the mind and to attain the greatest Dao which is nothingness.' What is the name of this house? And why was it built facing north?",
+    "quizImageURL": "",
+    "description": "",
+    "answerBtnList": ["Taehwagwan", "Simujang House", "Seonhakwon", ""],
+    "answer": "심우장"
+  },
+  {
+    "id": "11",
+    "title": "",
+    "question": "",
+    "quizImageURL": "",
+    "description": "",
+    "answerBtnList": ["", "", "", ""],
+    "answer": ""
+  }
+]
