@@ -1,0 +1,33 @@
+.quiz4_section {
+  width: 100%;
+  height: 55%;
+  margin-top: 2%;
+
+  display: flex;
+}
+
+.quiz4_complete_btn_wrapper {
+  width: 100%;
+  height: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .complete_line {
+    width: 100%;
+    height: 0.1vh;
+    background-color: #000;
+  }
+
+  .complete_btn {
+    width: 4vw;
+    aspect-ratio: 1/1;
+    position: absolute;
+    left: 68vw;
+
+    img {
+      width: 100%;
+    }
+  }
+}

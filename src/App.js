@@ -17,7 +17,7 @@ import { MedalDetail1 } from "./pages/medal/MedalDetail1";
 import { MedalDetail2 } from "./pages/medal/MedalDetail2";
 import { MedalDetail3 } from "./pages/medal/MedalDetail3";
 
-import { Quiz1 } from "./pages/quiz/Quiz1";
+import { Quiz1 } from "./pages/quiz/QuizType1";
 
 import { DndProvider } from "react-dnd";
 import { MultiBackend } from "react-dnd-multi-backend";
@@ -25,7 +25,8 @@ import { HTML5toTouch } from "rdndmb-html5-to-touch";
 
 import "./App.scss";
 import "./styles/reset.scss";
-import { Quiz2 } from "./pages/quiz/Quiz2";
+import { Quiz2 } from "./pages/quiz/QuizType2";
+import { Quiz4 } from "./pages/quiz/QuizType4";
 
 function App() {
   sessionStorage.setItem("language", "Ko");
@@ -56,6 +57,7 @@ function App() {
             <Route path="/quiz/1" element={<Quiz1 />} />
             <Route path="/quiz/:id" element={<Quiz2 />} />
             {/* <Route path="/quiz/3" element={<Quiz3 />} /> */}
+            <Route path="/quiz/4" element={<Quiz4 />} />
           </Routes>
         </Layout>
       </Router>

@@ -27,7 +27,7 @@ code {
   src: url(./fonts/NanumPen.otf);
 }
 
-/* @font-face {
+@font-face {
   font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 100;
@@ -62,4 +62,4 @@ code {
   font-style: normal;
   font-weight: 900;
   src: url(./fonts/NotoSansKR-Black.woff) format("woff");
-} */
+}
