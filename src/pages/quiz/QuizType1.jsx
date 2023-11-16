@@ -124,7 +124,6 @@ export const Quiz1 = () => {
         <div className="complete_line"></div>
         <div className="complete_btn">
           <img src={"/assets/quiz/quiz_complete_btn.png"} alt={"완료버튼"} />
-          <p>완 료</p>
         </div>
       </div>
     </div>

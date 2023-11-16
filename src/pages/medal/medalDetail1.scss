@@ -48,19 +48,22 @@
 }
 
 .medal_detail1_img_1 {
+  height: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 2vw;
-  margin-top: 10%;
+  margin-top: 6%;
 
   img {
     width: 16vw;
   }
 
   p {
+    height: 85%;
     font-size: 0.9vw;
     line-height: 1.6vw;
+    overflow-y: scroll;
   }
 }
 

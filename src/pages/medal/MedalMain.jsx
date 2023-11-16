@@ -20,7 +20,7 @@ export const MedalMain = () => {
             <p>
               우리나라는 무궁화대훈장을 정점으로 건국훈장, 국민훈장, 무공훈장,
               근정훈장, 보국훈장, 수교훈장, 산업훈장, 새마을훈장, 문화훈장,
-              체육훈장, 과학기술훈장 등 총 가지의 훈장이 있습니다.
+              체육훈장, 과학기술훈장 등 총 12가지의 훈장이 있습니다.
             </p>
           </div>
           <div className="section2">
@@ -70,14 +70,29 @@ export const MedalMain = () => {
       ) : (
         <div className="section_wrapper">
           <div className="section1">
-            <h1>english text</h1>
+            <h1>Order of the Republic of Korea</h1>
             <hr className="dividing_line" />
-            <p>english text</p>
+            <p>
+              Our country has a total of 12 orders, starting with the Grand
+              Order of Mugunghwa at the pinnacle, followed by the Order of Merit
+              for National Foundation, Order of Civil Merit, Order of Military
+              Merit, Order of Service Merit, Order of National Security Merit,
+              Order of Diplomatic Service Merit, Order of Industrial Service
+              Merit, Order of Saemaeul Service Merit, Order of Culture Merit,
+              Order of Sport Merit, and the Order of Science and Technology
+              Merit.
+            </p>
           </div>
           <div className="section2">
-            <h2>english text</h2>
+            <h2>Order of Merit for National Foundation</h2>
             <hr className="dividing_line" />
-            <p>english text</p>
+            <p>
+              The Order of Merit for National Foundation is awarded to
+              individuals who have m ade significant contributions to the
+              establishment of the Republic of Korea or have played a notable
+              role in solidifying the national flag. Additionally, the Order of
+              Merit for National Foundation is divided into different grades.
+            </p>
           </div>
           <div className="medal_main_btn_wrapper">
             <Link to="/medal/1" className="medal_main_btn">
@@ -85,14 +100,14 @@ export const MedalMain = () => {
                 src={"/assets/image/button_blue_1.png"}
                 alt={"1등급 - 대한민국장"}
               />
-              <span>english text</span>
+              <span>영어ver 이미지 필요</span>
             </Link>
             <Link to="/medal/2" className="medal_main_btn">
               <img
                 src={"/assets/image/button_blue_1.png"}
                 alt={"2등급 - 대통령장"}
               />
-              <span>english text</span>
+              <span>영어ver 이미지 필요</span>
             </Link>
             <Link to="/medal/3" className="medal_main_btn">
               <img
@@ -100,9 +115,9 @@ export const MedalMain = () => {
                 alt={"3등급, 4등급, 5등급"}
               />
               <span className="medal_main_btn_2_text">
-                english text
-                <br /> english text
-                <br /> english text
+                영어ver 이미지 필요
+                <br /> 영어ver 이미지 필요
+                <br /> 영어ver 이미지 필요
               </span>
             </Link>
             <Link to="/medal/making" className="medal_main_btn">
@@ -110,7 +125,7 @@ export const MedalMain = () => {
                 src={"/assets/image/button_blue_1.png"}
                 alt={"나만의 훈장 만들기"}
               />
-              <span>english text</span>
+              <span>영어ver 이미지 필요</span>
             </Link>
           </div>
         </div>

@@ -33,7 +33,7 @@ export const Quiz2 = () => {
       setBtnActive(value);
       setTimeout(() => {
         value === quizItem.answer ? setResult("correct") : setResult("wrong");
-      }, 500);
+      }, 400);
 
       setTimeout(() => {
         value === quizItem.answer && navigate(`/quiz/${Number(id) + 1}`);
@@ -43,62 +43,91 @@ export const Quiz2 = () => {
     }
   };
 
+  const quizClass =
+    id === "9"
+      ? "quiz_9th_desc"
+      : `quiz2_img ${quizItem.description !== "" ? "withDesc_wrapper" : ""}` +
+        (id === "4" ? " quiz4_desc_img" : "");
+
   return (
     <div className="quiz1_container">
-      <div className="quiz_title_wrapper">
-        <div className="quiz2_title_section">
-          <h1>{quizItem.title}</h1>
-          <hr />
-          <p>{quizItem.question}</p>
+      <div className="quiz2_all_wrapper">
+        <div className="quiz_title_wrapper">
+          <div className="quiz2_title_section">
+            <h1>{quizItem.title}</h1>
+            <hr />
+            <p className={id === "10" ? "quiz_10th_question" : "quiz_question"}>
+              {quizItem.question}
+            </p>
+          </div>
+          <div className="quiz_status">
+            <img
+              src={`/assets/quiz/${id.padStart(2, "0")}.png`}
+              alt={`${id} / 11`}
+            />
+          </div>
         </div>
-      </div>
-      <div className="quiz2_section">
-        <div
-          className={`quiz2_img ${
-            quizItem.description !== "" ? "withDesc_wrapper" : ""
-          }`}
-        >
-          <img
-            className={`quiz_img ${
-              quizItem.description !== "" ? "withDesc" : ""
-            }`}
-            src={quizItem.quizImageURL}
-            alt={quizItem.title}
-          />
-          {quizItem.description ? <p>{quizItem.description}</p> : null}
-        </div>
-        <div className="quiz2_btn">
-          {quizItem.answerBtnList.map((item) => {
-            return (
-              <button
-                value={item}
-                onClick={handleQuizBtn}
-                className={
-                  "quiz_btn_object" +
-                  (item === btnActive ? " active" : "") +
-                  (id === "6" ? " quiz6_btn" : "")
-                }
-                style={{
-                  backgroundImage: `url("${
-                    item === btnActive
-                      ? "/assets/quiz/quiz_btn_active_bg.png" // 활성화 상태일 때의 이미지
-                      : "/assets/quiz/quiz_btn_bg.png" // 디폴트 이미지
-                  }")`,
-                }}
+        <div className="quiz2_section">
+          <div className={quizClass}>
+            <img
+              className={
+                `quiz_img ${quizItem.description !== "" ? "withDesc" : ""}` +
+                (id === "4" ? " quiz4_desc_img" : "")
+              }
+              src={quizItem.quizImageURL}
+              alt={quizItem.title}
+            />
+            {quizItem.description ? (
+              <div
+                className={id === "4" ? " quiz4_desc_text" : "quiz_desc_text"}
               >
-                {item}
-              </button>
-            );
-          })}
+                <p>{quizItem.description}</p>
+              </div>
+            ) : null}
+          </div>
+          <div className="quiz2_btn">
+            {quizItem.answerBtnList.map((item) => {
+              return (
+                <button
+                  value={item}
+                  onClick={handleQuizBtn}
+                  className={
+                    "quiz_btn_object" +
+                    (item === btnActive ? " active" : "") +
+                    (id === "6" ||
+                    id === "9" ||
+                    (id === "10" && language === "En") ||
+                    (id === "7" && language === "En") ||
+                    (id === "5" && language === "En")
+                      ? " quiz_middle_btn"
+                      : "") +
+                    ((language === "En" && id === "9") ||
+                    (language === "En" && id === "6")
+                      ? " quiz_long_btn"
+                      : "")
+                  }
+                  style={{
+                    backgroundImage: `url("${
+                      item === btnActive
+                        ? "/assets/quiz/quiz_btn_active_bg1.png" // 활성화 상태일 때의 이미지
+                        : "/assets/quiz/quiz_btn_bg1.png" // 디폴트 이미지
+                    }")`,
+                  }}
+                >
+                  {item}
+                </button>
+              );
+            })}
+          </div>
         </div>
-      </div>
-      <div className="quiz_result">
-        {result === "correct" && (
-          <img src={"/assets/quiz/quiz_O.png"} alt={"정답"} />
-        )}
-        {result === "wrong" && (
-          <img id="wrong_img" src={"/assets/quiz/quiz_X.png"} alt={"땡"} />
-        )}
+        <div className="quiz_result">
+          {result === "correct" && (
+            <img src={"/assets/quiz/quiz_O.png"} alt={"정답"} />
+          )}
+          {result === "wrong" && (
+            <img id="wrong_img" src={"/assets/quiz/quiz_X.png"} alt={"땡"} />
+          )}
+        </div>
       </div>
     </div>
   );

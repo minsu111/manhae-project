@@ -8,7 +8,11 @@ export const Layout = (props) => {
   const location = useLocation();
   const isZoomEnabled = true;
 
-  const zoomPage = location.pathname.includes("/detail");
+  const zoomPage =
+    location.pathname.includes("/detail") ||
+    location.pathname.includes("/manhaeStory") ||
+    location.pathname.includes("/medal") ||
+    location.pathname.includes("/quiz");
 
   return (
     <div className="all_container">

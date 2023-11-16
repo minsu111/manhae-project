@@ -1,7 +1,7 @@
 [
   { "code": 0, "nameKo": "ALL", "nameEn": "ALL" },
-  { "code": 1, "nameKo": "안목을 세우다", "nameEn": "Set an Aim in Life" },
-  { "code": 2, "nameKo": "불교인", "nameEn": "Orientation as a Buddhist" },
+  { "code": 1, "nameKo": "안목을 세우다", "nameEn": "Set an Aim\nin Life" },
+  { "code": 2, "nameKo": "불교인", "nameEn": "Orientation as\na Buddhist" },
   {
     "code": 3,
     "nameKo": "삼일운동",
@@ -10,9 +10,9 @@
   {
     "code": 4,
     "nameKo": "침묵의 미학",
-    "nameEn": "The Aesthetics of Silence"
+    "nameEn": "The Aesthetics\nof Silence"
   },
-  { "code": 5, "nameKo": "설중매화", "nameEn": "Plum Blossoms in the Snow" },
+  { "code": 5, "nameKo": "설중매화", "nameEn": "Plum Blossoms\nin the Snow" },
   {
     "code": 6,
     "nameKo": "심우장의 정절",

@@ -4,7 +4,7 @@
     "title": "Set an Aim in Life",
     "question": "Master Manhae Han Yong-un wrote a poem called 'Anhaeju' in honor of the act of resistance carried out in Harbin. As you read this poem, try to match the name of the person it commemorates!",
     "quizImageURL": "/assets/original/만해2786.png",
-    "description": "A boiling sea of blood from a thousand isles! Ten measures of courage! The long-held valor is sharp as frostbite. Suddenly, like lightning striking, it shakes heaven and earth, Amidst the pouring bullets stands your gallant figure!",
+    "description": "A boiling sea of blood from a thousand isles!\nTen measures of courage!\nThe long-held valor is sharp as frostbite.\nSuddenly, like lightning striking, it shakes heaven and earth, Amidst the pouring bullets stands your gallant figure!",
     "answerBtnList": ["Ahn Jung-geun", "Kim Gu", "Yu Gwan-sun", "Shin Chae-ho"],
     "answer": "Ahn Jung-geun"
   },
@@ -12,8 +12,8 @@
     "id": "4",
     "title": "Orientation as a Buddhist",
     "question": "On the night of December 3, 1917, around 10 PM, while meditating in seated Zen, Manhae Han Yong-un suddenly heard the sound of the wind blowing something over, and he attained enlightenment. As you appreciate the poem he wrote upon gaining enlightenment, try to guess the name of the poem!",
-    "quizImageURL": "/assets/quiz/불교인으로의 지향2 이미지.png",
-    "description": "",
+    "quizImageURL": "/assets/quiz/quiz4_desc_img.png",
+    "description": "Wherever a man may go,\nEverywhere is his home.\nHow many\nhave fallen Into the sorrow of being a wanderer?\nWith one loud shout,\nHe shakes the three thousand worlds. In the snow, the peach blossoms Flutter vividly red.",
     "answerBtnList": ["Anhaeju", "Jeungbyeol", "OdoSong", "Chuhoe"],
     "answer": "OdoSong"
   },
@@ -64,7 +64,7 @@
     "title": "Plum Blossoms in the Snow",
     "question": "The artwork on the left is a piece of calligraphy featuring a poem by Master Manhae Han Yong-un. Try to match the national heroes that Master Manhae wished to take as boatmen and coachmen in his search for the ‘Nim'!",
     "quizImageURL": "/assets/quiz/quiz_9.png",
-    "description": "",
+    "description": "With Yi Sun-sin as a sailor, With Eulji Mundeok as his coachman, Hold high the blade of justice, Should I deliver it to the south and ride to the north? Maybe that’s the only way to find ‘Nim’",
     "answerBtnList": [
       "Gang Gam-chan, Eulji Mundeok",
       "Yeon Gaesomun, Gang Gam-chan",
@@ -77,16 +77,21 @@
     "id": "10",
     "title": "Simujang House's Fidelity",
     "question": "In his later years, Master Manhae Han Yong-un lived in this house in Seongbuk-dong, Seoul, which is named with the meaning of 'a house for studying to find the true seat of the mind and to attain the greatest Dao which is nothingness.' What is the name of this house? And why was it built facing north?",
-    "quizImageURL": "",
+    "quizImageURL": "/assets/quiz/quiz_10_img.png",
     "description": "",
-    "answerBtnList": ["Taehwagwan", "Simujang House", "Seonhakwon", ""],
+    "answerBtnList": [
+      "Taehwagwan",
+      "Simujang House",
+      "Seonhakwon",
+      "Ihwajang House"
+    ],
     "answer": "심우장"
   },
   {
     "id": "11",
-    "title": "",
+    "title": "Simujang House's Fidelity",
     "question": "",
-    "quizImageURL": "",
+    "quizImageURL": "/assets/quiz/quiz11_img.png",
     "description": "",
     "answerBtnList": ["", "", "", ""],
     "answer": ""

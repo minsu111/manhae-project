@@ -11,7 +11,7 @@ export const MedalDetail3 = () => {
       {language === "Ko" ? (
         <div className="detail3_section_wrapper">
           <div className="detail3_left_section">
-            <div className="medal_detail3_seciton">
+            <div className="medal_detail3_seciton first_section">
               <h2>건국훈장 ‒ 독립장(Independence Medal)</h2>
               <hr className="dividing_line" />
               <p>
@@ -50,9 +50,9 @@ export const MedalDetail3 = () => {
           </div>
         </div>
       ) : (
-        <div className="detail3_section_wrapper detail3_en">
+        <div className="detail3_section_wrapper">
           <div className="detail3_left_section">
-            <div className="medal_detail3_seciton detail3_desc_en">
+            <div className="medal_detail3_seciton first_section">
               <h2>
                 Order of Merit for National Foundation - Independence Medal
               </h2>
@@ -69,7 +69,7 @@ export const MedalDetail3 = () => {
               </div>
             </div>
           </div>
-          <div className="detail3_right_section detail3_desc_en">
+          <div className="detail3_right_section">
             <div className="medal_detail3_seciton">
               <h2>Order of Merit for National Foundation - Patriotic Medal</h2>
               <hr className="dividing_line" />

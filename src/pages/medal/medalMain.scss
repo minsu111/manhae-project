@@ -10,6 +10,7 @@
 
 .section_wrapper {
   width: 40%;
+  height: 100%;
   padding: 1% 8%;
 }
 
@@ -24,9 +25,12 @@
   }
 
   p {
+    height: 10vh;
     font-size: 1vw;
     line-height: 1.8vw;
     padding: 2% 0;
+    word-break: keep-all;
+    overflow-y: scroll;
   }
 }
 
@@ -40,9 +44,12 @@
   }
 
   p {
+    height: 10vh;
     font-size: 1vw;
     line-height: 1.8vw;
     padding: 2% 0;
+    word-break: keep-all;
+    overflow-y: scroll;
   }
 }
 

@@ -29,7 +29,7 @@
 
   p {
     font-size: 1vw;
-    line-height: 1.8vw;
+    line-height: 180%;
     padding: 2% 0;
   }
 }
@@ -43,9 +43,10 @@
 
 .detail2_desc_img {
   width: 70vw;
+  text-align: center;
 
   img {
-    width: 95%;
+    width: 70%;
     text-align: center;
   }
 }

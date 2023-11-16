@@ -88,15 +88,23 @@ export const MedalDetail1 = () => {
               alt={"훈장 설명 이미지"}
             />
             <p>
-              1. english text
+              1. Mugunghwayeobhwan: Indicates the prosperity of the Republic of
+              Korea
               <br />
-              2. english text <br />
-              3. english text <br />
-              4. english text <br />
-              5. english text <br />
-              6. english text <br />
-              7. english text <br />
-              ※english text
+              2. Taeyangji: Symbolizes the enhancement of national prestige
+              <br />
+              3. Daeji: Means the high spirit of the citizens
+              <br />
+              4. Seoji: Signifies the radiant light of hard work
+              <br />
+              5. Jaog: Represents the fruits of hard work
+              <br />
+              6. Seunghwan: Denotes the unity of the nation
+              <br />
+              7. Taegeuk: Stands for the Republic of Korea
+              <br />
+              ※The red color signifies vigorous determination, the yellow color
+              symbolizes unity.
             </p>
           </div>
         </div>

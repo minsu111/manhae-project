@@ -6,15 +6,17 @@ import "./sideBar.scss";
 const SideBar = () => {
   const location = useLocation();
 
-  let imageUrl = "/assets/image/sideBar1.png";
+  const language = sessionStorage.getItem("language");
+
+  let imageUrl = `/assets/image/sideBar1_${language}.png`;
   if (location.pathname.includes("/commentary")) {
-    imageUrl = "/assets/image/sideBar2.png";
+    imageUrl = `/assets/image/sideBar2_${language}.png`;
   } else if (location.pathname.includes("/manhaeStory")) {
-    imageUrl = "/assets/image/sideBar3.png";
+    imageUrl = `/assets/image/sideBar3_${language}.png`;
   } else if (location.pathname.includes("/medal")) {
-    imageUrl = "/assets/image/sideBar4.png";
+    imageUrl = `/assets/image/sideBar4_${language}.png`;
   } else if (location.pathname.includes("/quiz")) {
-    imageUrl = "/assets/image/sideBar5.png";
+    imageUrl = `/assets/image/sideBar2_${language}.png`;
   }
 
   return (
