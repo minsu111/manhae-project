@@ -18,10 +18,31 @@ export const ManhaeStory = () => {
         src={"/assets/image/manhaeStory_object.png"}
         alt={"만해"}
       />
-      <div className="title_section">
-        <h1>만해 한용운 말꽃 모음</h1>
-        <p>말꽃을 터치하시면 자세히 볼 수 있습니다.</p>
-      </div>
+      {language === "Ko" ? (
+        <div className="title_section">
+          <h1>만해 한용운 말꽃 모음</h1>
+          <p>말꽃을 터치하시면 자세히 볼 수 있습니다.</p>
+        </div>
+      ) : (
+        <div className="title_section">
+          <h1 style={{ fontSize: "2vw" }}>
+            Collection of Manhae
+            <br />
+            Han Yong-un's Word Blossoms
+          </h1>
+          <p
+            style={{
+              display: "flex",
+              alignItems: "flex-end",
+              paddingBottom: "1%",
+              marginLeft: "3%",
+            }}
+          >
+            Touch the button to see more details
+          </p>
+        </div>
+      )}
+
       <div className="story_title_section">
         {ManhaeStoryList.map((c, i) => (
           <div

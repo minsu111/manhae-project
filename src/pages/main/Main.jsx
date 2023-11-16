@@ -26,7 +26,9 @@ export const Main = () => {
   return (
     <div
       className="main_page"
-      style={{ backgroundImage: 'url("/assets/image/mainImg.png")' }}
+      style={{
+        backgroundImage: `url("/assets/image/mainImg_${languageType}.png")`,
+      }}
     >
       <div className="main_buttons_section">
         {MenuList.map((c, i) => (
@@ -36,7 +38,11 @@ export const Main = () => {
               goToSection(c.path);
             }}
           >
-            <img src={c[btnImgUrl]} alt={c.sectionName} />
+            <img
+              src={c[btnImgUrl]}
+              alt={c.sectionName}
+              style={{ paddingBottom: languageType === "En" && "3.5%" }}
+            />
           </button>
         ))}
       </div>

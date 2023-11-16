@@ -107,8 +107,8 @@
   }
 
   .quiz_desc_text {
-    width: 40%;
-    height: 100%;
+    width: 42%;
+    height: 90%;
     font-size: 1.2vw;
     font-weight: 600;
     line-height: 200%;
@@ -117,8 +117,9 @@
 
     display: flex;
     p {
-      height: 40%;
-      align-self: flex-end;
+      height: 95%;
+      display: flex;
+      align-items: flex-end;
       overflow-y: scroll;
     }
   }

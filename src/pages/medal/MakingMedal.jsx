@@ -88,7 +88,7 @@ export const MakingMedal = () => {
   const handleSubjectBtn = (e) => {
     language === "Ko"
       ? setSubject(e.target.value + " 훈장 만들기")
-      : setSubject(e.target.value + " text");
+      : setSubject(`Making '${e.target.value}' Medal`);
   };
 
   return (
@@ -274,32 +274,40 @@ export const MakingMedal = () => {
               <div className="medal_btn_section">
                 <input
                   type="button"
-                  className={`${subject.includes("애국심") && "double_height"}`}
-                  value="btn1"
+                  className={`${
+                    subject.includes("Patriotism") && "double_height"
+                  }`}
+                  value="Patriotism"
                   onClick={handleSubjectBtn}
                 />
                 <input
                   type="button"
-                  className={`${subject.includes("건강") && "double_height"}`}
-                  value="btn2"
+                  className={`${subject.includes("Health") && "double_height"}`}
+                  value="Health"
                   onClick={handleSubjectBtn}
                 />
                 <input
                   type="button"
-                  className={`${subject.includes("정직") && "double_height"}`}
-                  value="btn3"
+                  className={`${
+                    subject.includes("Honesty") && "double_height"
+                  }`}
+                  value="Honesty"
                   onClick={handleSubjectBtn}
                 />
                 <input
                   type="button"
-                  className={`${subject.includes("성실") && "double_height"}`}
-                  value="btn4"
+                  className={`${
+                    subject.includes("Diligence") && "double_height"
+                  }`}
+                  value="Diligence"
                   onClick={handleSubjectBtn}
                 />
                 <input
                   type="button"
-                  className={`${subject.includes("효도") && "double_height"}`}
-                  value="btn5"
+                  className={`${
+                    subject.includes("Filial Piety") && "double_height"
+                  }`}
+                  value="Filial Piety"
                   onClick={handleSubjectBtn}
                 />
               </div>

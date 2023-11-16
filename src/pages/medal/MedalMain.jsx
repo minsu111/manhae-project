@@ -94,38 +94,30 @@ export const MedalMain = () => {
               Merit for National Foundation is divided into different grades.
             </p>
           </div>
-          <div className="medal_main_btn_wrapper">
+          <div className="medal_main_btn_wrapper_en">
             <Link to="/medal/1" className="medal_main_btn">
               <img
-                src={"/assets/image/button_blue_1.png"}
+                src={"/assets/medal/medal_en_1.png"}
                 alt={"1등급 - 대한민국장"}
               />
-              <span>영어ver 이미지 필요</span>
             </Link>
             <Link to="/medal/2" className="medal_main_btn">
               <img
-                src={"/assets/image/button_blue_1.png"}
+                src={"/assets/medal/medal_en_2.png"}
                 alt={"2등급 - 대통령장"}
               />
-              <span>영어ver 이미지 필요</span>
             </Link>
             <Link to="/medal/3" className="medal_main_btn">
               <img
-                src={"/assets/image/button_blue_2.png"}
+                src={"/assets/medal/medal_en_3.png"}
                 alt={"3등급, 4등급, 5등급"}
               />
-              <span className="medal_main_btn_2_text">
-                영어ver 이미지 필요
-                <br /> 영어ver 이미지 필요
-                <br /> 영어ver 이미지 필요
-              </span>
             </Link>
             <Link to="/medal/making" className="medal_main_btn">
               <img
-                src={"/assets/image/button_blue_1.png"}
+                src={"/assets/medal/medal_en_4.png"}
                 alt={"나만의 훈장 만들기"}
               />
-              <span>영어ver 이미지 필요</span>
             </Link>
           </div>
         </div>

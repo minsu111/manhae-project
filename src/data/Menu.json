@@ -3,30 +3,30 @@
     "sectionName": "소장품 감상",
     "path": "collection",
     "btnImgKo": "/assets/image/main_btn_1.png",
-    "btnImgEn": "/assets/image/EnglishBtn_test.png"
+    "btnImgEn": "/assets/image/view the collection.png"
   },
   {
     "sectionName": "소장품 해설",
     "path": "commentary",
     "btnImgKo": "/assets/image/main_btn_2.png",
-    "btnImgEn": "/assets/image/EnglishBtn_test.png"
+    "btnImgEn": "/assets/image/collection commentary.png"
   },
   {
     "sectionName": "만해애게 듣는 지혜 이야기",
     "path": "manhaeStory",
     "btnImgKo": "/assets/image/main_btn_3.png",
-    "btnImgEn": "/assets/image/EnglishBtn_test.png"
+    "btnImgEn": "/assets/image/wisdom from manhae.png"
   },
   {
     "sectionName": "나만의 훈장 만들기",
     "path": "medal",
     "btnImgKo": "/assets/image/main_btn_4.png",
-    "btnImgEn": "/assets/image/EnglishBtn_test.png"
+    "btnImgEn": "/assets/image/create your own medal.png"
   },
   {
     "sectionName": "전시 연계 퀴즈",
     "path": "quiz/2",
     "btnImgKo": "/assets/image/main_btn_5.png",
-    "btnImgEn": "/assets/image/EnglishBtn_test.png"
+    "btnImgEn": "/assets/image/exhibition related quiz.png"
   }
 ]
