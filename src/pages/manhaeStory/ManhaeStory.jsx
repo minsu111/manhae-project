@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import "./manhaeStory.scss";
 
-export const ManhaeStory = () => {
+const ManhaeStory = () => {
   const navigate = useNavigate();
 
   // 다국어 처리
@@ -62,3 +62,5 @@ export const ManhaeStory = () => {
     </div>
   );
 };
+
+export default ManhaeStory;

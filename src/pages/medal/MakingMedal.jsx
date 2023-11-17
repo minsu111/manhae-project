@@ -6,7 +6,7 @@ import ObjectList from "../../data/MedalObjects";
 import "./makingMedal.scss";
 import Object from "../../components/medal/Object";
 
-export const MakingMedal = () => {
+const MakingMedal = () => {
   const [medal, setMedal] = useState(null);
   const [middleRibon, setMiddleRibon] = useState(null);
   const [bottomRibon, setBottomRibon] = useState(null);
@@ -329,3 +329,5 @@ export const MakingMedal = () => {
     </div>
   );
 };
+
+export default MakingMedal;

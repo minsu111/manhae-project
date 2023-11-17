@@ -7,7 +7,7 @@ import "./manhaeStoryDetail.scss";
 import { VideoPlayer } from "../../components/commentary/VideoPlayer";
 import ReactPlayer from "react-player";
 
-export const ManhaeStoryDetail = () => {
+const ManhaeStoryDetail = () => {
   const { id } = useParams();
 
   // 다국어 처리
@@ -41,3 +41,5 @@ export const ManhaeStoryDetail = () => {
     </div>
   );
 };
+
+export default ManhaeStoryDetail;

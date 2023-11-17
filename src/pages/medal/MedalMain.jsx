@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./medalMain.scss";
 
-export const MedalMain = () => {
+const MedalMain = () => {
   // 다국어 처리
   const language = sessionStorage.getItem("language");
 
@@ -35,35 +35,27 @@ export const MedalMain = () => {
           <div className="medal_main_btn_wrapper">
             <Link to="/medal/1" className="medal_main_btn">
               <img
-                src={"/assets/image/button_blue_1.png"}
+                src={"/assets/medal/medal_ko_1.png"}
                 alt={"1등급 - 대한민국장"}
               />
-              <span>1등급 - 대한민국장</span>
             </Link>
             <Link to="/medal/2" className="medal_main_btn">
               <img
-                src={"/assets/image/button_blue_1.png"}
+                src={"/assets/medal/medal_ko_2.png"}
                 alt={"2등급 - 대통령장"}
               />
-              <span>2등급 - 대통령장</span>
             </Link>
             <Link to="/medal/3" className="medal_main_btn">
               <img
-                src={"/assets/image/button_blue_2.png"}
+                src={"/assets/medal/medal_ko_3.png"}
                 alt={"3등급, 4등급, 5등급"}
               />
-              <span className="medal_main_btn_2_text">
-                3등급 - 대통령장
-                <br /> 4등급 - 대통령장
-                <br /> 4등급 - 대통령장
-              </span>
             </Link>
             <Link to="/medal/making" className="medal_main_btn">
               <img
-                src={"/assets/image/button_blue_1.png"}
+                src={"/assets/medal/medal_ko_4.png"}
                 alt={"나만의 훈장 만들기"}
               />
-              <span>나만의 훈장 만들기</span>
             </Link>
           </div>
         </div>
@@ -125,3 +117,5 @@ export const MedalMain = () => {
     </div>
   );
 };
+
+export default MedalMain;

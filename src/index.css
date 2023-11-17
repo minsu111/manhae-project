@@ -2,6 +2,14 @@
   margin: 0;
   padding: 0;
   font-family: "Noto Sans KR", sans-serif;
+
+  &::-webkit-scrollbar {
+    width: 0.5vw;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10vw;
+    background: #dddddd;
+  }
 }
 
 body {

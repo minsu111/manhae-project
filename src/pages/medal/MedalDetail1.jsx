@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./medalDetail1.scss";
 
-export const MedalDetail1 = () => {
+const MedalDetail1 = () => {
   const language = sessionStorage.getItem("language");
 
   return (
@@ -118,3 +118,5 @@ export const MedalDetail1 = () => {
     </div>
   );
 };
+
+export default MedalDetail1;

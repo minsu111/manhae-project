@@ -5,7 +5,7 @@ import MenuList from "../../data/Menu";
 
 import "./main.scss";
 
-export const Main = () => {
+const Main = () => {
   const sessionLang = sessionStorage.getItem("language");
 
   const [languageType, setLanguageType] = useState(sessionLang);
@@ -89,3 +89,5 @@ export const Main = () => {
     </div>
   );
 };
+
+export default Main;

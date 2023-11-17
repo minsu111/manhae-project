@@ -50,7 +50,15 @@
     font-size: 1vw;
     line-height: 180%;
     padding: 2% 0;
-    overflow-y: scroll;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 0.5vw;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10vw;
+      background: #dddddd;
+    }
   }
 }
 

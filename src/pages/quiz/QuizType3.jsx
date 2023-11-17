@@ -34,7 +34,7 @@ const quizList = [
   },
 ];
 
-export const Quiz3 = () => {
+const Quiz3 = () => {
   const [result, setResult] = useState(null);
   const [answerList, setAnswerList] = useState(
     Array(quizList.length).fill(null)
@@ -193,3 +193,5 @@ export const Quiz3 = () => {
     </div>
   );
 };
+
+export default Quiz3;

@@ -8,7 +8,7 @@ import CategoryList from "../../data/Category";
 
 import "./collection.scss";
 
-export const Collection = () => {
+const Collection = () => {
   const [category, setCategory] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [openToast, setOpentToast] = useState(false);
@@ -112,3 +112,5 @@ export const Collection = () => {
     </Suspense>
   );
 };
+
+export default Collection;

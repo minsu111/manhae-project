@@ -2,7 +2,7 @@ import React from "react";
 
 import "./quizType1.scss";
 
-export const Quiz1 = () => {
+const Quiz1 = () => {
   return (
     <div className="quiz1_container">
       <div className="quiz1_title_section">
@@ -129,3 +129,5 @@ export const Quiz1 = () => {
     </div>
   );
 };
+
+export default Quiz1;

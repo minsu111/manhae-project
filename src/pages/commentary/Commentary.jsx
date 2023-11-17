@@ -6,7 +6,7 @@ import "./commentary.scss";
 import { VideoPlayer } from "../../components/commentary/VideoPlayer";
 import { useNavigate } from "react-router-dom";
 
-export const Commentary = () => {
+const Commentary = () => {
   const [openModal, setOpenModal] = useState(false);
   const [selectedVideoUrl, setSelectedVideoUrl] = useState(null);
 
@@ -69,3 +69,5 @@ export const Commentary = () => {
     </section>
   );
 };
+
+export default Commentary;

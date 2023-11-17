@@ -7,7 +7,7 @@ import SubList from "../../data/Sub";
 import "./collectionDetail.scss";
 import { Spinner } from "../../components/common/spinner/Spinner";
 
-export const CollectionDetail = ({ fontSize }) => {
+const CollectionDetail = ({ fontSize }) => {
   const [subId, setSubId] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const { id } = useParams();
@@ -41,7 +41,7 @@ export const CollectionDetail = ({ fontSize }) => {
           {CollectionList[id][description]}
         </div>
       </div>
-      <Suspense fallback={Spinner}>
+      <Suspense fallback={<div>Loading...</div>}>
         <div className="main_img_wrapper">
           <div className="detail_main_title">{CollectionList[id][title]}</div>
           {subId !== null && (
@@ -87,3 +87,5 @@ export const CollectionDetail = ({ fontSize }) => {
     </section>
   );
 };
+
+export default CollectionDetail;
