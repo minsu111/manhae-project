@@ -1,6 +1,6 @@
 [
   {
-    "id": "2",
+    "id": "1",
     "title": "Set an Aim in Life",
     "question": "Master Manhae Han Yong-un wrote a poem called 'Anhaeju' in honor of the act of resistance carried out in Harbin. As you read this poem, try to match the name of the person it commemorates!",
     "quizImageURL": "/assets/original/만해2786.png",
@@ -9,7 +9,7 @@
     "answer": "Ahn Jung-geun"
   },
   {
-    "id": "4",
+    "id": "3",
     "title": "Orientation as a Buddhist",
     "question": "On the night of December 3, 1917, around 10 PM, while meditating in seated Zen, Manhae Han Yong-un suddenly heard the sound of the wind blowing something over, and he attained enlightenment. As you appreciate the poem he wrote upon gaining enlightenment, try to guess the name of the poem!",
     "quizImageURL": "/assets/quiz/quiz4_desc_img.png",
@@ -18,7 +18,7 @@
     "answer": "OdoSong"
   },
   {
-    "id": "5",
+    "id": "4",
     "title": "Standing at the forefront of the March 1st Movement",
     "question": "The picture on the left shows representatives of our nation gathered to declare independence from Japan after our country was annexed. Try to match the location and the number of people who gathered for the meeting!",
     "quizImageURL": "/assets/quiz/31운동의 선봉에 서서1 이미지.png",
@@ -32,7 +32,7 @@
     "answer": "Taehwagwan, 33 people"
   },
   {
-    "id": "6",
+    "id": "5",
     "title": "Standing at the forefront of the March 1st Movement",
     "question": "Before being detained by the Japanese police after reading The Independence Declaration, Master Han Yong-un made a promise with the national representatives to steadfastly uphold three principles even in prison, known as the 'Three Principles of Prison Struggle.' Identify which of the following is not one of those principles.",
     "quizImageURL": "/assets/quiz/31운동의 선봉에 서서2 이미지.png",
@@ -46,7 +46,7 @@
     "answer": "Do not bring in blankets and clothes."
   },
   {
-    "id": "7",
+    "id": "6",
     "title": "Standing at the forefront of the March 1st Movement",
     "question": "Master Han Yong-un's 'An Overview of Thoughts on Korean Independence,' which he wrote in prison, embodies the ideals of freedom, equality, and peace. One copy was handed over to the Japanese prosecutor, and another was secretly transmitted to the Provisional Government of the Republic of Korea established in Shanghai on April 13, 1919, to be published in the government's official newspaper. What is the name of this newspaper?",
     "quizImageURL": "/assets/quiz/31운동의 선봉에 서서3 이미지.png",
@@ -60,7 +60,7 @@
     "answer": "THE INDEPENDENT"
   },
   {
-    "id": "9",
+    "id": "8",
     "title": "Plum Blossoms in the Snow",
     "question": "The artwork on the left is a piece of calligraphy featuring a poem by Master Manhae Han Yong-un. Try to match the national heroes that Master Manhae wished to take as boatmen and coachmen in his search for the ‘Nim'!",
     "quizImageURL": "/assets/quiz/quiz_9.png",
@@ -74,7 +74,7 @@
     "answer": "Yi Sun-sin, Eulji Mundeok"
   },
   {
-    "id": "10",
+    "id": "9",
     "title": "Simujang House's Fidelity",
     "question": "In his later years, Master Manhae Han Yong-un lived in this house in Seongbuk-dong, Seoul, which is named with the meaning of 'a house for studying to find the true seat of the mind and to attain the greatest Dao which is nothingness.' What is the name of this house? And why was it built facing north?",
     "quizImageURL": "/assets/quiz/quiz_10_img.png",
@@ -88,12 +88,17 @@
     "answer": "심우장"
   },
   {
-    "id": "11",
+    "id": "10",
     "title": "Simujang House's Fidelity",
     "question": "",
     "quizImageURL": "/assets/quiz/quiz11_img.png",
-    "description": "",
-    "answerBtnList": ["", "", "", ""],
-    "answer": ""
+    "description": "Read the hints below slowly and try to guess the person in the photograph!\n\n1. As an independence activist, he played a pivotal role from the early 1910s in establishing a firm foundation for the independence movement base in the Gando area.\n2. He was arrested in Harbin in 1931 and suffered imprisonment, eventually becoming a martyr at Seodaemun Prison in 1937.\n3. Manhae Han Yong-un took care of his remains and held a funeral at Simujang House.\nThe lyrical song 'Pioneer' is well-known as a tribute to him.",
+    "answerBtnList": [
+      "Ilsong Kim Dong-sam",
+      "Baekbeom Kim-gu",
+      "Doma Ahn Joong-geun",
+      "Sowol Kim Jung-sik"
+    ],
+    "answer": "Ilsong Kim Dong-sam"
   }
 ]

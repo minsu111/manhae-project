@@ -28,14 +28,17 @@
 }
 
 .quiz4_question {
+  height: 70%;
   font-size: 1vw;
   font-weight: 500;
   line-height: 180%;
   padding: 30% 10% 10% 10%;
+  overflow-y: auto;
 }
 
 .ox_btn_wrapper {
   width: 100%;
+  height: 30%;
   text-align: center;
   padding-bottom: 10%;
 
@@ -51,7 +54,7 @@
 
     &.active {
       &.img {
-        transform: scale(1.1);
+        transform: scale(1.2);
         transition: transform 0.3s ease;
       }
     }

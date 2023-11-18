@@ -53,9 +53,15 @@ const Quiz4 = () => {
     setResult(isCorrect ? "correct" : "wrong");
 
     setTimeout(() => {
-      isCorrect && navigate("/quiz/9");
-      setBtnActive("");
-      setResult(null);
+      if (isCorrect) {
+        navigate("/quiz/8");
+      } else {
+        setBtnActive(["프랑스어", "영어", "에스페란토어", "체코어"]);
+        setResult(null);
+        setTimeout(() => {
+          navigate("/quiz/8");
+        }, 3000);
+      }
     }, 3000);
   };
 
@@ -89,14 +95,14 @@ const Quiz4 = () => {
           )}
 
           <div className="quiz_status">
-            <img src={"/assets/quiz/08.png"} alt={"8 / 11"} />
+            <img src={"/assets/quiz/07.png"} alt={"7 / 10"} />
           </div>
         </div>
         <div className="quiz4_section">
           <div className="quiz4_img">
             <img
               className="quiz_img"
-              src={"/assets/quiz/침묵의 미학 이미지.png"}
+              src={"/assets/quiz/침묵의 미학 이미지.png"}
               alt={"침묵의 미학"}
             />
           </div>

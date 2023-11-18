@@ -32,15 +32,12 @@ const Quiz2 = () => {
     };
 
     return () => {
-      image.onload = null; // Cleanup to avoid memory leaks
+      image.onload = null;
+      setIsImageLoaded(false);
     };
   }, [quizItem.quizImageURL]);
 
   const handleQuizBtn = (e) => {
-    // setBtnActive((prev) => {
-    //   return e.target.value;
-    // });
-
     if (result === null) {
       const value = e.target.value;
 
@@ -58,21 +55,21 @@ const Quiz2 = () => {
   };
 
   const quizClass =
-    id === "9"
+    id === "8"
       ? "quiz_9th_desc"
       : `quiz2_img ${quizItem.description !== "" ? "withDesc_wrapper" : ""}` +
-        (id === "4" ? " quiz4_desc_img" : "");
+        (id === "3" ? " quiz4_desc_img" : "");
 
   return (
     <div className="quiz1_container">
-      {isLaodinged ? (
+      {isLaodinged && (
         <div className="quiz2_all_wrapper">
           <div className="quiz_title_wrapper">
             <div className="quiz2_title_section">
               <h1>{quizItem.title}</h1>
               <hr />
               <p
-                className={id === "10" ? "quiz_10th_question" : "quiz_question"}
+                className={id === "9" ? "quiz_10th_question" : "quiz_question"}
               >
                 {quizItem.question}
               </p>
@@ -89,18 +86,18 @@ const Quiz2 = () => {
               <img
                 className={
                   `quiz_img ${quizItem.description !== "" ? "withDesc" : ""}` +
-                  (id === "4" ? " quiz4_desc_img" : "")
+                  (id === "3" ? " quiz4_desc_img" : "")
                 }
                 src={quizItem.quizImageURL}
                 alt={quizItem.title}
               />
-              {quizItem.description ? (
+              {quizItem.description && (
                 <div
-                  className={id === "4" ? " quiz4_desc_text" : "quiz_desc_text"}
+                  className={id === "3" ? " quiz4_desc_text" : "quiz_desc_text"}
                 >
                   <p>{quizItem.description}</p>
                 </div>
-              ) : null}
+              )}
             </div>
             <div className="quiz2_btn">
               {quizItem.answerBtnList.map((item) => {
@@ -111,15 +108,15 @@ const Quiz2 = () => {
                     className={
                       "quiz_btn_object" +
                       (item === btnActive ? " active" : "") +
-                      (id === "6" ||
-                      id === "9" ||
-                      (id === "10" && language === "En") ||
-                      (id === "7" && language === "En") ||
-                      (id === "5" && language === "En")
+                      (id === "5" ||
+                      id === "8" ||
+                      (id === "9" && language === "En") ||
+                      (id === "6" && language === "En") ||
+                      (id === "4" && language === "En")
                         ? " quiz_middle_btn"
                         : "") +
-                      ((language === "En" && id === "9") ||
-                      (language === "En" && id === "6")
+                      ((language === "En" && id === "8") ||
+                      (language === "En" && id === "5")
                         ? " quiz_long_btn"
                         : "")
                     }
@@ -146,8 +143,6 @@ const Quiz2 = () => {
             )}
           </div>
         </div>
-      ) : (
-        <div></div>
       )}
     </div>
   );

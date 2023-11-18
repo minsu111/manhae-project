@@ -5,6 +5,10 @@ import "./medalDetail1.scss";
 
 const MedalDetail1 = () => {
   const language = sessionStorage.getItem("language");
+  const imgURL =
+    language === "Ko"
+      ? "/assets/medal/medal_detail1_1_Ko.png"
+      : "/assets/medal/medal_detail1_1_En.webp";
 
   return (
     <div className="medal_detail1_container">
@@ -110,10 +114,7 @@ const MedalDetail1 = () => {
         </div>
       )}
       <div className="detail1_section_wrapper2">
-        <img
-          src={"/assets/medal/medal_detail1_1.jpeg"}
-          alt={"훈장 설명 이미지"}
-        />
+        <img src={imgURL} alt={"훈장 설명 이미지"} />
       </div>
     </div>
   );

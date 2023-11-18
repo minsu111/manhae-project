@@ -16,8 +16,8 @@ const Quiz5 = () => {
 
   const quizList =
     language === "Ko"
-      ? QuizList.filter((object) => object.id === "11")
-      : QuizListEn.filter((object) => object.id === "11");
+      ? QuizList.filter((object) => id === object.id)
+      : QuizListEn.filter((object) => id === object.id);
   const quizItem = quizList[0];
 
   const navigate = useNavigate();
@@ -49,42 +49,46 @@ const Quiz5 = () => {
             <p className="quiz_question">{quizItem.question}</p>
           </div>
           <div className="quiz_status">
-            <img src={`/assets/quiz/11.png`} alt="11 / 11" />
+            <img src={`/assets/quiz/10.png`} alt="10 / 10" />
           </div>
         </div>
         <div className="quiz2_section">
-          <div className="quiz2_img">
+          <div className="quiz_10th_img">
             <img
               className="quiz_img"
               src={quizItem.quizImageURL}
               alt={quizItem.title}
             />
+          </div>
+
+          <div className="quiz_10th_right_section">
             {quizItem.description ? (
-              <div className="quiz5_desc_text">
+              <div className="quiz_10th_desc_text">
                 <p>{quizItem.description}</p>
               </div>
             ) : null}
-          </div>
-          <div className="quiz2_btn">
-            {quizItem.answerBtnList.map((item) => {
-              return (
-                <button
-                  key={item.id}
-                  value={item}
-                  onClick={handleQuizBtn}
-                  className="quiz_btn_object"
-                  style={{
-                    backgroundImage: `url("${
-                      item === btnActive
-                        ? "/assets/quiz/quiz_btn_active_bg1.png" // 활성화 상태일 때의 이미지
-                        : "/assets/quiz/quiz_btn_bg1.png" // 디폴트 이미지
-                    }")`,
-                  }}
-                >
-                  {item}
-                </button>
-              );
-            })}
+
+            <div className="quiz_10th_btn">
+              {quizItem.answerBtnList.map((item) => {
+                return (
+                  <button
+                    key={item.id}
+                    value={item}
+                    onClick={handleQuizBtn}
+                    className="quiz_10th_btn_object"
+                    style={{
+                      backgroundImage: `url("${
+                        item === btnActive
+                          ? "/assets/quiz/quiz_btn_active_bg1.png" // 활성화 상태일 때의 이미지
+                          : "/assets/quiz/quiz_btn_bg1.png" // 디폴트 이미지
+                      }")`,
+                    }}
+                  >
+                    {item}
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
         <div className="quiz_result">

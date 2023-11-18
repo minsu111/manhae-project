@@ -87,7 +87,7 @@ const Quiz3 = () => {
       isCorrect ? navigate("/quiz/4") : setResult(null);
       setShowAnswer(true);
       setTimeout(() => {
-        navigate("/quiz/4");
+        navigate("/quiz/3");
       }, 3000);
       setAnswerList(Array(quizList.length).fill(null));
       setResult(null);
@@ -127,7 +127,7 @@ const Quiz3 = () => {
           )}
 
           <div className="quiz_status">
-            <img src={"/assets/quiz/03.png"} alt={"3 / 11"} />
+            <img src={"/assets/quiz/02.png"} alt={"2 / 11"} />
           </div>
         </div>
         <div className="quiz3_section_wrapper">
