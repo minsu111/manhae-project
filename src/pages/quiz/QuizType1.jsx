@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./quizType1.scss";
+import TTSSpeaker from "../../components/collection/TTSSpeaker";
 
 const Quiz1 = () => {
   return (
@@ -125,6 +126,9 @@ const Quiz1 = () => {
         <div className="complete_btn">
           <img src={"/assets/quiz/quiz_complete_btn.png"} alt={"완료버튼"} />
         </div>
+      </div>
+      <div className="play_btn">
+        <TTSSpeaker />
       </div>
     </div>
   );

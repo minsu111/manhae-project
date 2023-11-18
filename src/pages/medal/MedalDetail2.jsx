@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import TTSSpeaker from "../../components/collection/TTSSpeaker";
 
 import "./medalDetail2.scss";
 
@@ -40,6 +40,9 @@ const MedalDetail2 = () => {
         <div className="detail2_desc_img">
           <img src={"/assets/medal/medal_detail2_en.png"} alt={"독립장"} />
         </div>
+      </div>
+      <div className="play_btn">
+        <TTSSpeaker />
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import TTSSpeaker from "../../components/collection/TTSSpeaker";
 
 import "./medalDetail3.scss";
 
@@ -99,6 +99,9 @@ const MedalDetail3 = () => {
           </div>
         </div>
       )}
+      <div className="play_btn">
+        <TTSSpeaker />
+      </div>
     </div>
   );
 };

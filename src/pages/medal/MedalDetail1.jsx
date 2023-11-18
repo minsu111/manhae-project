@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import "./medalDetail1.scss";
+import TTSSpeaker from "../../components/collection/TTSSpeaker";
 
 const MedalDetail1 = () => {
   const language = sessionStorage.getItem("language");
@@ -115,6 +115,9 @@ const MedalDetail1 = () => {
       )}
       <div className="detail1_section_wrapper2">
         <img src={imgURL} alt={"훈장 설명 이미지"} />
+      </div>
+      <div className="play_btn">
+        <TTSSpeaker />
       </div>
     </div>
   );

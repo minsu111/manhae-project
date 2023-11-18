@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { useDrop } from "react-dnd";
+import Object from "../../components/medal/Object";
+import TTSSpeaker from "../../components/collection/TTSSpeaker";
 
 import ObjectList from "../../data/MedalObjects";
 
 import "./makingMedal.scss";
-import Object from "../../components/medal/Object";
 
 const MakingMedal = () => {
   const [medal, setMedal] = useState(null);
@@ -325,6 +326,9 @@ const MakingMedal = () => {
             <img src={"/assets/medal/refresh_btn.png"} alt={"다시 만들기"} />
           </div>
         </div>
+      </div>
+      <div className="play_btn">
+        <TTSSpeaker />
       </div>
     </div>
   );

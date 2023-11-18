@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import TTSSpeaker from "../../components/collection/TTSSpeaker";
 
 import "./quizType3.scss";
 
@@ -84,21 +85,25 @@ const Quiz3 = () => {
     setResult(isCorrect ? "correct" : "wrong");
 
     setTimeout(() => {
-      isCorrect ? navigate("/quiz/4") : setResult(null);
-      setShowAnswer(true);
-      setTimeout(() => {
+      if (isCorrect) {
         navigate("/quiz/3");
-      }, 3000);
-      setAnswerList(Array(quizList.length).fill(null));
-      setResult(null);
-    }, 3000);
+      } else {
+        setResult(null);
+        setShowAnswer(true);
+        setTimeout(() => {
+          navigate("/quiz/3");
+        }, 3500);
+        setAnswerList(Array(quizList.length).fill(null));
+        setResult(null);
+      }
+    }, 1500);
   };
 
-  setTimeout(() => {}, 3000);
+  // setTimeout(() => {}, 3000);
 
-  const getButtonStyle = (index) => {
-    return clickedIndex === index ? { transform: "scale(1.1)" } : {};
-  };
+  // const getButtonStyle = (index) => {
+  //   return clickedIndex === index ? { transform: "scale(1.1)" } : {};
+  // };
 
   return (
     <div className="quiz1_container ">
@@ -141,22 +146,24 @@ const Quiz3 = () => {
                   {item[question]}
                 </div>
                 <div className="ox_btn_wrapper">
-                  <div>
-                    <button
-                      onClick={() => handleAnswerBtn(index, "O")}
-                      className={index === clickedIndex ? " active" : ""}
-                      style={getButtonStyle(index)}
-                    >
-                      <img src={"/assets/quiz/oxquiz_O.png"} alt={"O"} />
-                    </button>
-                    <button
-                      onClick={() => handleAnswerBtn(index, "X")}
-                      className={index === clickedIndex ? " active" : ""}
-                      style={getButtonStyle(index)}
-                    >
-                      <img src={"/assets/quiz/oxquiz_X.png"} alt={"X"} />
-                    </button>
-                  </div>
+                  <button
+                    onClick={() => handleAnswerBtn(index, "O")}
+                    className={
+                      "btnO" + (index === clickedIndex ? " active" : "")
+                    }
+                    // style={getButtonStyle(index)}
+                  >
+                    <img src={"/assets/quiz/oxquiz_O.png"} alt={"O"} />
+                  </button>
+                  <button
+                    onClick={() => handleAnswerBtn(index, "X")}
+                    className={
+                      "btnX" + (index === clickedIndex ? " active" : "")
+                    }
+                    // style={getButtonStyle(index)}
+                  >
+                    <img src={"/assets/quiz/oxquiz_X.png"} alt={"X"} />
+                  </button>
                 </div>
               </div>
             ))}
@@ -189,6 +196,9 @@ const Quiz3 = () => {
             </div>{" "}
           </div>
         )}
+      </div>
+      <div className="play_btn">
+        <TTSSpeaker />
       </div>
     </div>
   );

@@ -1,0 +1,26 @@
+[
+  {
+    "path": "/",
+    "textKo": "TTS 테스트입니다. 1번입니다.",
+    "textEn": "test."
+  },
+
+  { "path": "/manhaeStory", "textKo": "코멘터리.", "textEn": "commentary." },
+
+  { "path": "/medal", "textKo": "1.", "textEn": "2." },
+  { "path": "/medal/1", "textKo": "1.", "textEn": "1." },
+  { "path": "/medal/2", "textKo": "2.", "textEn": "2." },
+  { "path": "/medal/3", "textKo": "3.", "textEn": "3." },
+  { "path": "/medal/making", "textKo": "4.", "textEn": "4." },
+
+  { "path": "/quiz/1", "textKo": "퀴즈1.", "textEn": "text1." },
+  { "path": "/quiz/2", "textKo": "퀴즈2.", "textEn": "text2." },
+  { "path": "/quiz/3", "textKo": "퀴즈3.", "textEn": "text3." },
+  { "path": "/quiz/4", "textKo": "퀴즈4.", "textEn": "text4." },
+  { "path": "/quiz/5", "textKo": "퀴즈5.", "textEn": "text5." },
+  { "path": "/quiz/6", "textKo": "퀴즈6.", "textEn": "text6." },
+  { "path": "/quiz/7", "textKo": "퀴즈7.", "textEn": "text7." },
+  { "path": "/quiz/8", "textKo": "퀴즈8.", "textEn": "text8." },
+  { "path": "/quiz/9", "textKo": "퀴즈9.", "textEn": "text9." },
+  { "path": "/quiz/10", "textKo": "퀴즈10.", "textEn": "text10." }
+]

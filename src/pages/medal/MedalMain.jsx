@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./medalMain.scss";
+import TTSSpeaker from "../../components/collection/TTSSpeaker";
 
 const MedalMain = () => {
   // 다국어 처리
@@ -114,6 +115,9 @@ const MedalMain = () => {
           </div>
         </div>
       )}
+      <div className="play_btn">
+        <TTSSpeaker />
+      </div>
     </div>
   );
 };

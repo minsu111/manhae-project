@@ -89,7 +89,7 @@ const TextToSpeech = ({ text }) => {
   };
 
   return (
-    <div style={{ paddingTop: "20%", paddingRight: "10%" }}>
+    <div>
       {text ? (
         <button onClick={handleTogglePlay} style={{ all: "unset" }}>
           <img

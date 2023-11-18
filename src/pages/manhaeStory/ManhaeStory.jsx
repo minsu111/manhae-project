@@ -1,6 +1,7 @@
 import React from "react";
 import ManhaeStoryList from "../../data/ManhaeStory";
 import { useNavigate } from "react-router-dom";
+import TTSSpeaker from "../../components/collection/TTSSpeaker";
 
 import "./manhaeStory.scss";
 
@@ -58,6 +59,9 @@ const ManhaeStory = () => {
             </p>
           </div>
         ))}
+      </div>
+      <div className="play_btn">
+        <TTSSpeaker />
       </div>
     </div>
   );

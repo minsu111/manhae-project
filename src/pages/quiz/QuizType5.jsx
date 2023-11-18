@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import TTSSpeaker from "../../components/collection/TTSSpeaker";
 
 import QuizList from "../../data/QuizKo.json";
 import QuizListEn from "../../data/QuizEn.json";
@@ -99,6 +100,9 @@ const Quiz5 = () => {
             <img id="wrong_img" src={"/assets/quiz/quiz_X.png"} alt={"땡"} />
           )}
         </div>
+      </div>
+      <div className="play_btn">
+        <TTSSpeaker />
       </div>
     </div>
   );

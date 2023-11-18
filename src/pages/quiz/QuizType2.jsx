@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import TTSSpeaker from "../../components/collection/TTSSpeaker";
 
 import QuizList from "../../data/QuizKo.json";
 import QuizListEn from "../../data/QuizEn.json";
@@ -50,7 +51,7 @@ const Quiz2 = () => {
         value === quizItem.answer && navigate(`/quiz/${Number(id) + 1}`);
         setBtnActive("");
         setResult(null);
-      }, 3000);
+      }, 1500);
     }
   };
 
@@ -144,6 +145,9 @@ const Quiz2 = () => {
           </div>
         </div>
       )}
+      <div className="play_btn">
+        <TTSSpeaker />
+      </div>
     </div>
   );
 };

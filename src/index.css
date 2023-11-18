@@ -10,6 +10,8 @@
     border-radius: 10vw;
     background: #dddddd;
   }
+
+  word-break: keep-all;
 }
 
 body {

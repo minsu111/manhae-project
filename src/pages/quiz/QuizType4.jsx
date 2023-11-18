@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import TTSSpeaker from "../../components/collection/TTSSpeaker";
 
 import "./quizType4.scss";
 
@@ -44,7 +45,10 @@ const Quiz4 = () => {
   };
 
   const handleCompleteBtn = () => {
-    const correctAnswers = ["프랑스어", "영어", "에스페란토어", "체코어"];
+    const correctAnswers =
+      language === "Ko"
+        ? ["프랑스어", "영어", "에스페란토어", "체코어"]
+        : ["French", "English", "Esperanto", "Czech"];
 
     const isCorrect =
       btnActive.length === correctAnswers.length &&
@@ -56,7 +60,7 @@ const Quiz4 = () => {
       if (isCorrect) {
         navigate("/quiz/8");
       } else {
-        setBtnActive(["프랑스어", "영어", "에스페란토어", "체코어"]);
+        setBtnActive(correctAnswers);
         setResult(null);
         setTimeout(() => {
           navigate("/quiz/8");
@@ -168,6 +172,9 @@ const Quiz4 = () => {
             <img id="wrong_img" src={"/assets/quiz/quiz_X.png"} alt={"땡"} />
           )}
         </div>
+      </div>
+      <div className="play_btn">
+        <TTSSpeaker />
       </div>
     </div>
   );

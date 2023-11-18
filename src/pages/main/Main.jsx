@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import TTSSpeaker from "../../components/collection/TTSSpeaker";
 
 import MenuList from "../../data/Menu";
 
@@ -85,6 +86,9 @@ const Main = () => {
             </label>
           </div>
         </div>
+      </div>
+      <div className="main_play_btn">
+        <TTSSpeaker />
       </div>
     </div>
   );
