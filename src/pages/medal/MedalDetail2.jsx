@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import TTSSpeaker from "../../components/collection/TTSSpeaker";
 
 import "./medalDetail2.scss";
+import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 const MedalDetail2 = () => {
+  const baseFontSize = 1;
+  const [fontSize, setFontSize] = useState(baseFontSize);
+  const maxFontSize = baseFontSize + 0.4;
   const language = sessionStorage.getItem("language");
 
   return (
-    <div className="medal_detail2_container">
+    <div
+      className="medal_detail2_container"
+      style={{ fontSize: `${fontSize}vw` }}
+    >
       <div className="detail2_section_wrapper">
         {language === "Ko" ? (
           <div className="medal_detail2_seciton">
@@ -47,6 +54,11 @@ const MedalDetail2 = () => {
       <div className="play_btn">
         <TTSSpeaker />
       </div>
+      <TextZoomBar
+        textFontSize={fontSize}
+        maxFontSize={maxFontSize}
+        setFontSize={setFontSize}
+      />
     </div>
   );
 };

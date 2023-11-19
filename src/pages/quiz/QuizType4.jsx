@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TTSSpeaker from "../../components/collection/TTSSpeaker";
+import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
+
+import correctAudio from "../../audio/correct.wav";
+import wrongAudio from "../../audio/wrong.wav";
 
 import "./quizType4.scss";
 
@@ -26,6 +30,9 @@ const Quiz4 = () => {
   const [result, setResult] = useState(null);
   const [btnActive, setBtnActive] = useState([]);
 
+  const baseFontSize = 1;
+  const [fontSize, setFontSize] = useState(baseFontSize);
+  const maxFontSize = baseFontSize + 0.4;
   const language = sessionStorage.getItem("language");
 
   const navigate = useNavigate();
@@ -56,6 +63,9 @@ const Quiz4 = () => {
 
     setResult(isCorrect ? "correct" : "wrong");
 
+    const newAudio = new Audio(isCorrect ? correctAudio : wrongAudio);
+    newAudio.play();
+
     setTimeout(() => {
       if (isCorrect) {
         navigate("/quiz/8");
@@ -70,7 +80,7 @@ const Quiz4 = () => {
   };
 
   return (
-    <div className="quiz1_container">
+    <div className="quiz1_container" style={{ fontSize: `${fontSize}vw` }}>
       <div className="quiz4_all_wrapper">
         <div className="quiz_title_wrapper">
           {language === "Ko" ? (
@@ -176,6 +186,11 @@ const Quiz4 = () => {
       <div className="play_btn">
         <TTSSpeaker />
       </div>
+      <TextZoomBar
+        textFontSize={fontSize}
+        maxFontSize={maxFontSize}
+        setFontSize={setFontSize}
+      />
     </div>
   );
 };

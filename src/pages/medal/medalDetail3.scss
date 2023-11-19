@@ -37,7 +37,6 @@
 
   p {
     height: 25%;
-    font-size: 1vw;
     line-height: 1.8vw;
     padding: 2% 0;
     overflow-y: auto;
@@ -48,9 +47,9 @@
     height: 90%;
 
     img {
-      width: 90%;
-      height: 100%;
-      padding-top: 10%;
+      width: 85%;
+      height: auto;
+      margin-top: 2%;
     }
   }
 
@@ -68,7 +67,7 @@
   height: 95% !important;
 
   p {
-    height: 10%;
+    height: 15%;
   }
 
   .detail3_desc_img_1 {

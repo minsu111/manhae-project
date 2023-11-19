@@ -6,11 +6,10 @@ import { ButtonBar } from "../buttonBar/ButtonBar";
 
 export const Layout = (props) => {
   const location = useLocation();
-  const isZoomEnabled = true;
 
   const zoomPage =
     location.pathname.includes("/detail") ||
-    location.pathname.includes("/manhaeStory") ||
+    location.pathname.includes("/manhaeStory/detail") ||
     location.pathname.includes("/medal") ||
     location.pathname.includes("/quiz");
 
@@ -19,12 +18,7 @@ export const Layout = (props) => {
       {location.pathname !== "/" && <SideBar />}
       <div className="content">
         {props.children}
-        {/* {location.pathname !== "/" &&
-          (zoomPage ? (
-            <ButtonBar isZoomEnabled={isZoomEnabled} />
-          ) : (
-            <ButtonBar />
-          ))} */}
+        {location.pathname !== "/" && !zoomPage && <ButtonBar />}
       </div>
     </div>
   );

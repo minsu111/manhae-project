@@ -8,12 +8,16 @@ import correctAudio from "../../audio/correct.wav";
 import wrongAudio from "../../audio/wrong.wav";
 
 import "./quizType2.scss";
+import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 const Quiz2 = () => {
   const [result, setResult] = useState(null);
   const [btnActive, setBtnActive] = useState("");
   const [isLaodinged, setIsImageLoaded] = useState(false);
   const [audio, setAudio] = useState(new Audio());
+  const baseFontSize = 1;
+  const [fontSize, setFontSize] = useState(baseFontSize);
+  const maxFontSize = baseFontSize + 0.4;
 
   const { id } = useParams();
 
@@ -41,13 +45,6 @@ const Quiz2 = () => {
     };
   }, [quizItem.quizImageURL]);
 
-  useEffect(() => {
-    setAudio(new Audio(result === "correct" ? correctAudio : wrongAudio));
-    return () => {
-      audio.pause();
-    };
-  }, [audio, result]);
-
   const handleQuizBtn = (e) => {
     if (result === null) {
       const value = e.target.value;
@@ -59,13 +56,7 @@ const Quiz2 = () => {
         const newAudio = new Audio(
           value === quizItem.answer ? correctAudio : wrongAudio
         );
-        setAudio(newAudio);
-
-        if (value === quizItem.answer) {
-          newAudio.play();
-        } else {
-          newAudio.play();
-        }
+        newAudio.play();
       }, 400);
 
       setTimeout(() => {
@@ -83,7 +74,7 @@ const Quiz2 = () => {
         (id === "3" ? " quiz4_desc_img" : "");
 
   return (
-    <div className="quiz1_container">
+    <div className="quiz1_container" style={{ fontSize: `${fontSize}vw` }}>
       {isLaodinged && (
         <div className="quiz2_all_wrapper">
           <div className="quiz_title_wrapper">
@@ -169,6 +160,11 @@ const Quiz2 = () => {
       <div className="play_btn">
         <TTSSpeaker />
       </div>
+      <TextZoomBar
+        textFontSize={fontSize}
+        maxFontSize={maxFontSize}
+        setFontSize={setFontSize}
+      />
     </div>
   );
 };

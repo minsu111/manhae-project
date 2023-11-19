@@ -5,14 +5,14 @@ import CollectionList from "../../data/Collection";
 import SubList from "../../data/Sub";
 
 import "./collectionDetail.scss";
-import { Spinner } from "../../components/common/spinner/Spinner";
-import { ButtonBar } from "../../components/common/buttonBar/ButtonBar";
+import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 const CollectionDetail = () => {
   const [subId, setSubId] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [zoomBtn, setZoomBtn] = useState("");
-  const [fontSize, setFontSize] = useState(1);
+  const baseFontSize = 1;
+  const [fontSize, setFontSize] = useState(baseFontSize);
+  const maxFontSize = baseFontSize + 0.4;
+
   const { id } = useParams();
 
   const ClickInnerImg = (subId, e) => {
@@ -31,26 +31,7 @@ const CollectionDetail = () => {
         break;
       }
     }
-
-    if (CollectionList.length > 0) {
-      setIsLoading(false);
-    }
   }, [id]);
-
-  useEffect(() => {
-    switch (zoomBtn) {
-      case "+":
-        const size1 = fontSize < 1.4 ? fontSize + 0.2 : 1.4;
-        setFontSize(size1);
-        break;
-      case "-":
-        const size2 = fontSize > 0.6 ? fontSize - 0.2 : 0.6;
-        setFontSize(size2);
-        break;
-      default:
-        break;
-    }
-  }, [zoomBtn]);
 
   return (
     <section className="detail_section">
@@ -59,50 +40,52 @@ const CollectionDetail = () => {
           {CollectionList[id][description]}
         </div>
       </div>
-      <Suspense fallback={<div>Loading...</div>}>
-        <div className="main_img_wrapper">
-          <div className="detail_main_title">{CollectionList[id][title]}</div>
-          {subId !== null && (
-            <img
-              src={SubList[subId].originImg}
-              alt={SubList[subId][title]}
-              className="main_img"
-            />
-          )}
-        </div>
+      <div className="main_img_wrapper">
+        <div className="detail_main_title">{CollectionList[id][title]}</div>
+        {subId !== null && (
+          <img
+            src={SubList[subId].originImg}
+            alt={SubList[subId][title]}
+            className="main_img"
+          />
+        )}
+      </div>
 
-        <div className="right_contents_wrapper">
-          <div className="inner_page_list">
-            {SubList.map(
-              (item, i) =>
-                item.mainId === Number(id) && (
-                  <div className="inner_pages" key={"inner" + i}>
-                    <div
-                      onClick={(e) => {
-                        ClickInnerImg(i, e);
-                      }}
-                      className="inner_figure"
-                    >
-                      <img
-                        src={item.thumbImg}
-                        alt={item[title]}
-                        className="inner_img"
-                      />
-                      <div className="inner_text">
-                        {String(item.subId + 1).padStart(2, "0")}
-                      </div>
+      <div className="right_contents_wrapper">
+        <div className="inner_page_list">
+          {SubList.map(
+            (item, i) =>
+              item.mainId === Number(id) && (
+                <div className="inner_pages" key={"inner" + i}>
+                  <div
+                    onClick={(e) => {
+                      ClickInnerImg(i, e);
+                    }}
+                    className="inner_figure"
+                  >
+                    <img
+                      src={item.thumbImg}
+                      alt={item[title]}
+                      className="inner_img"
+                    />
+                    <div className="inner_text">
+                      {String(item.subId + 1).padStart(2, "0")}
                     </div>
                   </div>
-                )
-            )}
-          </div>
-          <TextToSpeech
-            text={CollectionList[id][description]}
-            className="play_btn"
-          />
+                </div>
+              )
+          )}
         </div>
-        <ButtonBar isZoomEnabled={true} setZoomBtn={setZoomBtn} />
-      </Suspense>
+        <TextToSpeech
+          text={CollectionList[id][description]}
+          className="play_btn"
+        />
+      </div>
+      <TextZoomBar
+        textFontSize={fontSize}
+        maxFontSize={maxFontSize}
+        setFontSize={setFontSize}
+      />
     </section>
   );
 };

@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./medalMain.scss";
 import TTSSpeaker from "../../components/collection/TTSSpeaker";
+import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 const MedalMain = () => {
-  // 다국어 처리
+  const baseFontSize = 1;
+  const [fontSize, setFontSize] = useState(baseFontSize);
+  const maxFontSize = baseFontSize + 0.4;
+
   const language = sessionStorage.getItem("language");
 
   return (
@@ -14,7 +18,7 @@ const MedalMain = () => {
       style={{ backgroundImage: 'url("/assets/image/medalMain_bg.jpeg")' }}
     >
       {language === "Ko" ? (
-        <div className="section_wrapper">
+        <div className="section_wrapper" style={{ fontSize: `${fontSize}vw` }}>
           <div className="section1">
             <h1>대한민국 훈장</h1>
             <hr className="dividing_line" />
@@ -61,8 +65,8 @@ const MedalMain = () => {
           </div>
         </div>
       ) : (
-        <div className="section_wrapper">
-          <div className="section1">
+        <div className="section_wrapper" style={{ fontSize: `${fontSize}vw` }}>
+          <div className="section1_en">
             <h1>Order of the Republic of Korea</h1>
             <hr className="dividing_line" />
             <p>
@@ -76,7 +80,7 @@ const MedalMain = () => {
               Merit.
             </p>
           </div>
-          <div className="section2">
+          <div className="section2_en">
             <h2>Order of Merit for National Foundation</h2>
             <hr className="dividing_line" />
             <p>
@@ -118,6 +122,11 @@ const MedalMain = () => {
       <div className="play_btn">
         <TTSSpeaker />
       </div>
+      <TextZoomBar
+        textFontSize={fontSize}
+        maxFontSize={maxFontSize}
+        setFontSize={setFontSize}
+      />
     </div>
   );
 };

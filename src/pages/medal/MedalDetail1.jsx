@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./medalDetail1.scss";
 import TTSSpeaker from "../../components/collection/TTSSpeaker";
+import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 const MedalDetail1 = () => {
+  const baseFontSize = 1;
+  const [fontSize, setFontSize] = useState(baseFontSize);
+  const maxFontSize = baseFontSize + 0.4;
   const language = sessionStorage.getItem("language");
   const imgURL =
     language === "Ko"
@@ -11,7 +15,10 @@ const MedalDetail1 = () => {
       : "/assets/medal/medal_detail1_1_En.webp";
 
   return (
-    <div className="medal_detail1_container">
+    <div
+      className="medal_detail1_container"
+      style={{ fontSize: `${fontSize}vw` }}
+    >
       {language === "Ko" ? (
         <div className="detail1_section_wrapper1">
           <div className="medal_detail1_seciton">
@@ -86,7 +93,10 @@ const MedalDetail1 = () => {
             </div>
           </div>
 
-          <div className="medal_detail1_img_1">
+          <div
+            className="medal_detail1_img_1"
+            style={{ fontSize: `${fontSize}vw` }}
+          >
             <img
               src={"/assets/medal/medal_detail1_2.png"}
               alt={"훈장 설명 이미지"}
@@ -119,6 +129,11 @@ const MedalDetail1 = () => {
       <div className="play_btn">
         <TTSSpeaker />
       </div>
+      <TextZoomBar
+        textFontSize={fontSize}
+        maxFontSize={maxFontSize}
+        setFontSize={setFontSize}
+      />
     </div>
   );
 };

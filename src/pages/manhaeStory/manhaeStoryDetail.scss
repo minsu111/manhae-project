@@ -13,7 +13,8 @@
 }
 .story_content_wrapper {
   width: 100%;
-  margin-top: 8%;
+  height: 60%;
+  margin-top: 6%;
 
   display: flex;
   flex-direction: column;
@@ -23,11 +24,15 @@
 
 .animation_content {
   width: 50%;
+  height: 50%;
 }
 
 .text_content {
   width: 50%;
+  height: 50%;
   margin-top: 3%;
+  font-size: 1.2vw;
+  line-height: 180%;
 
   display: flex;
   flex-direction: column;
@@ -35,12 +40,17 @@
 
   p {
     width: 100%;
-    font-size: 1.2vw;
     word-break: break-all;
     white-space: pre-wrap;
 
+    &:nth-child(1) {
+      height: 80%;
+      overflow-y: auto;
+    }
+
     &:last-child {
-      padding: 4% 0;
+      height: 20%;
+      // padding: 2% 0;
       text-align: end;
     }
   }

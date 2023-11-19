@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 
 import ManhaeStoryList from "../../data/ManhaeStory";
 
 import "./manhaeStoryDetail.scss";
-import { VideoPlayer } from "../../components/commentary/VideoPlayer";
 import ReactPlayer from "react-player";
+import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 const ManhaeStoryDetail = () => {
+  const baseFontSize = 1.2;
+  const [fontSize, setFontSize] = useState(baseFontSize);
+  const maxFontSize = baseFontSize + 0.4;
   const { id } = useParams();
 
   // 다국어 처리
@@ -33,11 +36,16 @@ const ManhaeStoryDetail = () => {
           height="100%"
         />
 
-        <div className="text_content">
+        <div className="text_content" style={{ fontSize: `${fontSize}vw` }}>
           <p>{ManhaeStoryList[id][text]}</p>
           <p>{ManhaeStoryList[id].source}</p>
         </div>
       </div>
+      <TextZoomBar
+        textFontSize={fontSize}
+        maxFontSize={maxFontSize}
+        setFontSize={setFontSize}
+      />
     </div>
   );
 };

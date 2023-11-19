@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import TTSSpeaker from "../../components/collection/TTSSpeaker";
+import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
+
+import correctAudio from "../../audio/correct.wav";
+import wrongAudio from "../../audio/wrong.wav";
 
 import QuizList from "../../data/QuizKo.json";
 import QuizListEn from "../../data/QuizEn.json";
@@ -11,6 +15,9 @@ const Quiz5 = () => {
   const [result, setResult] = useState(null);
   const [btnActive, setBtnActive] = useState("");
 
+  const baseFontSize = 1;
+  const [fontSize, setFontSize] = useState(baseFontSize);
+  const maxFontSize = baseFontSize + 0.4;
   const language = sessionStorage.getItem("language");
 
   const { id } = useParams();
@@ -30,6 +37,10 @@ const Quiz5 = () => {
       setBtnActive(value);
       setTimeout(() => {
         value === quizItem.answer ? setResult("correct") : setResult("wrong");
+        const newAudio = new Audio(
+          value === quizItem.answer ? correctAudio : wrongAudio
+        );
+        newAudio.play();
       }, 400);
 
       setTimeout(() => {
@@ -41,10 +52,10 @@ const Quiz5 = () => {
   };
 
   return (
-    <div className="quiz1_container">
+    <div className="quiz1_container" style={{ fontSize: `${fontSize}vw` }}>
       <div className="quiz2_all_wrapper">
-        <div className="quiz_title_wrapper">
-          <div className="quiz2_title_section">
+        <div className="quiz_10th_title_wrapper">
+          <div className="quiz_10th_title_section">
             <h1>{quizItem.title}</h1>
             <hr />
             <p className="quiz_question">{quizItem.question}</p>
@@ -53,7 +64,7 @@ const Quiz5 = () => {
             <img src={`/assets/quiz/10.png`} alt="10 / 10" />
           </div>
         </div>
-        <div className="quiz2_section">
+        <div className="quiz_10th_section">
           <div className="quiz_10th_img">
             <img
               className="quiz_img"
@@ -104,6 +115,11 @@ const Quiz5 = () => {
       <div className="play_btn">
         <TTSSpeaker />
       </div>
+      <TextZoomBar
+        textFontSize={fontSize}
+        maxFontSize={maxFontSize}
+        setFontSize={setFontSize}
+      />
     </div>
   );
 };

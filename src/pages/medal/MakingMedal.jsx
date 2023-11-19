@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDrop } from "react-dnd";
 import Object from "../../components/medal/Object";
 import TTSSpeaker from "../../components/collection/TTSSpeaker";
+import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 import ObjectList from "../../data/MedalObjects";
 
@@ -12,6 +13,9 @@ const MakingMedal = () => {
   const [middleRibon, setMiddleRibon] = useState(null);
   const [bottomRibon, setBottomRibon] = useState(null);
   const [extraItems, setExtraItems] = useState([]);
+  const baseFontSize = 1;
+  const [fontSize, setFontSize] = useState(baseFontSize);
+  const maxFontSize = baseFontSize + 0.4;
 
   // 다국어 처리
   const language = sessionStorage.getItem("language");
@@ -93,7 +97,10 @@ const MakingMedal = () => {
   };
 
   return (
-    <div className="making_medal_container">
+    <div
+      className="making_medal_container"
+      style={{ fontSize: `${fontSize}vw` }}
+    >
       <div className="making_medal_section_wrapper">
         <div className="left_section">
           {language === "Ko" ? (
@@ -330,6 +337,11 @@ const MakingMedal = () => {
       <div className="play_btn">
         <TTSSpeaker />
       </div>
+      <TextZoomBar
+        textFontSize={fontSize}
+        maxFontSize={maxFontSize}
+        setFontSize={setFontSize}
+      />
     </div>
   );
 };

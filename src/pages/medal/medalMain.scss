@@ -26,7 +26,26 @@
 
   p {
     height: 10vh;
-    font-size: 1vw;
+    line-height: 180%;
+    padding: 2% 0;
+    word-break: keep-all;
+    overflow-y: auto;
+  }
+}
+
+.section1_en {
+  width: 40vw;
+  margin: 5% 0;
+
+  h1 {
+    font-size: 1.8vw;
+    font-weight: 800;
+    color: #595757;
+    margin-bottom: 1%;
+  }
+
+  p {
+    height: 15vh;
     line-height: 180%;
     padding: 2% 0;
     word-break: keep-all;
@@ -45,10 +64,26 @@
 
   p {
     height: 10vh;
-    font-size: 1vw;
     line-height: 180%;
     padding: 2% 0;
-    word-break: keep-all;
+    overflow-y: auto;
+  }
+}
+
+.section2_en {
+  width: 40vw;
+  margin: 5% 0;
+
+  h2 {
+    font-size: 1.5vw;
+    font-weight: 500;
+    margin-bottom: 1%;
+  }
+
+  p {
+    height: 15vh;
+    line-height: 180%;
+    padding: 2% 0;
     overflow-y: auto;
   }
 }
@@ -66,29 +101,16 @@
 
 .medal_main_btn_wrapper_en {
   width: 70%;
+  margin-top: 2%;
 }
 
 .medal_main_btn {
   all: unset;
-  position: relative;
 
   img {
     width: 100%;
     padding: 2% 0;
   }
-
-  span {
-    position: absolute;
-    left: 10%;
-    font-size: 1.2vw;
-    padding-top: 0.5vw;
-  }
-}
-
-.medal_main_btn_2_text {
-  font-size: 1.2vw;
-  margin-top: 1.5vh;
-  line-height: 4.6vh;
 }
 
 .play_btn {
