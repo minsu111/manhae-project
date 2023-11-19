@@ -22,7 +22,7 @@ const MakingMedal = () => {
 
   const [subject, setSubject] = useState(
     language === "Ko"
-      ? "아래 버튼을 눌러 주제를 선택해주세요."
+      ? "아래 버튼을 눌러 주제를 선택해 주세요."
       : "Please press the button below\nto select a topic."
   );
 
