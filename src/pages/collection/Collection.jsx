@@ -1,7 +1,7 @@
-import React, { useEffect, Suspense, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ToastNotification } from "../../components/common/toast/ToastNotification";
-import { Spinner } from "../../components/common/spinner/Spinner";
+import TTSSpeaker from "../../components/collection/TTSSpeaker";
 
 import CollectionList from "../../data/Collection";
 import CategoryList from "../../data/Category";
@@ -59,57 +59,58 @@ const Collection = () => {
     language === "Ko" ? "category_item_ko" : "category_item_en";
 
   return (
-    <Suspense fallback={<Spinner />}>
-      <div className="collection_section">
-        {openToast && (
-          <ToastNotification
-            openToast={openToast}
-            setOpentToast={setOpentToast}
-          />
-        )}
-        {/* 카테고리 영역 */}
-        <div className={categoryClass}>
-          {CategoryList.map((c, i) => (
-            <div key={i} className={categoryItemClass}>
-              <label>
-                <input
-                  type="radio"
-                  name="category"
-                  id={c.code}
-                  value={c.code}
-                  onChange={handleCategory}
-                  checked={category === c.code}
-                />
-                <span className="category_name">{c[name]}</span>
-              </label>
-            </div>
-          ))}
-        </div>
-
-        <section
-          className="img_section"
-          ref={imgSectionRef}
-          onScroll={handleScroll}
-        >
-          {CollectionList.filter(
-            (item) => category === 0 || category === item.category
-          ).map((item, i) => (
-            <div key={i} className="items">
-              <div className="figure">
-                <Link to={`/collection/detail/${i}`} onClick={storeScrollTop}>
-                  <img
-                    src={`/assets/thumbnail/${item.thumbImg}`}
-                    alt={item[title]}
-                    className="image"
-                  />
-                </Link>
-                <div className="main_title">{item[title]}</div>
-              </div>
-            </div>
-          ))}
-        </section>
+    <div className="collection_section">
+      {openToast && (
+        <ToastNotification
+          openToast={openToast}
+          setOpentToast={setOpentToast}
+        />
+      )}
+      {/* 카테고리 영역 */}
+      <div className={categoryClass}>
+        {CategoryList.map((c, i) => (
+          <div key={i} className={categoryItemClass}>
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id={c.code}
+                value={c.code}
+                onChange={handleCategory}
+                checked={category === c.code}
+              />
+              <span className="category_name">{c[name]}</span>
+            </label>
+          </div>
+        ))}
       </div>
-    </Suspense>
+
+      <section
+        className="img_section"
+        ref={imgSectionRef}
+        onScroll={handleScroll}
+      >
+        {CollectionList.filter(
+          (item) => category === 0 || category === item.category
+        ).map((item, i) => (
+          <div key={i} className="items">
+            <div className="figure">
+              <Link to={`/collection/detail/${i}`} onClick={storeScrollTop}>
+                <img
+                  src={`/assets/thumbnail/${item.thumbImg}`}
+                  alt={item[title]}
+                  className="image"
+                />
+              </Link>
+              <div className="main_title">{item[title]}</div>
+            </div>
+          </div>
+        ))}
+      </section>
+      <div className="play_btn">
+        <TTSSpeaker />
+      </div>
+    </div>
   );
 };
 

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+
 import TTSSpeaker from "../../components/collection/TTSSpeaker";
 import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
@@ -9,7 +11,6 @@ import QuizList from "../../data/QuizKo.json";
 import QuizListEn from "../../data/QuizEn.json";
 
 import "./quizType5.scss";
-import { useNavigate, useParams } from "react-router-dom";
 
 const Quiz5 = () => {
   const [result, setResult] = useState(null);

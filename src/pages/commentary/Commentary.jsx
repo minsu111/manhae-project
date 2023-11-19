@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 
+import { VideoPlayer } from "../../components/commentary/VideoPlayer";
+import { useNavigate } from "react-router-dom";
+import TTSSpeaker from "../../components/collection/TTSSpeaker";
+
 import VideoList from "../../data/Commentary";
 
 import "./commentary.scss";
-import { VideoPlayer } from "../../components/commentary/VideoPlayer";
-import { useNavigate } from "react-router-dom";
 
 const Commentary = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -66,6 +68,9 @@ const Commentary = () => {
           </div>
         </div>
       )}
+      <div className="play_btn">
+        <TTSSpeaker />
+      </div>
     </section>
   );
 };

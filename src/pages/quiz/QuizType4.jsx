@@ -38,8 +38,6 @@ const Quiz4 = () => {
   const navigate = useNavigate();
 
   const handleQuizBtn = (e) => {
-    // const value = e.target.value;
-
     if (result === null) {
       const value = e.target.value;
 

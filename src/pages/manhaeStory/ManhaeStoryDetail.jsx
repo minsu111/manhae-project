@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import ReactPlayer from "react-player";
+import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 import ManhaeStoryList from "../../data/ManhaeStory";
 
 import "./manhaeStoryDetail.scss";
-import ReactPlayer from "react-player";
-import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 const ManhaeStoryDetail = () => {
   const baseFontSize = 1.2;

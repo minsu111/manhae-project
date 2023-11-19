@@ -1,11 +1,12 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import TextToSpeech from "../../components/collection/TextToSpeech";
+import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
+
 import CollectionList from "../../data/Collection";
 import SubList from "../../data/Sub";
 
 import "./collectionDetail.scss";
-import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 const CollectionDetail = () => {
   const [subId, setSubId] = useState(null);
@@ -76,10 +77,9 @@ const CollectionDetail = () => {
               )
           )}
         </div>
-        <TextToSpeech
-          text={CollectionList[id][description]}
-          className="play_btn"
-        />
+        <div className="play_btn">
+          <TextToSpeech text={CollectionList[id][description]} />
+        </div>
       </div>
       <TextZoomBar
         textFontSize={fontSize}

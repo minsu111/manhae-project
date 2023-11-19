@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import TTSSpeaker from "../../components/collection/TTSSpeaker";
+import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 import "./medalDetail2.scss";
-import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 const MedalDetail2 = () => {
   const baseFontSize = 1;

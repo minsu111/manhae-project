@@ -6,7 +6,6 @@ import Quiz2 from "./QuizType2";
 import Quiz3 from "./QuizType3";
 import Quiz4 from "./QuizType4";
 import Quiz5 from "./QuizType5";
-import TextToSpeech from "../../components/collection/TextToSpeech";
 
 const Quiz = () => {
   const { id } = useParams();

@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TTSSpeaker from "../../components/collection/TTSSpeaker";
+import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 import correctAudio from "../../audio/correct.wav";
 import wrongAudio from "../../audio/wrong.wav";
 
 import "./quizType3.scss";
-import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 const quizList = [
   {
@@ -80,7 +80,6 @@ const Quiz3 = () => {
       setClickedIndex(null);
       setSelectedAnswer(null);
     }
-    console.log(answerList);
   }, [clickedIndex, selectedAnswer]);
 
   const handleCompleteBtn = () => {

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import "./medalMain.scss";
 import TTSSpeaker from "../../components/collection/TTSSpeaker";
 import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
+
+import "./medalMain.scss";
 
 const MedalMain = () => {
   const baseFontSize = 1;

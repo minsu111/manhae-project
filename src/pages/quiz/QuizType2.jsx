@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import TTSSpeaker from "../../components/collection/TTSSpeaker";
+import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 import QuizList from "../../data/QuizKo.json";
 import QuizListEn from "../../data/QuizEn.json";
@@ -8,7 +9,6 @@ import correctAudio from "../../audio/correct.wav";
 import wrongAudio from "../../audio/wrong.wav";
 
 import "./quizType2.scss";
-import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 const Quiz2 = () => {
   const [result, setResult] = useState(null);

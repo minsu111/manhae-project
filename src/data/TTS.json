@@ -5,15 +5,38 @@
     "textEn": "Welcome to the Manhae Han Yong-un Museum! Experience Manhae Han Yong-un's spirit of love for the country through various contents! Now, please touch one of the five menus for the content you'd like to see! 1. View the Collection. 2. Collection Commentary. 3. Wisdom from Manhae. 4. Create Your Own Medal. 5. Exhibition Related Quiz."
   },
 
-  { "path": "/manhaeStory", "textKo": "코멘터리.", "textEn": "commentary." },
+  {
+    "path": "/collection",
+    "textKo": "만해기념관이 소장하고 있는 소장품에 대한 감상 콘텐츠입니다. 약 300여점의 디지털 콘텐츠가 제공됩니다. 천천히 시간을 갖고 즐겨 주시기 바랍니다!",
+    "textEn": "This is an appreciation content of the collection held by Manhae Museum. About 300 pieces of digital content are available. Please take your time and enjoy it!"
+  },
+  {
+    "path": "/commentary",
+    "textKo": "만해기념관 전보삼 관장님이 직접 만해의 유물이나 철학, 사상에 대해 해설하시는 콘텐츠입니다. 만해기념관이 보유 및 전시하고 있는 다양한 콘텐츠의 역사 및 의미에 대해 더 깊이 알아보세요! ",
+    "textEn": "This is content in which Director Jeon Bo-sam of the Manhae Museum directly explains Manhae's relics, philosophy, and thoughts."
+  },
 
-  { "path": "/medal", "textKo": "1.", "textEn": "2." },
+  {
+    "path": "/manhaeStory",
+    "textKo": "만해에게 지혜를 빌리는 콘텐츠입니다!오늘 하루 슬프거나, 기쁘거나, 기억이 잘 나지 않으신다면 나를 돌아볼 시간입니다. 만해의 지혜를 들으며 나와 대화 해 보세요!",
+    "textEn": "This is content for seeking wisdom from Manhae! If today you feel sad, joyful, or if memories don't come easily, it's time to reflect on yourself. Listen to Manhae's wisdom and have a conversation with me!"
+  },
+
+  {
+    "path": "/medal",
+    "textKo": "대한민국 훈장의 종류 및 만해 한용운 선생님이 받은 건국훈장에 대한 자세한 정보를 알아본 후 나만의 훈장을 만들어 부모님, 친구들과 공유 해 보세요!",
+    "textEn": "After learning about the types of Orders of the Republic of Korea and the detailed information about the Order of Merit for National Foundation received by Master Manhae Han Yong-un, create your own medal and share it with your parents and friends!"
+  },
   { "path": "/medal/1", "textKo": "1.", "textEn": "1." },
   { "path": "/medal/2", "textKo": "2.", "textEn": "2." },
   { "path": "/medal/3", "textKo": "3.", "textEn": "3." },
   { "path": "/medal/making", "textKo": "4.", "textEn": "4." },
 
-  { "path": "/quiz/1", "textKo": "퀴즈1.", "textEn": "text1." },
+  {
+    "path": "/quiz/1",
+    "textKo": "만해 한용운 선생님의 생애와 업적을 다양한 퀴즈로 풀어 보는 콘텐츠입니다. 10개의 인터랙티브 퀴즈로 구성되어 있으며, 퀴즈를 푸는 과정을 통해 그의 업적과 철학을 이해 할 수 있습니다.",
+    "textEn": "This content allows you to explore the life and achievements of Master Manhae Han Yong-un through various quizzes. It consists of 10 interactive quizzes, and by solving them, you can understand his accomplishments and philosophy."
+  },
   { "path": "/quiz/2", "textKo": "퀴즈2.", "textEn": "text2." },
   { "path": "/quiz/3", "textKo": "퀴즈3.", "textEn": "text3." },
   { "path": "/quiz/4", "textKo": "퀴즈4.", "textEn": "text4." },
