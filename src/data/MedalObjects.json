@@ -66,7 +66,7 @@
     "id": 8,
     "url": "/assets/medal/medal_object_09.png",
     "location": "",
-    "top": 44.5,
+    "top": 48,
     "left": 33.7,
     "width": 8,
     "groupId": 3
@@ -75,7 +75,7 @@
     "id": 9,
     "url": "/assets/medal/medal_object_10.png",
     "location": "",
-    "top": 45,
+    "top": 48,
     "left": 35.5,
     "width": 7,
     "groupId": 3
@@ -84,7 +84,7 @@
     "id": 10,
     "url": "/assets/medal/medal_object_11.png",
     "location": "",
-    "top": 46,
+    "top": 50,
     "left": 43.1,
     "width": 3,
     "groupId": 3
@@ -93,7 +93,7 @@
     "id": 11,
     "url": "/assets/medal/medal_object_12.png",
     "location": "",
-    "top": 46,
+    "top": 50,
     "left": 43.1,
     "width": 3,
     "groupId": 3
@@ -102,7 +102,7 @@
     "id": 12,
     "url": "/assets/medal/medal_object_13.png",
     "location": "",
-    "top": 46.5,
+    "top": 50,
     "left": 43,
     "width": 3.2,
     "groupId": 3
@@ -111,7 +111,7 @@
     "id": 13,
     "url": "/assets/medal/medal_object_14.png",
     "location": "",
-    "top": 46,
+    "top": 50,
     "left": 43.5,
     "width": 3,
     "groupId": 3

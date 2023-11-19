@@ -4,6 +4,8 @@ import TTSSpeaker from "../../components/collection/TTSSpeaker";
 
 import QuizList from "../../data/QuizKo.json";
 import QuizListEn from "../../data/QuizEn.json";
+import correctAudio from "../../audio/correct.wav";
+import wrongAudio from "../../audio/wrong.wav";
 
 import "./quizType2.scss";
 
@@ -11,6 +13,7 @@ const Quiz2 = () => {
   const [result, setResult] = useState(null);
   const [btnActive, setBtnActive] = useState("");
   const [isLaodinged, setIsImageLoaded] = useState(false);
+  const [audio, setAudio] = useState(new Audio());
 
   const { id } = useParams();
 
@@ -38,6 +41,13 @@ const Quiz2 = () => {
     };
   }, [quizItem.quizImageURL]);
 
+  useEffect(() => {
+    setAudio(new Audio(result === "correct" ? correctAudio : wrongAudio));
+    return () => {
+      audio.pause();
+    };
+  }, [audio, result]);
+
   const handleQuizBtn = (e) => {
     if (result === null) {
       const value = e.target.value;
@@ -45,6 +55,17 @@ const Quiz2 = () => {
       setBtnActive(value);
       setTimeout(() => {
         value === quizItem.answer ? setResult("correct") : setResult("wrong");
+
+        const newAudio = new Audio(
+          value === quizItem.answer ? correctAudio : wrongAudio
+        );
+        setAudio(newAudio);
+
+        if (value === quizItem.answer) {
+          newAudio.play();
+        } else {
+          newAudio.play();
+        }
       }, 400);
 
       setTimeout(() => {

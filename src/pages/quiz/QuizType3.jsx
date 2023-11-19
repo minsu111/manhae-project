@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TTSSpeaker from "../../components/collection/TTSSpeaker";
 
@@ -49,9 +49,15 @@ const Quiz3 = () => {
 
   const navigate = useNavigate();
 
-  const handleAnswerBtn = (index, selectedAnswer) => {
+  // OX 버튼 핸들러
+  const handleAnswerBtn = (index, selectedAnswer, e) => {
     setClickedIndex(index);
     setSelectedAnswer(selectedAnswer);
+    let prevImgId = e.currentTarget.id.indexOf("btnO") !== -1 ? "btnX" : "btnO";
+    prevImgId += index;
+    document.getElementById(prevImgId).style.backgroundColor = "";
+    document.getElementById(e.currentTarget.id).style.backgroundColor =
+      "#eccd8ec3";
   };
 
   // 추가: 스케일이 변경된 후에 초기화
@@ -65,12 +71,6 @@ const Quiz3 = () => {
 
       setClickedIndex(null);
       setSelectedAnswer(null);
-
-      // setTimeout(() => {
-      //   setClickedIndex(null);
-      //   setSelectedAnswer(null);
-      //   setButtonStyles(Array(quizList.length).fill({}));
-      // }, 0);
     }
     console.log(answerList);
   }, [clickedIndex, selectedAnswer]);
@@ -147,20 +147,14 @@ const Quiz3 = () => {
                 </div>
                 <div className="ox_btn_wrapper">
                   <button
-                    onClick={() => handleAnswerBtn(index, "O")}
-                    className={
-                      "btnO" + (index === clickedIndex ? " active" : "")
-                    }
-                    // style={getButtonStyle(index)}
+                    onClick={(e) => handleAnswerBtn(index, "O", e)}
+                    id={`btnO${index}`}
                   >
                     <img src={"/assets/quiz/oxquiz_O.png"} alt={"O"} />
                   </button>
                   <button
-                    onClick={() => handleAnswerBtn(index, "X")}
-                    className={
-                      "btnX" + (index === clickedIndex ? " active" : "")
-                    }
-                    // style={getButtonStyle(index)}
+                    onClick={(e) => handleAnswerBtn(index, "X", e)}
+                    id={`btnX${index}`}
                   >
                     <img src={"/assets/quiz/oxquiz_X.png"} alt={"X"} />
                   </button>

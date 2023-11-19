@@ -6,10 +6,13 @@ import SubList from "../../data/Sub";
 
 import "./collectionDetail.scss";
 import { Spinner } from "../../components/common/spinner/Spinner";
+import { ButtonBar } from "../../components/common/buttonBar/ButtonBar";
 
-const CollectionDetail = ({ fontSize }) => {
+const CollectionDetail = () => {
   const [subId, setSubId] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [zoomBtn, setZoomBtn] = useState("");
+  const [fontSize, setFontSize] = useState(1);
   const { id } = useParams();
 
   const ClickInnerImg = (subId, e) => {
@@ -34,10 +37,25 @@ const CollectionDetail = ({ fontSize }) => {
     }
   }, [id]);
 
+  useEffect(() => {
+    switch (zoomBtn) {
+      case "+":
+        const size1 = fontSize < 1.4 ? fontSize + 0.2 : 1.4;
+        setFontSize(size1);
+        break;
+      case "-":
+        const size2 = fontSize > 0.6 ? fontSize - 0.2 : 0.6;
+        setFontSize(size2);
+        break;
+      default:
+        break;
+    }
+  }, [zoomBtn]);
+
   return (
     <section className="detail_section">
       <div className="text_wrapper">
-        <div className="description" style={{ fontSize: `${fontSize}px` }}>
+        <div style={{ fontSize: `${fontSize}vw` }} className="description">
           {CollectionList[id][description]}
         </div>
       </div>
@@ -83,6 +101,7 @@ const CollectionDetail = ({ fontSize }) => {
             className="play_btn"
           />
         </div>
+        <ButtonBar isZoomEnabled={true} setZoomBtn={setZoomBtn} />
       </Suspense>
     </section>
   );

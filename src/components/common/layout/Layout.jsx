@@ -19,12 +19,12 @@ export const Layout = (props) => {
       {location.pathname !== "/" && <SideBar />}
       <div className="content">
         {props.children}
-        {location.pathname !== "/" &&
+        {/* {location.pathname !== "/" &&
           (zoomPage ? (
             <ButtonBar isZoomEnabled={isZoomEnabled} />
           ) : (
             <ButtonBar />
-          ))}
+          ))} */}
       </div>
     </div>
   );

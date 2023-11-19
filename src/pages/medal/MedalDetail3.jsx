@@ -20,7 +20,10 @@ const MedalDetail3 = () => {
                 박사등의 위인분들이 수여 받았습니다.
               </p>
               <div className="detail3_desc_img_1">
-                <img src={"/assets/medal/medal_detail3_1.png"} alt={"독립장"} />
+                <img
+                  src={"/assets/medal/medal_detail3_1_Ko.png"}
+                  alt={"독립장"}
+                />
               </div>
             </div>
           </div>
@@ -33,7 +36,10 @@ const MedalDetail3 = () => {
                 이육사, 송몽규 등의 위인분들이 수여 받았습니다.
               </p>
               <div className="detail3_desc_img_2">
-                <img src={"/assets/medal/medal_detail3_2.png"} alt={"독립장"} />
+                <img
+                  src={"/assets/medal/medal_detail3_2_Ko.png"}
+                  alt={"애국장"}
+                />
               </div>
             </div>
             <div className="medal_detail3_seciton detail3_section3">
@@ -44,7 +50,10 @@ const MedalDetail3 = () => {
                 차미리사 여사 등의 위인분들이 수여 받았습니다.
               </p>
               <div className="detail3_desc_img_2">
-                <img src={"/assets/medal/medal_detail3_2.png"} alt={"독립장"} />
+                <img
+                  src={"/assets/medal/medal_detail3_2_Ko.png"}
+                  alt={"애족장"}
+                />
               </div>
             </div>
           </div>
@@ -65,7 +74,10 @@ const MedalDetail3 = () => {
                 brought the Jeam-ri massacre to the world's attention.
               </p>
               <div className="detail3_desc_img_1">
-                <img src={"/assets/medal/medal_detail3_1.png"} alt={"독립장"} />
+                <img
+                  src={"/assets/medal/medal_detail3_1_En.png"}
+                  alt={"독립장"}
+                />
               </div>
             </div>
           </div>
@@ -80,10 +92,13 @@ const MedalDetail3 = () => {
                 Field," resistance poet Yi Yuk-sa, and Song Mong-gyu.
               </p>
               <div className="detail3_desc_img_2">
-                <img src={"/assets/medal/medal_detail3_2.png"} alt={"독립장"} />
+                <img
+                  src={"/assets/medal/medal_detail3_2_En.png"}
+                  alt={"애국장"}
+                />
               </div>
             </div>
-            <div className="medal_detail3_seciton detail3_section3 ">
+            <div className="medal_detail3_seciton detail3_2_section3 ">
               <h2>Order of Merit for National Foundation - National Medal</h2>
               <hr className="dividing_line" />
               <p>
@@ -93,7 +108,10 @@ const MedalDetail3 = () => {
                 who led the enlightenment for women.
               </p>
               <div className="detail3_desc_img_2">
-                <img src={"/assets/medal/medal_detail3_2.png"} alt={"독립장"} />
+                <img
+                  src={"/assets/medal/medal_detail3_3_En.png"}
+                  alt={"애족장"}
+                />
               </div>
             </div>
           </div>

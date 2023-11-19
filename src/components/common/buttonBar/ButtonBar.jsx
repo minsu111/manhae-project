@@ -2,7 +2,7 @@ import React, { useNavigate } from "react-router-dom";
 
 import "./buttonBar.scss";
 
-export const ButtonBar = ({ isZoomEnabled, isModal }) => {
+export const ButtonBar = ({ isZoomEnabled, isModal, setZoomBtn }) => {
   const navigate = useNavigate();
 
   const btnBarClasses = `${
@@ -26,13 +26,13 @@ export const ButtonBar = ({ isZoomEnabled, isModal }) => {
 
         {isZoomEnabled && (
           <>
-            <button>
+            <button onClick={() => setZoomBtn("+")}>
               <img
                 src={"/assets/image/plus_icon01 77x67.png"}
                 alt={"확대버튼"}
               />
             </button>
-            <button>
+            <button onClick={() => setZoomBtn("-")}>
               <img
                 src={"/assets/image/minus_icon01 77x67.png"}
                 alt={"축소버튼"}

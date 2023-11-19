@@ -38,7 +38,10 @@ const MedalDetail2 = () => {
         )}
 
         <div className="detail2_desc_img">
-          <img src={"/assets/medal/medal_detail2_en.png"} alt={"독립장"} />
+          <img
+            src={`/assets/medal/medal_detail2_${language}.png`}
+            alt={"독립장"}
+          />
         </div>
       </div>
       <div className="play_btn">

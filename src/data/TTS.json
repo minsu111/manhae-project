@@ -1,8 +1,8 @@
 [
   {
     "path": "/",
-    "textKo": "TTS 테스트입니다. 1번입니다.",
-    "textEn": "test."
+    "textKo": "만해기념관 방문을 환영합니다! 만해 한용운 선생님의 나라 사랑 정신을 다양한 콘텐츠를 통해 경험 해 보세요! 자! 이제 5개 메뉴 중 보고 싶은 콘텐츠의 버튼을 터치 해 주세요! 1. 소장품 감상. 2. 소장품 해설. 3. 만해에게 듣는 지혜. 4. 나만의 훈장 만들기. 5. 전시연계퀴즈.",
+    "textEn": "Welcome to the Manhae Han Yong-un Museum! Experience Manhae Han Yong-un's spirit of love for the country through various contents! Now, please touch one of the five menus for the content you'd like to see! 1. View the Collection. 2. Collection Commentary. 3. Wisdom from Manhae. 4. Create Your Own Medal. 5. Exhibition Related Quiz."
   },
 
   { "path": "/manhaeStory", "textKo": "코멘터리.", "textEn": "commentary." },
