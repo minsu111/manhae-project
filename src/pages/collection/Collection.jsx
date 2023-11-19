@@ -23,6 +23,7 @@ const Collection = () => {
     const selectedCategory = parseInt(e.target.value, 10);
     setCategory(selectedCategory);
     imgSectionRef.current.scrollTo(0, 0);
+    sessionStorage.setItem("category", selectedCategory);
   };
 
   const imgSectionRef = useRef(null);
@@ -39,8 +40,12 @@ const Collection = () => {
     const menu = sessionStorage.getItem("menu");
     if (menu === "collection") {
       setOpentToast(true);
+      sessionStorage.removeItem("category");
     }
     sessionStorage.removeItem("menu");
+
+    const storedCategory = sessionStorage.getItem("category");
+    storedCategory && setCategory(storedCategory * 1);
   }, []);
 
   // 디테일 페이지 진입 시 scrollTop 값을 세션스토리지에 저장
@@ -95,7 +100,10 @@ const Collection = () => {
         ).map((item, i) => (
           <div key={i} className="items">
             <div className="figure">
-              <Link to={`/collection/detail/${i}`} onClick={storeScrollTop}>
+              <Link
+                to={`/collection/detail/${item.mainId}`}
+                onClick={storeScrollTop}
+              >
                 <img
                   src={`/assets/thumbnail/${item.thumbImg}`}
                   alt={item[title]}
