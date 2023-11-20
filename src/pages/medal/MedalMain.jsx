@@ -86,7 +86,7 @@ const MedalMain = () => {
             <hr className="dividing_line" />
             <p>
               The Order of Merit for National Foundation is awarded to
-              individuals who have m ade significant contributions to the
+              individuals who have made significant contributions to the
               establishment of the Republic of Korea or have played a notable
               role in solidifying the national flag. Additionally, the Order of
               Merit for National Foundation is divided into different grades.
