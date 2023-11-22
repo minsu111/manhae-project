@@ -9,6 +9,11 @@ import Quiz5 from "./QuizType5";
 
 const Quiz = () => {
   const { id } = useParams();
+
+  if (parseInt(id) > 10) {
+    return null;
+  }
+
   return (
     (id === "2" && <Quiz3 />) ||
     (id === "7" && <Quiz4 />) ||

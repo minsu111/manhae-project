@@ -8,8 +8,10 @@ const SideBar = () => {
 
   const language = sessionStorage.getItem("language");
 
-  let imageUrl = `/assets/image/sideBar1_${language}.png`;
-  if (location.pathname.includes("/commentary")) {
+  let imageUrl = null;
+  if (location.pathname.includes("/collection")) {
+    imageUrl = `/assets/image/sideBar1_${language}.png`;
+  } else if (location.pathname.includes("/commentary")) {
     imageUrl = `/assets/image/sideBar2_${language}.png`;
   } else if (location.pathname.includes("/manhaeStory")) {
     imageUrl = `/assets/image/sideBar3_${language}.png`;
@@ -17,6 +19,8 @@ const SideBar = () => {
     imageUrl = `/assets/image/sideBar4_${language}.png`;
   } else if (location.pathname.includes("/quiz")) {
     imageUrl = `/assets/image/sideBar5_${language}.png`;
+  } else {
+    return null;
   }
 
   return (
