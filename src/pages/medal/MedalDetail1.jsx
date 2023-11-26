@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import "./medalDetail1.scss";
-import TTSSpeaker from "../../components/collection/TTSSpeaker";
+import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 const MedalDetail1 = () => {

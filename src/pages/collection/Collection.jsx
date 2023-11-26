@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ToastNotification } from "../../components/common/toast/ToastNotification";
-import TTSSpeaker from "../../components/collection/TTSSpeaker";
+import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 
 import CollectionList from "../../data/Collection";
 import CategoryList from "../../data/Category";

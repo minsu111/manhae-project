@@ -1,7 +1,7 @@
 import React from "react";
 import ManhaeStoryList from "../../data/ManhaeStory";
 import { useNavigate } from "react-router-dom";
-import TTSSpeaker from "../../components/collection/TTSSpeaker";
+import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 
 import "./manhaeStory.scss";
 

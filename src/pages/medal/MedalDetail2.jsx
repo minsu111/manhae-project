@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TTSSpeaker from "../../components/collection/TTSSpeaker";
+import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 import "./medalDetail2.scss";

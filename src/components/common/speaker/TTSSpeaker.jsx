@@ -1,8 +1,8 @@
 import React from "react";
 
-import TTS from "../../data/TTS";
+import TTS from "../../../data/TTS";
 import { useLocation } from "react-router-dom";
-import TextToSpeech from "./TextToSpeech";
+import TextToSpeech from "../../collection/TextToSpeech";
 
 const TTSSpeaker = () => {
   const language = sessionStorage.getItem("language");

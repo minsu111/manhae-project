@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDrop } from "react-dnd";
 import Object from "../../components/medal/Object";
-import TTSSpeaker from "../../components/collection/TTSSpeaker";
+import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 import ObjectList from "../../data/MedalObjects";

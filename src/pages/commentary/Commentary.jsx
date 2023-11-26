@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { VideoPlayer } from "../../components/commentary/VideoPlayer";
 import { useNavigate } from "react-router-dom";
-import TTSSpeaker from "../../components/collection/TTSSpeaker";
+import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 
 import VideoList from "../../data/Commentary";
 

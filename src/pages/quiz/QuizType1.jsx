@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./quizType1.scss";
-import TTSSpeaker from "../../components/collection/TTSSpeaker";
+import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 
 const Quiz1 = () => {
   return (
