@@ -145,7 +145,7 @@
   },
   {
     "mainId": 17,
-    "category": 6,
+    "category": 2,
     "titleKo": "경허집",
     "titleEn": "Gyeongheo's Collection",
     "thumbImg": "만해2357_thumbnail.png",
@@ -193,15 +193,6 @@
     "titleEn": "Silence of Nim - Foreign Language Edition",
     "thumbImg": "만해2453_thumbnail.png",
     "descKo": "▸ MANHAE HAN JONG-UN - TVOJE MLCENI, IVANA\nGRUBEROVA, Dharma Gala Praha, 1996.\n님의 침묵 - 체코어판)\n님의 침묵 - 프랑스어판)"
-  },
-  {
-    "mainId": 23,
-    "category": 3,
-    "titleKo": "유심",
-    "titleEn": "Yusim",
-    "thumbImg": "만해2477_thumbnail.png",
-    "descKo": "만해가 1918년 9월에 창간한 이 잡지는 3·1운동의 전위지로서 역사의 어둠을 밝혔던 종합지였다. 3호까지 발행하였고 이 잡지의 창간호에는 '심' 이라는 근대시의 새 장을 연 시가 실려 있다.",
-    "descEn": "The magazine founded by Manhae Han Yong-un in September 1918 served as a vanguard in the March 1st Movement, illuminating the dark parts of history as a comprehensive publication. It was published up to its third issue, and the inaugural issue featured a modern poem titled \"Heart (심),\" marking a new chapter in modern Korean poetry."
   },
   {
     "mainId": 24,
@@ -422,6 +413,24 @@
     "descEn": "On the night of December 3, 1917, during meditation, Manhae Han Yong-un's doubts cleared and he composed the following 'OdoSong':\n\n\"Wherever a man goes, there is his homeland,\nYet how many are trapped in the inn of strangers?\nWith one loud shout, I shake the three thousand worlds,\nThe peach blossoms in the snow bloom ever so red.\""
   },
   {
+    "mainId": 23,
+    "category": 3,
+    "titleKo": "유심",
+    "titleEn": "Yusim",
+    "thumbImg": "만해2477_thumbnail.png",
+    "descKo": "만해가 1918년 9월에 창간한 이 잡지는 3·1운동의 전위지로서 역사의 어둠을 밝혔던 종합지였다. 3호까지 발행하였고 이 잡지의 창간호에는 '심' 이라는 근대시의 새 장을 연 시가 실려 있다.",
+    "descEn": "The magazine founded by Manhae Han Yong-un in September 1918 served as a vanguard in the March 1st Movement, illuminating the dark parts of history as a comprehensive publication. It was published up to its third issue, and the inaugural issue featured a modern poem titled \"Heart (심),\" marking a new chapter in modern Korean poetry."
+  },
+  {
+    "mainId": 53,
+    "category": 3,
+    "titleKo": "03-03-유심-권두시-02",
+    "titleEn": "Yusim - Preface Poem",
+    "thumbImg": "만해2753_thumbnail.png",
+    "descKo": "심(C)은 심(C)이니라.\n심만 심이 아니라 비심도 심이니, 심외에는 하물도 무하니라.\n생도 심이요, 사도 심이니라.\n무궁화도 심이요, 장미화도 심이니라.\n호한도 심이요, 천장부도 심이니라. \n신루도 심이요, 공화도 심이니라.\n공간도 심이요, 시간도 심이니라.\n심이 생하면 만유가 기하고,\n심이 식하면 일공도 무하니라.\n심은 무의 실재요, 유의 진공이니라.\n심은 인에게 누도 여하고 소도 여하느니라.\n심의 허에는 천당의 동량도 유하고, 지옥의 기초도 유하니라.\n심의 야에는 성공의 송덕비도 입하고, 퇴패의 기념품도 진열하느니라.\n심은 자연 전쟁의 총사령관이며 강화사니라.\n금강산 상봉에는 어하의 화석이 유하고, \n대서양의 해저에는 분화구가 유하니라.\n심은 하시라도 하사 하물에라도\n심 자체뿐이니라.\n심은 절대미 자유며 만능이니라.",
+    "descEn": "심(C)은 심(C)이니라.\n심만 심이 아니라 비심도 심이니, 심외에는 하물도 무하니라.\n생도 심이요, 사도 심이니라.\n무궁화도 심이요, 장미화도 심이니라.\n호한도 심이요, 천장부도 심이니라. \n신루도 심이요, 공화도 심이니라.\n공간도 심이요, 시간도 심이니라.\n심이 생하면 만유가 기하고,\n심이 식하면 일공도 무하니라.\n심은 무의 실재요, 유의 진공이니라.\n심은 인에게 누도 여하고 소도 여하느니라.\n심의 허에는 천당의 동량도 유하고, 지옥의 기초도 유하니라.\n심의 야에는 성공의 송덕비도 입하고, 퇴패의 기념품도 진열하느니라.\n심은 자연 전쟁의 총사령관이며 강화사니라.\n금강산 상봉에는 어하의 화석이 유하고, \n대서양의 해저에는 분화구가 유하니라.\n심은 하시라도 하사 하물에라도\n심 자체뿐이니라.\n심은 절대미 자유며 만능이니라."
+  },
+  {
     "mainId": 51,
     "category": 7,
     "titleKo": "경봉서각  -만해 100주년",
@@ -438,15 +447,6 @@
     "thumbImg": "만해2750_thumbnail.png",
     "descKo": "만해 한용운의 친필서각으로 '절굿공이를 갈아 바늘을 만들었고, 대나무 책의 가죽 끈이 끊어졌다는 고사로서 쉬지 말고 노력하라'는 뜻이다.",
     "descEn": "Manhae Han Yong-un's handwritten calligraphy contains the story of 'grinding an iron rod into a needle and the leather strap of a bamboo book breaking,' symbolizing the message 'to tirelessly persevere and keep striving.'"
-  },
-  {
-    "mainId": 53,
-    "category": 3,
-    "titleKo": "03-03-유심-권두시-02",
-    "titleEn": "Yusim - Preface Poem",
-    "thumbImg": "만해2753_thumbnail.png",
-    "descKo": "심(C)은 심(C)이니라.\n심만 심이 아니라 비심도 심이니, 심외에는 하물도 무하니라.\n생도 심이요, 사도 심이니라.\n무궁화도 심이요, 장미화도 심이니라.\n호한도 심이요, 천장부도 심이니라. \n신루도 심이요, 공화도 심이니라.\n공간도 심이요, 시간도 심이니라.\n심이 생하면 만유가 기하고,\n심이 식하면 일공도 무하니라.\n심은 무의 실재요, 유의 진공이니라.\n심은 인에게 누도 여하고 소도 여하느니라.\n심의 허에는 천당의 동량도 유하고, 지옥의 기초도 유하니라.\n심의 야에는 성공의 송덕비도 입하고, 퇴패의 기념품도 진열하느니라.\n심은 자연 전쟁의 총사령관이며 강화사니라.\n금강산 상봉에는 어하의 화석이 유하고, \n대서양의 해저에는 분화구가 유하니라.\n심은 하시라도 하사 하물에라도\n심 자체뿐이니라.\n심은 절대미 자유며 만능이니라.",
-    "descEn": "심(C)은 심(C)이니라.\n심만 심이 아니라 비심도 심이니, 심외에는 하물도 무하니라.\n생도 심이요, 사도 심이니라.\n무궁화도 심이요, 장미화도 심이니라.\n호한도 심이요, 천장부도 심이니라. \n신루도 심이요, 공화도 심이니라.\n공간도 심이요, 시간도 심이니라.\n심이 생하면 만유가 기하고,\n심이 식하면 일공도 무하니라.\n심은 무의 실재요, 유의 진공이니라.\n심은 인에게 누도 여하고 소도 여하느니라.\n심의 허에는 천당의 동량도 유하고, 지옥의 기초도 유하니라.\n심의 야에는 성공의 송덕비도 입하고, 퇴패의 기념품도 진열하느니라.\n심은 자연 전쟁의 총사령관이며 강화사니라.\n금강산 상봉에는 어하의 화석이 유하고, \n대서양의 해저에는 분화구가 유하니라.\n심은 하시라도 하사 하물에라도\n심 자체뿐이니라.\n심은 절대미 자유며 만능이니라."
   },
   {
     "mainId": 54,

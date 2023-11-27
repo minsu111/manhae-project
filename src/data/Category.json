@@ -1,6 +1,5 @@
 [
-  { "code": 0, "nameKo": "ALL", "nameEn": "ALL" },
-  { "code": 1, "nameKo": "안목을 세우다", "nameEn": "Set an Aim\nin Life" },
+  { "code": 1, "nameKo": "뜻을 세우다", "nameEn": "Set an Aim\nin Life" },
   { "code": 2, "nameKo": "불교인", "nameEn": "Orientation as\na Buddhist" },
   {
     "code": 3,
@@ -16,11 +15,12 @@
   {
     "code": 6,
     "nameKo": "심우장의 정절",
-    "nameEn": "Simujang's Fidelity"
+    "nameEn": "Simujang's\nFidelity"
   },
   {
     "code": 7,
     "nameKo": "만해가 떠난후",
     "nameEn": "After Manhae's Departure"
-  }
+  },
+  { "code": 0, "nameKo": "ALL", "nameEn": "ALL" }
 ]

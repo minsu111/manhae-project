@@ -868,69 +868,6 @@
     "originImg": "/assets/original/만해2475.png"
   },
   {
-    "mainId": 23,
-    "subId": 0,
-    "titleKo": "03-02-유심-00",
-    "thumbImg": "/assets/thumbnail/만해2477_thumbnail.png",
-    "originImg": "/assets/original/만해2477.png"
-  },
-  {
-    "mainId": 23,
-    "subId": 1,
-    "titleKo": "03-02-유심-01",
-    "thumbImg": "/assets/thumbnail/만해2480_thumbnail.png",
-    "originImg": "/assets/original/만해2480.png"
-  },
-  {
-    "mainId": 23,
-    "subId": 2,
-    "titleKo": "03-02-유심-02",
-    "thumbImg": "/assets/thumbnail/만해2487_thumbnail.png",
-    "originImg": "/assets/original/만해2487.png"
-  },
-  {
-    "mainId": 23,
-    "subId": 3,
-    "titleKo": "03-02-유심-03",
-    "thumbImg": "/assets/thumbnail/만해2492_thumbnail.png",
-    "originImg": "/assets/original/만해2492.png"
-  },
-  {
-    "mainId": 23,
-    "subId": 4,
-    "titleKo": "03-02-유심-04",
-    "thumbImg": "/assets/thumbnail/만해2482_thumbnail.png",
-    "originImg": "/assets/original/만해2482.png"
-  },
-  {
-    "mainId": 23,
-    "subId": 5,
-    "titleKo": "03-02-유심-05",
-    "thumbImg": "/assets/thumbnail/만해2484_thumbnail.png",
-    "originImg": "/assets/original/만해2484.png"
-  },
-  {
-    "mainId": 23,
-    "subId": 6,
-    "titleKo": "03-02-유심-06",
-    "thumbImg": "/assets/thumbnail/만해2486_thumbnail.png",
-    "originImg": "/assets/original/만해2486.png"
-  },
-  {
-    "mainId": 23,
-    "subId": 7,
-    "titleKo": "03-02-유심-07",
-    "thumbImg": "/assets/thumbnail/만해2490_thumbnail.png",
-    "originImg": "/assets/original/만해2490.png"
-  },
-  {
-    "mainId": 23,
-    "subId": 8,
-    "titleKo": "03-02-유심-08",
-    "thumbImg": "/assets/thumbnail/만해2493_thumbnail.png",
-    "originImg": "/assets/original/만해2493.png"
-  },
-  {
     "mainId": 24,
     "subId": 0,
     "titleKo": "05-12-만해선생시집-00",
@@ -1540,6 +1477,76 @@
     "originImg": "/assets/original/만해2741.png"
   },
   {
+    "mainId": 23,
+    "subId": 0,
+    "titleKo": "03-02-유심-00",
+    "thumbImg": "/assets/thumbnail/만해2477_thumbnail.png",
+    "originImg": "/assets/original/만해2477.png"
+  },
+  {
+    "mainId": 23,
+    "subId": 1,
+    "titleKo": "03-02-유심-01",
+    "thumbImg": "/assets/thumbnail/만해2480_thumbnail.png",
+    "originImg": "/assets/original/만해2480.png"
+  },
+  {
+    "mainId": 23,
+    "subId": 2,
+    "titleKo": "03-02-유심-02",
+    "thumbImg": "/assets/thumbnail/만해2487_thumbnail.png",
+    "originImg": "/assets/original/만해2487.png"
+  },
+  {
+    "mainId": 23,
+    "subId": 3,
+    "titleKo": "03-02-유심-03",
+    "thumbImg": "/assets/thumbnail/만해2492_thumbnail.png",
+    "originImg": "/assets/original/만해2492.png"
+  },
+  {
+    "mainId": 23,
+    "subId": 4,
+    "titleKo": "03-02-유심-04",
+    "thumbImg": "/assets/thumbnail/만해2482_thumbnail.png",
+    "originImg": "/assets/original/만해2482.png"
+  },
+  {
+    "mainId": 23,
+    "subId": 5,
+    "titleKo": "03-02-유심-05",
+    "thumbImg": "/assets/thumbnail/만해2484_thumbnail.png",
+    "originImg": "/assets/original/만해2484.png"
+  },
+  {
+    "mainId": 23,
+    "subId": 6,
+    "titleKo": "03-02-유심-06",
+    "thumbImg": "/assets/thumbnail/만해2486_thumbnail.png",
+    "originImg": "/assets/original/만해2486.png"
+  },
+  {
+    "mainId": 23,
+    "subId": 7,
+    "titleKo": "03-02-유심-07",
+    "thumbImg": "/assets/thumbnail/만해2490_thumbnail.png",
+    "originImg": "/assets/original/만해2490.png"
+  },
+  {
+    "mainId": 23,
+    "subId": 8,
+    "titleKo": "03-02-유심-08",
+    "thumbImg": "/assets/thumbnail/만해2493_thumbnail.png",
+    "originImg": "/assets/original/만해2493.png"
+  },
+  {
+    "mainId": 53,
+    "subId": 0,
+    "titleKo": "03-03-유심-권두시-02",
+    "thumbImg": "/assets/thumbnail/만해2753_thumbnail.png",
+    "originImg": "/assets/original/만해2753.png"
+  },
+  {
     "mainId": 51,
     "subId": 0,
     "titleKo": "07-09-경봉서각-만해100주년",
@@ -1552,13 +1559,6 @@
     "titleKo": "05-01-만해친필서각-마저절위",
     "thumbImg": "/assets/thumbnail/만해2750_thumbnail.png",
     "originImg": "/assets/original/만해2750.png"
-  },
-  {
-    "mainId": 53,
-    "subId": 0,
-    "titleKo": "03-03-유심-권두시-02",
-    "thumbImg": "/assets/thumbnail/만해2753_thumbnail.png",
-    "originImg": "/assets/original/만해2753.png"
   },
   {
     "mainId": 54,
