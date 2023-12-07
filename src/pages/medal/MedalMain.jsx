@@ -38,15 +38,6 @@ const MedalMain = () => {
               나누어 집니다.
             </p>
           </div>
-          <iframe
-            src="https://www.mpva.go.kr/mpva/contents.do?key=100"
-            height="300"
-            width="100%"
-            title="국가유공자"
-            sandbox
-          >
-            ㅇㅇ
-          </iframe>
           <div className="medal_main_btn_wrapper">
             <Link to="/medal/1" className="medal_main_btn">
               <img

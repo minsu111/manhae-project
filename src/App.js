@@ -27,6 +27,8 @@ import MedalDetail2 from "./pages/medal/MedalDetail2";
 import MedalDetail3 from "./pages/medal/MedalDetail3";
 
 import Quiz from "./pages/quiz/Quiz";
+import Test from "./pages/test/Test";
+import Test1 from "./pages/test/Test1";
 
 function App() {
   sessionStorage.setItem("language", "Ko");
@@ -55,6 +57,9 @@ function App() {
             <Route path="/medal/making" element={<MakingMedal />} />
 
             <Route path="/quiz/:id" element={<Quiz />} />
+
+            <Route path="/test" element={<Test />} />
+            <Route path="/test1" element={<Test1 />} />
           </Routes>
         </Layout>
       </Router>
