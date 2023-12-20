@@ -5,17 +5,21 @@ import { useNavigate } from "react-router-dom";
 import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 
 import VideoList from "../../data/Commentary";
+import YouTubeList from "../../data/YouTube";
+import DocList from "../../data/Documentary";
 
 import "./commentary.scss";
 
 const Commentary = () => {
   const [openModal, setOpenModal] = useState(false);
   const [selectedVideoUrl, setSelectedVideoUrl] = useState(null);
+  const [category, setCategory] = useState(0);
 
   // 다국어 처리
   const language = sessionStorage.getItem("language");
   const title = "title" + language;
   const video = "video" + language;
+  const name = "name" + language;
 
   const openModalHandler = (videoUrl) => {
     setSelectedVideoUrl(videoUrl);
@@ -24,54 +28,97 @@ const Commentary = () => {
 
   const navigate = useNavigate();
 
+  const MenuArr = [
+    { code: 0, nameKo: "소장품 해설", nameEn: "", contents: VideoList },
+    { code: 1, nameKo: "만해기념관", nameEn: "", contents: YouTubeList },
+    { code: 2, nameKo: "도큐멘터리", nameEn: "", contents: DocList },
+  ];
+
+  const categoryClass = ` category ${language === "Ko" ? "category_ko" : ""}`;
+
+  const categoryItemClass =
+    language === "Ko" ? "category_item_ko" : "category_item_en";
+
+  // 카테고리 이벤트 핸들러
+  const handleCategory = (e) => {
+    const selectedCategory = parseInt(e.target.value, 10);
+    setCategory(selectedCategory);
+  };
+
+  const VideoData = MenuArr[category].contents;
+
   return (
-    <section className="video_thumb_section">
-      {VideoList.map((v, i) => {
-        return (
-          <div key={i + language} className="video_thumb_items">
-            <div
-              onClick={() =>
-                openModalHandler(
-                  `/video/commentary/commentary_video/${v[video]}`
-                )
-              }
-              className="figure"
-            >
-              <img
-                src={`/video/commentary/commentary_thumbnail/${v.thumbImg}`}
-                alt={"영상 섬네일"}
-                className="video_thumb_img"
+    <div className="commentary_wrapper">
+      {/* 탭 영역 */}
+      <div className={categoryClass}>
+        {MenuArr.map((c, i) => (
+          <div key={i.code} className={categoryItemClass}>
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id={c.code}
+                value={c.code}
+                onChange={handleCategory}
+                checked={category === c.code}
               />
-              <div className="video_title">{v[title]}</div>
-            </div>
+              <span className="category_name">{c[name]}</span>
+            </label>
           </div>
-        );
-      })}
-      {openModal && (
-        <div className="modal_backdrop" onClick={openModalHandler}>
-          <div className="modal_view" onClick={(e) => e.stopPropagation()}>
-            <VideoPlayer videoURL={selectedVideoUrl} />
-          </div>
-          <div className="modal_btn_bar_wrapper">
-            <div className="modal_btn_bar">
-              <button onClick={() => navigate("/")}>
-                <img src={"/assets/image/icon-home.png"} alt={"홈버튼"} />
-              </button>
-              <button
-                onClick={() => {
-                  setOpenModal(!openModal);
-                }}
-              >
-                <img src={"/assets/image/icon-backward.png"} alt={"이전버튼"} />
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-      <div className="play_btn">
-        <TTSSpeaker />
+        ))}
       </div>
-    </section>
+      {/* 리스트 영역 */}
+      <section className="video_thumb_section">
+        {VideoData.map((v, i) => {
+          return (
+            <div key={i + language} className="video_thumb_items">
+              <div
+                onClick={() =>
+                  openModalHandler(
+                    `/video/commentary/commentary_video/${v[video]}`
+                  )
+                }
+                className="figure"
+              >
+                <img
+                  src={`/video/commentary/commentary_thumbnail/${v.thumbImg}`}
+                  alt={"영상 섬네일"}
+                  className="video_thumb_img"
+                />
+                <div className="video_title">{v[title]}</div>
+              </div>
+            </div>
+          );
+        })}
+        {openModal && (
+          <div className="modal_backdrop" onClick={openModalHandler}>
+            <div className="modal_view" onClick={(e) => e.stopPropagation()}>
+              <VideoPlayer videoURL={selectedVideoUrl} />
+            </div>
+            <div className="modal_btn_bar_wrapper">
+              <div className="modal_btn_bar">
+                <button onClick={() => navigate("/")}>
+                  <img src={"/assets/image/icon-home.png"} alt={"홈버튼"} />
+                </button>
+                <button
+                  onClick={() => {
+                    setOpenModal(!openModal);
+                  }}
+                >
+                  <img
+                    src={"/assets/image/icon-backward.png"}
+                    alt={"이전버튼"}
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+        <div className="play_btn">
+          <TTSSpeaker />
+        </div>
+      </section>
+    </div>
   );
 };
 

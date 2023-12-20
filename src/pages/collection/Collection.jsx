@@ -9,7 +9,7 @@ import CategoryList from "../../data/Category";
 import "./collection.scss";
 
 const Collection = () => {
-  const [category, setCategory] = useState(0);
+  const [category, setCategory] = useState(1);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [openToast, setOpentToast] = useState(false);
 

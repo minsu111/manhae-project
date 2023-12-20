@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "titleKo": "영환지략",
+    "titleEn": "Yeonghwanjilyag ",
+    "thumbImg": "영환지략.jpg",
+    "videoKo": "영환지략 한글.mp4",
+    "videoEn": "영환지략 영어.mp4"
+  },
+  {
+    "id": 2,
+    "titleKo": "만해 진영",
+    "titleEn": "True Portrait of Manhae ",
+    "thumbImg": "만해 진영.jpg",
+    "videoKo": "만해 진영 한글.mp4",
+    "videoEn": "만해 진영 영어.mp4"
+  },
+  {
+    "id": 3,
+    "titleKo": "음빙실문집",
+    "titleEn": "Eumbingsil Collection of Writings ",
+    "thumbImg": "음빙실문집.jpg",
+    "videoKo": "음빙실문집 한글.mp4",
+    "videoEn": "음빙실문집 영어.mp4"
+  }
+]
