@@ -1,3 +1,5 @@
+@import "../../styles/mixin";
+
 .making_medal_container {
   width: 94%;
   height: 100vh;
@@ -213,5 +215,34 @@
 
   img {
     width: 2.5vw;
+  }
+}
+
+@include mobile {
+  .boards {
+    width: 70%;
+    height: 80%;
+    border: 1px solid darkgray;
+    margin-top: 15%;
+    margin-left: 4%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .board_top_object {
+    position: absolute;
+    margin-top: 4.7%;
+    left: 72.5%;
+    z-index: 1;
+
+    img {
+      width: 18vw;
+    }
+  }
+
+  .objects_wrapper {
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-bottom: 10%;
   }
 }

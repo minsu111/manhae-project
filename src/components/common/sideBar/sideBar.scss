@@ -1,3 +1,5 @@
+@import "../../../styles/mixin";
+
 .side_bar {
   width: 24%;
   position: fixed;
@@ -9,5 +11,21 @@
     height: 100vh;
     object-fit: cover;
     object-position: center;
+  }
+}
+
+@include mobile {
+  .side_bar {
+    width: 20%;
+    position: fixed;
+    // box-shadow: 2px 4px 4px 2px rgb(90, 90, 90);
+    z-index: 10;
+
+    img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 }
