@@ -1,4 +1,4 @@
-import React, { useNavigate } from "react-router-dom";
+import React, { useLocation, useNavigate } from "react-router-dom";
 
 import "./buttonBar.scss";
 
@@ -9,6 +9,7 @@ export const ButtonBar = ({
   btnToggle,
 }) => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const btnBarClasses = `${
     isZoomEnabled ? "full_btn_bar_wrapper" : "short_btn_bar_wrapper"
@@ -20,9 +21,14 @@ export const ButtonBar = ({
         <button onClick={() => navigate("/")}>
           <img src={"/assets/image/icon-home.png"} alt={"홈버튼"} />
         </button>
-        <button onClick={() => navigate(-1)}>
-          <img src={"/assets/image/icon-backward.png"} alt={"이전버튼"} />
-        </button>
+        {location.pathname.includes("quiz") ? (
+          ""
+        ) : (
+          <button onClick={() => navigate(-1)}>
+            <img src={"/assets/image/icon-backward.png"} alt={"이전버튼"} />
+          </button>
+        )}
+
         {isModal && (
           <button onClick={() => navigate(-1)}>
             <img src={"/assets/image/icon-backward.png"} alt={"이전버튼"} />

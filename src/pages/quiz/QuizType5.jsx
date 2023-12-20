@@ -36,6 +36,12 @@ const Quiz5 = () => {
       const value = e.target.value;
 
       setBtnActive(value);
+
+      const currentScore = Number(sessionStorage.getItem("score"));
+      value === quizItem.answer
+        ? sessionStorage.setItem("score", currentScore + 1)
+        : sessionStorage.setItem("score", currentScore);
+
       setTimeout(() => {
         value === quizItem.answer ? setResult("correct") : setResult("wrong");
         const newAudio = new Audio(

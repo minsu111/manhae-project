@@ -61,6 +61,7 @@ const Quiz3 = () => {
   const handleAnswerBtn = (index, selectedAnswer, e) => {
     setClickedIndex(index);
     setSelectedAnswer(selectedAnswer);
+
     let prevImgId = e.currentTarget.id.indexOf("btnO") !== -1 ? "btnX" : "btnO";
     prevImgId += index;
     document.getElementById(prevImgId).style.backgroundColor = "";
@@ -88,6 +89,11 @@ const Quiz3 = () => {
     const isCorrect =
       answerList.length === correctAnswers.length &&
       answerList.every((value, index) => correctAnswers[index] === value);
+
+    const currentScore = Number(sessionStorage.getItem("score"));
+    isCorrect
+      ? sessionStorage.setItem("score", currentScore + 1)
+      : sessionStorage.setItem("score", currentScore);
 
     setResult(isCorrect ? "correct" : "wrong");
 

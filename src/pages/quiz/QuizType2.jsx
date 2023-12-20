@@ -14,11 +14,9 @@ const Quiz2 = () => {
   const [result, setResult] = useState(null);
   const [btnActive, setBtnActive] = useState("");
   const [isLaodinged, setIsImageLoaded] = useState(false);
-  const [audio, setAudio] = useState(new Audio());
   const baseFontSize = 1;
   const [fontSize, setFontSize] = useState(baseFontSize);
   const maxFontSize = baseFontSize + 0.4;
-
   const { id } = useParams();
 
   const language = sessionStorage.getItem("language");
@@ -50,6 +48,12 @@ const Quiz2 = () => {
       const value = e.target.value;
 
       setBtnActive(value);
+
+      const currentScore = Number(sessionStorage.getItem("score"));
+      value === quizItem.answer
+        ? sessionStorage.setItem("score", currentScore + 1)
+        : sessionStorage.setItem("score", currentScore);
+
       setTimeout(() => {
         value === quizItem.answer ? setResult("correct") : setResult("wrong");
 
@@ -60,9 +64,13 @@ const Quiz2 = () => {
       }, 400);
 
       setTimeout(() => {
-        value === quizItem.answer && navigate(`/quiz/${Number(id) + 1}`);
-        setBtnActive("");
+        value === quizItem.answer
+          ? navigate(`/quiz/${Number(id) + 1}`)
+          : setBtnActive(quizItem.answer);
         setResult(null);
+        setTimeout(() => {
+          navigate(`/quiz/${Number(id) + 1}`);
+        }, 3000);
       }, 1500);
     }
   };

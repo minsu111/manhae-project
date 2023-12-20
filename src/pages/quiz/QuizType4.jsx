@@ -59,6 +59,11 @@ const Quiz4 = () => {
       btnActive.length === correctAnswers.length &&
       btnActive.every((value) => correctAnswers.includes(value));
 
+    const currentScore = Number(sessionStorage.getItem("score"));
+    isCorrect
+      ? sessionStorage.setItem("score", currentScore + 1)
+      : sessionStorage.setItem("score", currentScore);
+
     setResult(isCorrect ? "correct" : "wrong");
 
     const newAudio = new Audio(isCorrect ? correctAudio : wrongAudio);

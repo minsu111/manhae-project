@@ -37,6 +37,7 @@ const Main = () => {
             key={i}
             onClick={() => {
               goToSection(c.path);
+              c.path === "quiz/1" && sessionStorage.removeItem("score");
             }}
           >
             <img
