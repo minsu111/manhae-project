@@ -34,15 +34,20 @@ const CollectionDetail = () => {
     }
   }, [id]);
 
+  const collection = CollectionList.filter(
+    (object) => Number(id) === object.mainId
+  );
+  const matchedCollection = collection[0];
+
   return (
     <section className="detail_section">
       <div className="text_wrapper">
         <div style={{ fontSize: `${fontSize}vw` }} className="description">
-          {CollectionList[id][description]}
+          {matchedCollection[description]}
         </div>
       </div>
       <div className="main_img_wrapper">
-        <div className="detail_main_title">{CollectionList[id][title]}</div>
+        <div className="detail_main_title">{matchedCollection[title]}</div>
         {subId !== null && (
           <img
             src={SubList[subId].originImg}
