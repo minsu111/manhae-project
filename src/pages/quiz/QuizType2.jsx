@@ -64,13 +64,20 @@ const Quiz2 = () => {
       }, 400);
 
       setTimeout(() => {
-        value === quizItem.answer
-          ? navigate(`/quiz/${Number(id) + 1}`)
-          : setBtnActive(quizItem.answer);
-        setResult(null);
-        setTimeout(() => {
-          navigate(`/quiz/${Number(id) + 1}`);
-        }, 3000);
+        if (value === quizItem.answer) {
+          id === "15"
+            ? navigate("/quiz/result")
+            : navigate(`/quiz/${Number(id) + 1}`);
+          setResult(null);
+        } else {
+          setBtnActive(quizItem.answer);
+          setResult(null);
+          setTimeout(() => {
+            id === "15"
+              ? navigate("/quiz/result")
+              : navigate(`/quiz/${Number(id) + 1}`);
+          }, 2000);
+        }
       }, 1500);
     }
   };

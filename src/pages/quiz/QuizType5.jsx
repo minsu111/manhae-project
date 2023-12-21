@@ -51,7 +51,7 @@ const Quiz5 = () => {
       }, 400);
 
       setTimeout(() => {
-        value === quizItem.answer && navigate("/");
+        value === quizItem.answer && navigate(`/quiz/${Number(id) + 1}`);
         setBtnActive("");
         setResult(null);
       }, 3000);

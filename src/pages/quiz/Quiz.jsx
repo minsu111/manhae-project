@@ -10,7 +10,7 @@ import Quiz5 from "./QuizType5";
 const Quiz = () => {
   const { id } = useParams();
 
-  if (parseInt(id) > 10) {
+  if (parseInt(id) > 15) {
     return null;
   }
 
