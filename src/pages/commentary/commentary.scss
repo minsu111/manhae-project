@@ -5,13 +5,12 @@
 }
 
 .video_thumb_section {
-  height: 72vh;
+  height: 73vh;
   margin: 3%;
   margin-top: 4%;
-  padding-top: 8%;
+  padding-top: 6%;
   padding-left: 4%;
   display: grid;
-  // grid-template-columns: repeat(4, 1fr);
   grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr));
   column-gap: 3em;
   overflow-y: scroll;
@@ -113,8 +112,33 @@
   }
 }
 
+.category_ko_commentary {
+  width: 30%;
+  line-height: 1.5vw;
+}
+
+.category_en_commentary {
+  width: 40%;
+  line-height: 1.5vw;
+}
+
+.category_item_en_commentary:has(:checked) {
+  background: linear-gradient(to bottom, #4669ae, #78bbd9);
+  color: white;
+}
+
 @include mobile {
   .video_thumb_items {
     margin-bottom: 2em;
+  }
+
+  .modal_backdrop {
+    width: 80%;
+    left: 18%;
+  }
+
+  .modal_btn_bar_wrapper {
+    left: 52.5%;
+    bottom: 0.8%;
   }
 }

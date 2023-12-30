@@ -10,73 +10,75 @@ const MedalMain = () => {
   const baseFontSize = 1;
   const [fontSize, setFontSize] = useState(baseFontSize);
   const maxFontSize = baseFontSize + 0.4;
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
   const [iframeLink, setIframeLink] = useState("");
 
   const language = sessionStorage.getItem("language");
 
   const navigate = useNavigate();
 
+  const ModalLink = "https://www.sanghun.go.kr/nation/hunjangDetail.html#tab";
+
   const MedalList1 = [
     {
       code: 0,
       nameKo: "무궁화대훈장",
-      link: "https://www.sanghun.go.kr/nation/hunjangDetail.html#tab1",
+      link: ModalLink + 1,
     },
     {
       code: 1,
       nameKo: "건국훈장",
-      link: "https://www.sanghun.go.kr/nation/hunjangDetail.html#tab2",
+      link: ModalLink + 2,
     },
     {
       code: 2,
       nameKo: "국민훈장",
-      link: "https://www.sanghun.go.kr/nation/hunjangDetail.html#tab3",
+      link: ModalLink + 3,
     },
     {
       code: 3,
       nameKo: "무공훈장",
-      link: "https://www.sanghun.go.kr/nation/hunjangDetail.html#tab3",
+      link: ModalLink + 4,
     },
     {
       code: 4,
       nameKo: "근정훈장",
-      link: "https://www.sanghun.go.kr/nation/hunjangDetail.html#tab3",
+      link: ModalLink + 5,
     },
     {
       code: 5,
       nameKo: "보국훈장",
-      link: "https://www.sanghun.go.kr/nation/hunjangDetail.html#tab3",
+      link: ModalLink + 6,
     },
     {
       code: 6,
       nameKo: "수교훈장",
-      link: "https://www.sanghun.go.kr/nation/hunjangDetail.html#tab3",
+      link: ModalLink + 7,
     },
     {
       code: 7,
       nameKo: "산업훈장",
-      link: "https://www.sanghun.go.kr/nation/hunjangDetail.html#tab3",
+      link: ModalLink + 8,
     },
     {
       code: 8,
       nameKo: "새마을훈장",
-      link: "https://www.sanghun.go.kr/nation/hunjangDetail.html#tab3",
+      link: ModalLink + 9,
     },
     {
       code: 9,
       nameKo: "문화훈장",
-      link: "https://www.sanghun.go.kr/nation/hunjangDetail.html#tab3",
+      link: ModalLink + 10,
     },
     {
       code: 10,
       nameKo: "체육훈장",
-      link: "https://www.sanghun.go.kr/nation/hunjangDetail.html#tab3",
+      link: ModalLink + 11,
     },
     {
       code: 11,
       nameKo: "과학기술훈장",
-      link: "https://www.sanghun.go.kr/nation/hunjangDetail.html#tab3",
+      link: ModalLink + 12,
     },
   ];
 
@@ -88,10 +90,9 @@ const MedalMain = () => {
     { nameKo: "애족장" },
   ];
 
-  const handleMedalBtn = (e) => {
-    setIsModalOpen(true);
-    // setIframeLink(c.link);
-    console.log(e);
+  const handleMedalBtn = (link) => {
+    setOpenModal(!openModal);
+    setIframeLink(link);
   };
 
   return (
@@ -114,20 +115,23 @@ const MedalMain = () => {
                 <div
                   className="medal_desc_btn"
                   key={i.name}
-                  onClick={handleMedalBtn}
+                  onClick={() => handleMedalBtn(c.link)}
                 >
                   {c.nameKo}
                 </div>
               ))}
-              {/* {isModalOpen && (
-                <iframe
-                  width="700px"
-                  height="600px"
-                  src={MedalList[0].link}
-                  title="description of medal"
-                  // sandbox="allow-same-origin allow-scripts"
-                ></iframe>
-              )} */}
+              {openModal && (
+                <div className="modal_backdrop" onClick={handleMedalBtn}>
+                  <iframe
+                    className="medal_desc_modal"
+                    width="30%"
+                    height="70%"
+                    src={iframeLink}
+                    title="description of medal"
+                    sandbox="allow-same-origin allow-scripts"
+                  ></iframe>
+                </div>
+              )}
             </div>
             <p>
               무궁화대훈장은 대통령과 배우자 또는 우리나라의 발전과 안전보장에
