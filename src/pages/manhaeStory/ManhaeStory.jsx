@@ -1,19 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ManhaeStoryList from "../../data/ManhaeStory";
 import { useNavigate } from "react-router-dom";
 import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 
 import "./manhaeStory.scss";
+import { VideoPlayer } from "../../components/commentary/VideoPlayer";
 
 const ManhaeStory = () => {
   const navigate = useNavigate();
+  const [playIntro, setPlayIntro] = useState(false);
 
   // 다국어 처리
   const language = sessionStorage.getItem("language");
   const title = "title" + language;
 
+  useEffect(() => {
+    setPlayIntro(true);
+  }, []);
+
+  setTimeout(() => {
+    setPlayIntro(false);
+  }, 43000);
+
   return (
     <div className="manhae_story_wrapper">
+      {playIntro && (
+        <div
+          className="modal_backdrop"
+          onClick={() => {
+            setPlayIntro(!playIntro);
+          }}
+        >
+          <div className="modal_view" onClick={(e) => e.stopPropagation()}>
+            <VideoPlayer videoURL="/video/commentary/commentary_video/만해 진영 한글.mp4" />
+          </div>
+          <div className="modal_btn_bar_wrapper"></div>
+        </div>
+      )}
       <img
         className="top_img"
         src={"/assets/image/manhaeStory_object.png"}

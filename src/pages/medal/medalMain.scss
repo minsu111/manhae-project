@@ -135,6 +135,12 @@
   line-height: 160%;
 }
 
+.medal_desc_modal {
+  position: absolute;
+  left: 35%;
+  z-index: 2;
+}
+
 .medal_making_btn {
   left: 30vw;
   all: unset;

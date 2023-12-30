@@ -29,15 +29,27 @@ const Commentary = () => {
   const navigate = useNavigate();
 
   const MenuArr = [
-    { code: 0, nameKo: "소장품 해설", nameEn: "", contents: VideoList },
-    { code: 1, nameKo: "만해기념관", nameEn: "", contents: YouTubeList },
-    { code: 2, nameKo: "도큐멘터리", nameEn: "", contents: DocList },
+    {
+      code: 0,
+      nameKo: "소장품 해설",
+      nameEn: "commentary",
+      contents: VideoList,
+    },
+    {
+      code: 1,
+      nameKo: "만해기념관",
+      nameEn: "Manhae Memorial Hall",
+      contents: YouTubeList,
+    },
+    { code: 2, nameKo: "도큐멘터리", nameEn: "Documentary", contents: DocList },
   ];
 
-  const categoryClass = ` category ${language === "Ko" ? "category_ko" : ""}`;
+  const categoryClass = ` category ${
+    language === "Ko" ? "category_ko_commentary" : "category_en_commentary"
+  }`;
 
   const categoryItemClass =
-    language === "Ko" ? "category_item_ko" : "category_item_en";
+    language === "Ko" ? "category_item_ko" : "category_item_en_commentary";
 
   // 카테고리 이벤트 핸들러
   const handleCategory = (e) => {
