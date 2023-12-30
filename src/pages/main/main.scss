@@ -27,7 +27,7 @@
 
   button {
     all: unset;
-    padding-bottom: 3%;
+    padding-bottom: 6%;
     img {
       width: 20vw;
     }
@@ -36,14 +36,16 @@
 
 .lang_btn_wrapper {
   width: 20%;
-  padding: 10px;
+  // padding: 10px;
   border-radius: 2em;
   position: absolute;
-  left: 85%;
-  bottom: 4%;
+  left: 66%;
+  top: 90%;
   display: flex;
-  gap: 10%;
-  float: right;
+  align-items: center;
+  justify-content: center;
+  gap: 6%;
+  // float: right;
 
   label {
     font-size: 1.5vw;
@@ -55,19 +57,34 @@
   }
 }
 
+.btn_divide_line {
+  border: 1.5px solid #000;
+  height: 3vh;
+}
+
 .main_play_btn {
   position: fixed;
-  top: 85%;
+  top: 90%;
   left: 93.5%;
 }
 
 @include mobile {
+  .main_buttons_section {
+    button {
+      padding-bottom: 2%;
+    }
+  }
+
   .lang_btn_wrapper {
-    left: 68%;
+    left: 66%;
     bottom: 0.2%;
   }
 
   .main_play_btn {
     top: 91%;
+  }
+
+  .btn_divide_line {
+    border: 0.8px solid #000;
   }
 }
