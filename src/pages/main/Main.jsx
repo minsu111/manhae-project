@@ -68,6 +68,7 @@ const Main = () => {
               </span>
             </label>
           </div>
+          <div className="btn_divide_line"></div>
           <div className="en_btn">
             <label>
               <input
