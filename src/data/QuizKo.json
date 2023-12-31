@@ -24,12 +24,12 @@
     "quizImageURL": "/assets/quiz/31_1.png",
     "description": "",
     "answerBtnList": [
-      "태화관, 32인",
-      "탑골공원, 33인",
       "태화관, 33인",
-      "탑골공원, 32인"
+      "탑골공원, 33인",
+      "태화관, 29인",
+      "탑골공원, 29인"
     ],
-    "answer": "태화관, 33인"
+    "answer": "태화관, 29인"
   },
   {
     "id": "5",
@@ -88,27 +88,27 @@
   },
   {
     "id": "11",
-    "title": "",
+    "title": "뜻을 세우다",
     "question": "다음에서 설명하는 만해 한용운과 관련된 저서를 골라보세요.",
-    "quizImageURL": "/assets/quiz/quiz11_img.png",
+    "quizImageURL": "/assets/quiz/quiz_11.jpg",
     "description": "송나라의 사마광이 영종의 명에 따라 펴낸 중국의 편년체 역사서로 이 책을 읽고 만해 한용운은 세계 일주를 결심하게 됩니다.",
     "answerBtnList": ["자치통감", "영환지략", "음빙실문집", "채근담"],
     "answer": "자치통감"
   },
   {
     "id": "12",
-    "title": "",
+    "title": "뜻을 세우다",
     "question": "다음에서 설명하는 만해 한용운의 대표 저서를 골라보세요.",
-    "quizImageURL": "/assets/quiz/quiz11_img.png",
+    "quizImageURL": "/assets/quiz/quiz_12.png",
     "description": "한국의 시로 대표되는 영원한 고전으로 1925년 오세암에서 쓰고, 1926년 회동서관에서 발행한 책으로 총 88편의 시가 수록되어 있다.",
     "answerBtnList": ["불교대전", "조선불교유신론", "님의 침묵", "채근담"],
     "answer": "님의 침묵"
   },
   {
     "id": "13",
-    "title": "",
+    "title": "뜻을 세우다",
     "question": "만해 한용운에게 수여된 훈장의 종류와 등급을 골라보세요.",
-    "quizImageURL": "/assets/quiz/quiz11_img.png",
+    "quizImageURL": "/assets/quiz/quiz_13.png",
     "description": "",
     "answerBtnList": [
       "건국훈장-대한민국장",
@@ -120,18 +120,18 @@
   },
   {
     "id": "14",
-    "title": "",
+    "title": "뜻을 세우다",
     "question": "다음 문장은 한용운의 조선독립의 書(서)내용의 일부분입니다. 빈칸에 들어갈 알맞은 단어를 골라보세요.",
-    "quizImageURL": "/assets/quiz/quiz11_img.png",
+    "quizImageURL": "/assets/quiz/quiz_14.png",
     "description": "○○는(은) 만유의 생명이요, 평화는 인생의 행복이다.",
     "answerBtnList": ["애국", "자유", "사랑", "진실"],
     "answer": "자유"
   },
   {
     "id": "15",
-    "title": "",
+    "title": "뜻을 세우다",
     "question": "다음에서 설명하는 만해 한용운과 관련된 저서를 골라보세요.",
-    "quizImageURL": "/assets/quiz/quiz11_img.png",
+    "quizImageURL": "/assets/quiz/quiz_15.png",
     "description": "청나라의 서계여가 지은 책으로 세계의 지리와 문화를 소상히 설명한 지리서. 이 책을 읽고 만해 한용운은 세계 일주를 위해 블라디보스톡으로 떠납니다.",
     "answerBtnList": ["자치통감", "채근담", "음빙실문집", "영환지략"],
     "answer": "영환지략"
