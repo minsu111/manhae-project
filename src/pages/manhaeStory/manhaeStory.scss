@@ -72,10 +72,11 @@
 
 .story_title_section {
   width: 76%;
-  height: 100vh;
+  height: 80vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 4vw;
+  row-gap: 5vh;
   align-items: center;
   overflow-y: scroll;
   margin-bottom: 10%;

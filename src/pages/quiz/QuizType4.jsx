@@ -52,8 +52,8 @@ const Quiz4 = () => {
   const handleCompleteBtn = () => {
     const correctAnswers =
       language === "Ko"
-        ? ["프랑스어", "영어", "에스페란토어", "체코어"]
-        : ["French", "English", "Esperanto", "Czech"];
+        ? ["프랑스어", "영어", "에스페란토어", "체코어", "베트남어"]
+        : ["French", "English", "Esperanto", "Czech", "Vietnamese"];
 
     const isCorrect =
       btnActive.length === correctAnswers.length &&

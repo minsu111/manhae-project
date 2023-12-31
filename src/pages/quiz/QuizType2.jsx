@@ -83,7 +83,7 @@ const Quiz2 = () => {
   };
 
   const quizClass =
-    id === "8"
+    id === "8" || id === "11" || id === "12" || id === "14" || id === "15"
       ? "quiz_9th_desc"
       : `quiz2_img ${quizItem.description !== "" ? "withDesc_wrapper" : ""}` +
         (id === "3" ? " quiz4_desc_img" : "");
@@ -138,6 +138,7 @@ const Quiz2 = () => {
                       (item === btnActive ? " active" : "") +
                       (id === "5" ||
                       id === "8" ||
+                      id === "13" ||
                       (id === "9" && language === "En") ||
                       (id === "6" && language === "En") ||
                       (id === "4" && language === "En")

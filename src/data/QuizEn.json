@@ -24,12 +24,12 @@
     "quizImageURL": "/assets/quiz/31_1.png",
     "description": "",
     "answerBtnList": [
-      "Taehwagwan, 32 people",
-      "Tapgol Park, 33 people",
       "Taehwagwan, 33 people",
-      "Tapgol Park, 32 people"
+      "Tapgol Park, 33 people",
+      "Taehwagwan, 29 people",
+      "Tapgol Park, 29 people"
     ],
-    "answer": "Taehwagwan, 33 people"
+    "answer": "Taehwagwan, 29 people"
   },
   {
     "id": "5",
