@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
@@ -83,11 +83,11 @@ const MedalMain = () => {
   ];
 
   const MedalList2 = [
-    { nameKo: "대한민국장" },
-    { nameKo: "대통령장" },
-    { nameKo: "독립장" },
-    { nameKo: "애국장" },
-    { nameKo: "애족장" },
+    { code: 0, nameKo: "대한민국장", link: "/medal/1" },
+    { code: 1, nameKo: "대통령장", link: "/medal/2" },
+    { code: 2, nameKo: "독립장", link: "/medal/3" },
+    { code: 3, nameKo: "애국장", link: "/medal/3" },
+    { code: 4, nameKo: "애족장", link: "/medal/3" },
   ];
 
   const handleMedalBtn = (link) => {
@@ -122,14 +122,16 @@ const MedalMain = () => {
               ))}
               {openModal && (
                 <div className="modal_backdrop" onClick={handleMedalBtn}>
-                  <iframe
-                    className="medal_desc_modal"
-                    width="30%"
-                    height="70%"
-                    src={iframeLink}
-                    title="description of medal"
-                    sandbox="allow-same-origin allow-scripts"
-                  ></iframe>
+                  <div className="iframe_wrapper">
+                    <iframe
+                      id="medal_desc_modal"
+                      width="100%"
+                      height="100%"
+                      src={iframeLink}
+                      title="description of medal"
+                      sandbox="allow-same-origin allow-scripts"
+                    ></iframe>
+                  </div>
                 </div>
               )}
             </div>
@@ -150,7 +152,9 @@ const MedalMain = () => {
                 <div
                   className="medal_desc_btn"
                   key={i.code}
-                  onClick={handleMedalBtn}
+                  onClick={() => {
+                    navigate(c.link);
+                  }}
                 >
                   {c.nameKo}
                 </div>

@@ -105,7 +105,7 @@ const Quiz2 = () => {
             <div className="quiz_status">
               <img
                 src={`/assets/quiz/${id.padStart(2, "0")}.png`}
-                alt={`${id} / 11`}
+                alt={`${id} / 15`}
               />
             </div>
           </div>
