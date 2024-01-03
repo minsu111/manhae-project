@@ -8,20 +8,18 @@ function Object({ medalItem }) {
   const index = medalItem.index || 0;
   const [isDragging, setIsDragging] = useState(false);
   const [draggingPosition, setDraggingPosition] = useState({ x: 0, y: 0 });
-  const [dragStartPos, setDragStartPos] = useState({ x: 0, y: 0 });
+  // const [dragStartPos, setDragStartPos] = useState({ x: 0, y: 0 });
 
   const objectList = ObjectList.filter((object) => id === object.id);
   const ghostImageSize = objectList[0].width;
 
-  const [{ isDragging: isDraggingMonitor }, drag, drop, preview] = useDrag(
-    () => ({
-      type: "image",
-      item: { id: id, index: index },
-      collect: (monitor) => ({
-        isDragging: !!monitor.isDragging(),
-      }),
-    })
-  );
+  const [{ isDragging: isDraggingMonitor }, drag] = useDrag(() => ({
+    type: "image",
+    item: { id: id, index: index },
+    collect: (monitor) => ({
+      isDragging: !!monitor.isDragging(),
+    }),
+  }));
 
   const handleTouchMove = (e) => {
     if (!isDraggingMonitor) {
