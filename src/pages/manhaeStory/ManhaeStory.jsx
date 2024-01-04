@@ -15,7 +15,12 @@ const ManhaeStory = () => {
   const title = "title" + language;
 
   useEffect(() => {
-    setPlayIntro(true);
+    const menu = sessionStorage.getItem("menu");
+    if (menu === "manhaeStory") {
+      setPlayIntro(true);
+      sessionStorage.removeItem("category");
+    }
+    sessionStorage.removeItem("menu");
   }, []);
 
   setTimeout(() => {

@@ -241,12 +241,18 @@ const MedalMain = () => {
           </div>
         </div>
       )}
-      <button
+      <Link to="/medal/making" className="medal_making_btn">
+        <img
+          src={"/assets/medal/medal_ko_4_r1.png"}
+          alt={"나만의 훈장 만들기"}
+        />
+      </Link>
+      {/* <button
         className="medal_making_btn"
         onClick={() => navigate("/medal/making")}
       >
         훈장만들기
-      </button>
+      </button> */}
       <div className="play_btn">
         <TTSSpeaker />
       </div>
