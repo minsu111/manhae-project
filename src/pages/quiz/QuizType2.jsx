@@ -83,7 +83,7 @@ const Quiz2 = () => {
   };
 
   const quizClass =
-    id === "8" || id === "11" || id === "12" || id === "14" || id === "15"
+    id === "8"
       ? "quiz_9th_desc"
       : `quiz2_img ${quizItem.description !== "" ? "withDesc_wrapper" : ""}` +
         (id === "3" ? " quiz4_desc_img" : "");
@@ -138,14 +138,18 @@ const Quiz2 = () => {
                       (item === btnActive ? " active" : "") +
                       (id === "5" ||
                       id === "8" ||
-                      id === "13" ||
+                      id === "15" ||
                       (id === "9" && language === "En") ||
                       (id === "6" && language === "En") ||
                       (id === "4" && language === "En")
                         ? " quiz_middle_btn"
                         : "") +
                       ((language === "En" && id === "8") ||
-                      (language === "En" && id === "5")
+                      (language === "En" && id === "5") ||
+                      (language === "En" && id === "11") ||
+                      (language === "En" && id === "12") ||
+                      (language === "En" && id === "14") ||
+                      (language === "En" && id === "15")
                         ? " quiz_long_btn"
                         : "")
                     }
