@@ -88,12 +88,16 @@ const Quiz2 = () => {
       : `quiz2_img ${quizItem.description !== "" ? "withDesc_wrapper" : ""}` +
         (id === "3" ? " quiz4_desc_img" : "");
 
+  const quizTitleClass =
+    language === "Ko"
+      ? "quiz2_title_section"
+      : "quiz2_title_section quiz2_title_section_en";
   return (
     <div className="quiz1_container" style={{ fontSize: `${fontSize}vw` }}>
       {isLaodinged && (
         <div className="quiz2_all_wrapper">
           <div className="quiz_title_wrapper">
-            <div className="quiz2_title_section">
+            <div className={quizTitleClass}>
               <h1>{quizItem.title}</h1>
               <hr />
               <p

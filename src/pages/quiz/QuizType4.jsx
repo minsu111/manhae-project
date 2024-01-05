@@ -98,7 +98,7 @@ const Quiz4 = () => {
               </p>
             </div>
           ) : (
-            <div className="quiz2_title_section">
+            <div className="quiz2_title_section quiz2_title_section_en">
               <h1>The Aesthetics of Silence</h1>
               <hr />
               <p className="quiz_question">
