@@ -42,7 +42,7 @@
 .modal_backdrop {
   width: 80%;
   height: 100vh;
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -136,5 +136,16 @@
   .modal_btn_bar_wrapper {
     left: 51.2%;
     bottom: 0.8%;
+  }
+}
+
+@include web {
+  .modal_backdrop {
+    width: 82%;
+    left: 18%;
+  }
+
+  .modal_btn_bar_wrapper {
+    left: 51.2%;
   }
 }

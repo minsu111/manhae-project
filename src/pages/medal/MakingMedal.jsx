@@ -57,11 +57,6 @@ const MakingMedal = () => {
         const dragStartPos = monitor.getInitialClientOffset();
         const itemPos = monitor.getClientOffset();
 
-        const relativeLeft =
-          ((itemPos.x - imageboxPos.x) / imageboxPos.width) * 100;
-        const relativeTop =
-          ((itemPos.y - imageboxPos.y) / imageboxPos.height) * 100;
-
         if (imageboxPos.x < dragStartPos.x && imageboxPos.y < dragStartPos.y) {
           // 박스안에서 드래그시작일 경우 기존 아이템 유지
           setExtraItems((prevExtraItems) => {
@@ -69,8 +64,8 @@ const MakingMedal = () => {
               if (id === object.id && index === object.index) {
                 return {
                   ...object,
-                  left: relativeLeft,
-                  top: relativeTop,
+                  left: itemPos.x - imageboxPos.x,
+                  top: itemPos.y - imageboxPos.y,
                 };
               }
               return object;
@@ -84,8 +79,8 @@ const MakingMedal = () => {
             {
               ...item,
               index: prevExtraItems.length + 1,
-              left: relativeLeft,
-              top: relativeTop,
+              left: itemPos.x - imageboxPos.x,
+              top: itemPos.y - imageboxPos.y,
             },
           ]);
         }
