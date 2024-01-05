@@ -67,6 +67,8 @@
   width: 100%;
   height: 80%;
   margin-top: 2%;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   hr {
     margin: 6% 0;
@@ -220,29 +222,33 @@
 
 @include mobile {
   .boards {
-    width: 70%;
+    width: 66%;
     height: 80%;
-    border: 1px solid darkgray;
     margin-top: 15%;
     margin-left: 4%;
-    overflow: hidden;
-    position: relative;
   }
 
   .board_top_object {
-    position: absolute;
     margin-top: 4.9%;
     left: 74%;
-    z-index: 1;
-
-    img {
-      width: 18vw;
-    }
   }
 
   .objects_wrapper {
-    overflow-y: auto;
-    overflow-x: hidden;
+    margin-bottom: 10%;
+  }
+}
+
+@include web {
+  .boards {
+    height: 76%;
+    margin-top: 18%;
+  }
+
+  .board_top_object {
+    margin-top: 5.7%;
+  }
+
+  .objects_wrapper {
     margin-bottom: 10%;
   }
 }
