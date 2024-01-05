@@ -99,7 +99,7 @@ const Collection = () => {
           (item) => category === 0 || category === item.category
         ).map((item, i) => (
           <div key={i} className="items">
-            <div className="figure">
+            <div className="">
               <Link
                 to={`/collection/detail/${item.mainId}`}
                 onClick={storeScrollTop}
