@@ -3,7 +3,7 @@ import ReactPlayer from "react-player";
 
 import "./videoPlayer.scss";
 
-export const VideoPlayer = ({ videoURL }) => {
+export const VideoPlayer = ({ videoURL, handleVideoEnd }) => {
   const pathname = window.location.pathname;
 
   const onError = (error) => {
@@ -25,6 +25,7 @@ export const VideoPlayer = ({ videoURL }) => {
         width="50vw"
         height="50%"
         onError={onError}
+        onEnded={handleVideoEnd}
       />
     </div>
   );

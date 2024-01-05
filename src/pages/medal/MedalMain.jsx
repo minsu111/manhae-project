@@ -247,12 +247,6 @@ const MedalMain = () => {
           alt={"나만의 훈장 만들기"}
         />
       </Link>
-      {/* <button
-        className="medal_making_btn"
-        onClick={() => navigate("/medal/making")}
-      >
-        훈장만들기
-      </button> */}
       <div className="play_btn">
         <TTSSpeaker />
       </div>
