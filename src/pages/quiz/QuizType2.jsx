@@ -143,17 +143,17 @@ const Quiz2 = () => {
                       (id === "5" ||
                       id === "8" ||
                       id === "15" ||
-                      (id === "9" && language === "En") ||
+                      (id === "4" && language === "En") ||
                       (id === "6" && language === "En") ||
-                      (id === "4" && language === "En")
+                      (id === "9" && language === "En") ||
+                      (id === "11" && language === "En") ||
+                      (id === "12" && language === "En")
                         ? " quiz_middle_btn"
                         : "") +
-                      ((language === "En" && id === "8") ||
-                      (language === "En" && id === "5") ||
-                      (language === "En" && id === "11") ||
-                      (language === "En" && id === "12") ||
-                      (language === "En" && id === "14") ||
-                      (language === "En" && id === "15")
+                      ((id === "5" && language === "En") ||
+                      (id === "8" && language === "En") ||
+                      (id === "14" && language === "En") ||
+                      (id === "15" && language === "En")
                         ? " quiz_long_btn"
                         : "")
                     }

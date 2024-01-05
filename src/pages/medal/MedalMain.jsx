@@ -287,7 +287,7 @@ const MedalMain = () => {
       </div>
       <Link to="/medal/making" className="medal_making_btn">
         <img
-          src={"/assets/medal/medal_ko_4_r1.png"}
+          src={`/assets/medal/making_medal_btn_${language}.png`}
           alt={"나만의 훈장 만들기"}
         />
       </Link>

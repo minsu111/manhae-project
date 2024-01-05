@@ -99,7 +99,7 @@
     "id": "12",
     "title": "뜻을 세우다",
     "question": "다음에서 설명하는 만해 한용운과 관련된 저서를 골라보세요.",
-    "quizImageURL": "/assets/quiz/quiz_12_Ko.png",
+    "quizImageURL": "/assets/quiz/quiz_11_Ko.png",
     "description": "",
     "answerBtnList": ["채근담", "불교대전", "자치통감", "조선불교유신론"],
     "answer": "채근담"
@@ -108,7 +108,7 @@
     "id": "13",
     "title": "뜻을 세우다",
     "question": "다음 문장은 한용운의 ‘조선독립의 서(조선독립에 대한 감상개요)’ 내용의 일부분입니다. 빈칸에 들어갈 알맞은 단어를 골라보세요.",
-    "quizImageURL": "/assets/quiz/quiz_13_Ko.png",
+    "quizImageURL": "/assets/quiz/quiz_11_Ko.png",
     "description": "",
     "answerBtnList": ["애국", "자유", "사랑", "진실"],
     "answer": "자유"
@@ -117,7 +117,7 @@
     "id": "14",
     "title": "침묵의 미학",
     "question": "다음에서 설명하는 만해 한용운의 대표 시집을 골라보세요.",
-    "quizImageURL": "/assets/quiz/quiz_14_Ko.png",
+    "quizImageURL": "/assets/quiz/quiz_11_Ko.png",
     "description": "",
     "answerBtnList": ["불교대전", "조선불교유신론", "님의 침묵", "채근담"],
     "answer": "님의 침묵"
@@ -126,7 +126,7 @@
     "id": "15",
     "title": "만해 그 후",
     "question": "만해 한용운에게 수여된 훈장의 종류와 등급을 골라보세요.\n대한민국 정부는 만해 한용운의 독립운동에 대한 커다란 공적을 기려 1962년 3월 1일 이 훈장을 추서하였습니다.",
-    "quizImageURL": "/assets/quiz/quiz_15.png",
+    "quizImageURL": "/assets/quiz/quiz_11_Ko.png",
     "description": "",
     "answerBtnList": [
       "건국훈장-대한민국장",
