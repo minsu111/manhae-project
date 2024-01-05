@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ManhaeStoryList from "../../data/ManhaeStory";
 import { useNavigate } from "react-router-dom";
 import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
@@ -8,6 +8,7 @@ import { VideoPlayer } from "../../components/commentary/VideoPlayer";
 
 const ManhaeStory = () => {
   const navigate = useNavigate();
+  const videoRef = useRef(null);
   const [playIntro, setPlayIntro] = useState(false);
 
   // 다국어 처리
@@ -23,9 +24,13 @@ const ManhaeStory = () => {
     sessionStorage.removeItem("menu");
   }, []);
 
-  setTimeout(() => {
+  // setTimeout(() => {
+  //   setPlayIntro(false);
+  // }, 43000);
+
+  const handleVideoEnd = () => {
     setPlayIntro(false);
-  }, 43000);
+  };
 
   return (
     <div className="manhae_story_wrapper">
@@ -37,7 +42,11 @@ const ManhaeStory = () => {
           }}
         >
           <div className="modal_view" onClick={(e) => e.stopPropagation()}>
-            <VideoPlayer videoURL="/video/commentary/commentary_video/만해 진영 한글.mp4" />
+            <VideoPlayer
+              videoURL="/video/commentary/commentary_video/만해 진영 한글.mp4"
+              handleVideoEnd={handleVideoEnd}
+              ref={videoRef}
+            />
           </div>
           <div className="modal_btn_bar_wrapper"></div>
         </div>
