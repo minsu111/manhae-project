@@ -196,6 +196,23 @@ const MedalMain = () => {
                     sandbox="allow-same-origin allow-scripts"
                   ></iframe>
                 </div>
+                <div className="modal_btn_bar_wrapper">
+                  <div className="modal_btn_bar">
+                    <button onClick={() => navigate("/")}>
+                      <img src={"/assets/image/icon-home.png"} alt={"홈버튼"} />
+                    </button>
+                    <button
+                      onClick={() => {
+                        setOpenModal(!openModal);
+                      }}
+                    >
+                      <img
+                        src={"/assets/image/icon-backward.png"}
+                        alt={"이전버튼"}
+                      />
+                    </button>
+                  </div>
+                </div>
               </div>
             )}
           </div>
