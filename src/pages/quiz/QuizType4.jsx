@@ -174,7 +174,10 @@ const Quiz4 = () => {
         <div className="quiz4_complete_btn_wrapper">
           <div className="complete_line"></div>
           <div className="complete_btn" onClick={handleCompleteBtn}>
-            <img src={"/assets/quiz/quiz_complete_btn.png"} alt={"완료버튼"} />
+            <img
+              src={`/assets/quiz/quiz_submit_btn_${language}.png`}
+              alt={"완료버튼"}
+            />
           </div>
         </div>
         <div className="quiz_result">
