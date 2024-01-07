@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const TextToSpeech = ({ text }) => {
+const TextToSpeech = ({ text, setStopPlay, stopPlay }) => {
   const [utterance, setUtterance] = useState(null);
   const [voicesLoaded, setVoicesLoaded] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -65,6 +65,13 @@ const TextToSpeech = ({ text }) => {
       }
     };
 
+    if (stopPlay === true) {
+      if (isPlaying) {
+        handleTogglePlay();
+        setStopPlay(false);
+      }
+    }
+
     handleVoicesChanged();
 
     synth.onvoiceschanged = handleVoicesChanged;
@@ -73,7 +80,7 @@ const TextToSpeech = ({ text }) => {
       synth.cancel();
       synth.onvoiceschanged = null;
     };
-  }, [text]);
+  }, [text, stopPlay]);
 
   const handleTogglePlay = () => {
     if (voicesLoaded && utterance) {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { VideoPlayer } from "../../components/commentary/VideoPlayer";
 import { useNavigate } from "react-router-dom";
@@ -14,6 +14,7 @@ const Commentary = () => {
   const [openModal, setOpenModal] = useState(false);
   const [selectedVideoUrl, setSelectedVideoUrl] = useState(null);
   const [category, setCategory] = useState(0);
+  const [stopPlay, setStopPlay] = useState(false);
 
   // 다국어 처리
   const language = sessionStorage.getItem("language");
@@ -25,6 +26,12 @@ const Commentary = () => {
     setSelectedVideoUrl(videoUrl);
     setOpenModal(!openModal);
   };
+
+  useEffect(() => {
+    if (openModal === true) {
+      setStopPlay(!stopPlay);
+    }
+  }, [openModal]);
 
   const navigate = useNavigate();
 
@@ -41,7 +48,7 @@ const Commentary = () => {
       nameEn: "Manhae Memorial Hall",
       contents: YouTubeList,
     },
-    { code: 2, nameKo: "도큐멘터리", nameEn: "Documentary", contents: DocList },
+    { code: 2, nameKo: "다큐멘터리", nameEn: "Documentary", contents: DocList },
   ];
 
   const categoryClass = ` category ${
@@ -51,7 +58,6 @@ const Commentary = () => {
   const categoryItemClass =
     language === "Ko" ? "category_item_ko" : "category_item_en_commentary";
 
-  // 카테고리 이벤트 핸들러
   const handleCategory = (e) => {
     const selectedCategory = parseInt(e.target.value, 10);
     setCategory(selectedCategory);
@@ -127,7 +133,11 @@ const Commentary = () => {
           </div>
         )}
         <div className="play_btn">
-          <TTSSpeaker />
+          <TTSSpeaker
+            category={category}
+            setStopPlay={setStopPlay}
+            stopPlay={stopPlay}
+          />
         </div>
       </section>
     </div>

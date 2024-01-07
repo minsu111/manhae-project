@@ -12,8 +12,12 @@
   },
   {
     "path": "/commentary",
-    "textKo": "만해기념관 전보삼 관장님이 직접 만해의 유물이나 철학, 사상에 대해 해설하시는 콘텐츠입니다. 만해기념관이 보유 및 전시하고 있는 다양한 콘텐츠의 역사 및 의미에 대해 더 깊이 알아보세요! ",
-    "textEn": "This is content in which Director Jeon Bo-sam of the Manhae Museum directly explains Manhae's relics, philosophy, and thoughts."
+    "textKo0": "만해기념관 전보삼 관장님이 직접 만해의 유물이나 철학, 사상에 대해 해설하시는 콘텐츠입니다. 만해기념관이 보유 및 전시하고 있는 다양한 콘텐츠의 역사 및 의미에 대해 더 깊이 알아보세요! ",
+    "textKo1": "만해기념관 국문 tts.",
+    "textKo2": "다큐멘터리 국문 tts.",
+    "textEn0": "This is content in which Director Jeon Bo-sam of the Manhae Museum directly explains Manhae's relics, philosophy, and thoughts.",
+    "textEn1": "만해기념관 영문 tts",
+    "textEn2": "다큐멘터리 영문 tts"
   },
 
   {
@@ -97,5 +101,30 @@
     "path": "/quiz/10",
     "textKo": "심우장의 정절. 아래의 도움말을 천천히 읽고 사진 속의 인물을 맞춰 보세요! 첫번째,독립운동가로서, 1910년대 초반부터 간도 지역에 독립운동기지를 세우는데 단단한 기반을 마련한 주역입니다. 두번째, 1931년 하얼빈에서 체포되어 옥고를 치르다. 1937년 서대문 형무소에서 순국합니다. 세번째, 만해 한용운은 그의 시신을 수습하여, 심우장에서 장례식를 치렀습니다. 네번째, 가곡 '선구자'는 이 분을 주인공으로 한 노래로 잘 알려져 있습니다. 1. 일송 김동삼. 2. 백범 김구. 3. 도마 안중근. 4. 소월 감정식.",
     "textEn": "Simujang House's Fidelity. Read the hints below slowly and try to guess the person in the photograph! First, As an independence activist, he played a pivotal role from the early 1910s in establishing a firm foundation for the independence movement base in the Gando area. Second, He was arrested in Harbin in 1931 and suffered imprisonment, eventually becoming a martyr at Seodaemun Prison in 1937. Third, Manhae Han Yong-un took care of his remains and held a funeral at Simujang House. Fourth, The lyrical song 'Pioneer' is well-known as a tribute to him. 1. Ilsong Kim Dong-sam. 2. Baekbeom Kim-gu. 3. Doma Ahn Joong-geun. 4. Sowol Kim Jung-sik."
+  },
+  {
+    "path": "/quiz/11",
+    "textKo": "",
+    "textEn": ""
+  },
+  {
+    "path": "/quiz/12",
+    "textKo": "",
+    "textEn": ""
+  },
+  {
+    "path": "/quiz/13",
+    "textKo": "",
+    "textEn": ""
+  },
+  {
+    "path": "/quiz/14",
+    "textKo": "",
+    "textEn": ""
+  },
+  {
+    "path": "/quiz/15",
+    "textKo": "",
+    "textEn": ""
   }
 ]
