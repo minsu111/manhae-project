@@ -18,15 +18,11 @@ const ManhaeStory = () => {
   useEffect(() => {
     const menu = sessionStorage.getItem("menu");
     if (menu === "manhaeStory") {
-      setPlayIntro(true);
+      // setPlayIntro(true);
       sessionStorage.removeItem("category");
     }
     sessionStorage.removeItem("menu");
   }, []);
-
-  // setTimeout(() => {
-  //   setPlayIntro(false);
-  // }, 43000);
 
   const handleVideoEnd = () => {
     setPlayIntro(false);
@@ -43,7 +39,7 @@ const ManhaeStory = () => {
         >
           <div className="modal_view" onClick={(e) => e.stopPropagation()}>
             <VideoPlayer
-              videoURL="/video/commentary/commentary_video/만해 진영 한글.mp4"
+              videoURL="/video/commentary/commentary_video/.mp4"
               handleVideoEnd={handleVideoEnd}
               ref={videoRef}
             />
