@@ -243,7 +243,7 @@ const MedalMain = () => {
             <p>
               <span className="blue_text">
                 The Order of Merit for National Foundation
-              </span>{" "}
+              </span>
               is awarded to individuals with distinguished contributions to the
               establishment of the Republic of Korea, or who have made
               significant efforts in solidifying the foundation of the state.
@@ -267,9 +267,7 @@ const MedalMain = () => {
           {language === "Ko" ? (
             <p className="text_shadow_part">
               만해 한용운이 받은 건국훈장 대한민국장은 대통령이 아닌 인물이 받을
-              수 있는
-              <br />
-              최고의 대한민국 훈장으로 평가됩니다.
+              수 있는 최고의 대한민국 훈장으로 평가됩니다.
             </p>
           ) : (
             <p className="text_shadow_part">

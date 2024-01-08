@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { QuizScoreContext } from "../../context/QuizScoreContext";
 import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 
 import MenuList from "../../data/Menu";
@@ -8,6 +9,7 @@ import "./main.scss";
 
 const Main = () => {
   const sessionLang = sessionStorage.getItem("language");
+  const { setQuizScore } = useContext(QuizScoreContext);
 
   const [languageType, setLanguageType] = useState(sessionLang);
   const [btnImgUrl, setBtnImgUrl] = useState("btnImg" + sessionLang);
@@ -37,7 +39,8 @@ const Main = () => {
             key={i}
             onClick={() => {
               goToSection(c.path);
-              c.path === "quiz/1" && sessionStorage.removeItem("score");
+              c.path === "quiz/1" && sessionStorage.removeItem("QuizList");
+              setQuizScore({});
             }}
           >
             <img

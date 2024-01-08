@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
@@ -6,6 +6,7 @@ import correctAudio from "../../audio/correct.wav";
 import wrongAudio from "../../audio/wrong.wav";
 
 import "./quizType3.scss";
+import { QuizScoreContext } from "../../context/QuizScoreContext";
 
 const quizList = [
   {
@@ -43,6 +44,7 @@ const Quiz3 = () => {
   const [answerList, setAnswerList] = useState(
     Array(quizList.length).fill(null)
   );
+  const { quizScore, setQuizScore } = useContext(QuizScoreContext);
 
   const [clickedIndex, setClickedIndex] = useState(null);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -56,6 +58,13 @@ const Quiz3 = () => {
   const question = "question" + language;
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const storedQuizScore = sessionStorage.getItem("QuizList");
+    if (storedQuizScore) {
+      setQuizScore(JSON.parse(storedQuizScore));
+    }
+  }, [setQuizScore]);
 
   // OX 버튼 핸들러
   const handleAnswerBtn = (index, selectedAnswer, e) => {
@@ -90,11 +99,6 @@ const Quiz3 = () => {
       answerList.length === correctAnswers.length &&
       answerList.every((value, index) => correctAnswers[index] === value);
 
-    const currentScore = Number(sessionStorage.getItem("score"));
-    isCorrect
-      ? sessionStorage.setItem("score", currentScore + 1)
-      : sessionStorage.setItem("score", currentScore);
-
     setResult(isCorrect ? "correct" : "wrong");
 
     const newAudio = new Audio(isCorrect ? correctAudio : wrongAudio);
@@ -102,8 +106,18 @@ const Quiz3 = () => {
 
     setTimeout(() => {
       if (isCorrect) {
+        setQuizScore((prevScore) => {
+          const newScore = { ...prevScore, 2: true };
+          sessionStorage.setItem("QuizList", JSON.stringify(newScore));
+          return newScore;
+        });
         navigate("/quiz/3");
       } else {
+        setQuizScore((prevScore) => {
+          const newScore = { ...prevScore, 2: false };
+          sessionStorage.setItem("QuizList", JSON.stringify(newScore));
+          return newScore;
+        });
         setResult(null);
         setShowAnswer(true);
         setTimeout(() => {

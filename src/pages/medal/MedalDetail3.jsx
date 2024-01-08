@@ -105,7 +105,7 @@ const MedalDetail3 = () => {
                 />
               </div>
             </div>
-            <div className="medal_detail3_seciton detail3_2_section3 ">
+            <div className="medal_detail3_seciton detail3_2_section3">
               <h2>Order of Merit for National Foundation - National Medal</h2>
               <hr className="dividing_line" />
               <p>

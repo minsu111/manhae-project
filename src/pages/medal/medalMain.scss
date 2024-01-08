@@ -11,7 +11,7 @@
 }
 
 .section_wrapper_ko {
-  width: 45%;
+  width: 50%;
   height: 90%;
   padding: 1% 8%;
 }
@@ -23,7 +23,10 @@
 }
 
 .section1 {
+  width: 100%;
+  height: 35%;
   margin: 5% 0 0 0;
+  overflow-y: scroll;
 
   h1 {
     font-size: 2vw;
@@ -33,24 +36,27 @@
   }
 
   p {
+    // height: 21%;
     line-height: 160%;
     padding: 2% 0;
     word-break: keep-all;
-    overflow-y: auto;
   }
 }
 
 .section1_en {
+  height: 46%;
   margin-bottom: 0;
 }
 
 .section2 {
-  margin: 3% 0;
+  // margin: 3% 0;
+  height: 50%;
+  overflow-y: scroll;
 
   p {
     line-height: 160%;
     padding: 3% 0 2% 0;
-    overflow-y: auto;
+    // overflow-y: auto;
   }
 }
 
@@ -100,6 +106,7 @@
 
 .medal_type_desc_ko {
   width: 100%;
+  height: 20%;
 
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -156,6 +163,7 @@
 }
 
 .text_shadow_part {
+  width: 86%;
   text-shadow: 4px 2px 2px white;
 }
 
@@ -199,6 +207,20 @@
     width: 80%;
     height: 80%;
   }
+
+  .section_wrapper_ko {
+    width: 60%;
+  }
+
+  .section1 {
+    height: 40%;
+    overflow-x: hidden;
+  }
+
+  .section1_en {
+    height: 52%;
+  }
+
   .section2_en {
     height: 40%;
   }

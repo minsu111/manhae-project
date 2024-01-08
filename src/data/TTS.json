@@ -12,12 +12,8 @@
   },
   {
     "path": "/commentary",
-    "textKo0": "만해기념관 전보삼 관장님이 직접 만해의 유물이나 철학, 사상에 대해 해설하시는 콘텐츠입니다. 만해기념관이 보유 및 전시하고 있는 다양한 콘텐츠의 역사 및 의미에 대해 더 깊이 알아보세요! ",
-    "textKo1": "만해기념관 국문 tts.",
-    "textKo2": "다큐멘터리 국문 tts.",
-    "textEn0": "This is content in which Director Jeon Bo-sam of the Manhae Museum directly explains Manhae's relics, philosophy, and thoughts.",
-    "textEn1": "만해기념관 영문 tts",
-    "textEn2": "다큐멘터리 영문 tts"
+    "textKo": "만해기념관 전보삼 관장님이 직접 만해의 유물이나 철학, 사상에 대해 해설하시는 콘텐츠입니다. 만해기념관이 보유 및 전시하고 있는 다양한 콘텐츠의 역사 및 의미에 대해 더 깊이 알아보세요!",
+    "textEn": "This is content in which Director Jeon Bo-sam of the Manhae Museum directly explains Manhae's relics, philosophy, and thoughts."
   },
 
   {
@@ -104,27 +100,27 @@
   },
   {
     "path": "/quiz/11",
-    "textKo": "",
-    "textEn": ""
+    "textKo": "다음에서 설명하는 만해 한용운과 관련된 저서를 골라보세요. 청나라의 서계여가 지은 책으로 세계의 지리와 문화를 소상히 설명한 지리서입니다. 이 책을 읽고 만해 한용운은 세계 일주를 위해 블라디보스톡으로 떠나게 됩니다. 1. 자치통감.  2. 채근담.  3. 음빙실문집.  4. 영환지략.",
+    "textEn": "Choose the work related to Manhae Han Yong-un described below. This is a geography book written by Seo Gye-yeo of the Qing Dynasty, which explains the geography and culture of the world in detail. After reading this book, Manhae Han Yong-un set off for Vladivostok to embark on a journey around the world. 1. Jachitonggam.  2. Chaekundam.  3. embbingsilmoonjib.  4. Yeonghwanjirak."
   },
   {
     "path": "/quiz/12",
-    "textKo": "",
-    "textEn": ""
+    "textKo": "다음에서 설명하는 만해 한용운과 관련된 저서를 골라보세요. 유교, 불교, 도교에서 마음 수양에 필요한 중요한 어록을 모은 심신 수양서입니다.  만해 한용운은 이 책을 읽고 새롭게 해석하여 책을 내게 됩니다. 채근담.  2. 불교대전.  3. 자치통감.  4. 조선불교유신론.",
+    "textEn": "Select the work related to Manhae Han Yong-un described below. This is a book on mental and physical cultivation that compiles important sayings necessary for mind cultivation from Confucianism, Buddhism, and Taoism. Manhae Han Yong-un read this book and published his own interpretation of it. 1. Chaekundam.  2. Boolgyo Daejeon.  3. Jachitonggam.  4. The Restoration of Korean Buddhism."
   },
   {
     "path": "/quiz/13",
-    "textKo": "",
-    "textEn": ""
+    "textKo": "다음 문장은 한용운의 ‘조선독립의 서(조선독립에 대한 감상개요)’, 내용의 일부분입니다. 빈칸에 들어갈 알맞은 단어를 골라보세요. '빈칸' 은 만유의 생명이요, 평화는 인생의 행복이다. 1. 애국.  2. 자유.  3. 사랑.  4. 진실.",
+    "textEn": "The following sentence is part of Han Yong-un’s ‘Book of Joseon Independence (Overview of Joseon's Independence Sentiments)’. Choose the right word to fill in the blank. 'Blank' is the life of all things, and peace is the happiness of life. 1. Patriotism. 2. Freedom. 3. Love. 4. Truth."
   },
   {
     "path": "/quiz/14",
-    "textKo": "",
-    "textEn": ""
+    "textKo": "다음에서 설명하는 만해 한용운의 대표 시집을 골라보세요. 한국의 시로 대표되는 영원한 고전으로 1925년 오세암에서 쓰고, 1926년 회동서관에서 발행되었습니다. 이 시집에는 총 88편의 시가 수록되어 있습니다. 1. 불교대전.  2. 조선불교유신론.  3. 님의 침묵.  4.  채근담.",
+    "textEn": "Choose the representative work of Manhae Han Yong-un described below. This is an eternal classic represented by Korean poetry. It was written in 1925 at Oseam and published in 1926 by Hwidong Bookstore. The book contains a total of 88 poems. 1. Boolgyo Daejeon.   2. Joseonbulgyoyusinlon.  3. Silence of Nim.   4. Chaekundam."
   },
   {
     "path": "/quiz/15",
-    "textKo": "",
-    "textEn": ""
+    "textKo": "만해 한용운에게 수여된 훈장의 종류와 등급을 골라보세요. 대한민국 정부는 만해 한용운의 독립운동에 대한 커다란 공적을 기려 1962년 3월 1일 이 훈장을 추서 하였습니다. 1. 건국훈장-대한민국장.  2. 무궁화대훈장-대통령장.  3. 국민훈장-애족장.  4. 무공훈장-애국장. ",
+    "textEn": "Choose the type and grade of the medal awarded to Manhae Han Yong-un. The government of the Republic of Korea recognized Manhae Han Yong-un's great contribution to the independence movement and posthumously awarded him this medal on March 1, 1962. 1. Order of Merit for National Foundation - Republic of Korea Medal. 2. Grand Order of Mugunghwa - Presidential Medal. 3. Order of Civil Merit - National Medal. 4. Order of Military Merit - Patriotic Medal."
   }
 ]
