@@ -119,7 +119,7 @@
     "id": "12",
     "title": "Set an Aim in Life",
     "question": "Select the work related to Manhae Han Yong-un described below.",
-    "quizImageURL": "/assets/quiz/quiz_11_En.png",
+    "quizImageURL": "/assets/quiz/quiz_12_En.png",
     "description": "",
     "answerBtnList": [
       "Chaekundam",
@@ -133,7 +133,7 @@
     "id": "13",
     "title": "Standing at the forefront of the March 1st Movement",
     "question": "The following sentence is part of Han Yong-un’s ‘Book of Joseon Independence (Overview of Joseon's Independence Sentiments)’. Choose the right word to fill in the blank.",
-    "quizImageURL": "/assets/quiz/quiz_11_En.png",
+    "quizImageURL": "/assets/quiz/quiz_13_En.png",
     "description": "",
     "answerBtnList": ["Patriotism", "Freedom", "Love", "Truth"],
     "answer": "Freedom"
@@ -142,11 +142,11 @@
     "id": "14",
     "title": "The Aesthetics of Silence",
     "question": "Choose the representative work of Manhae Han Yong-un described below.",
-    "quizImageURL": "/assets/quiz/quiz_11_En.png",
+    "quizImageURL": "/assets/quiz/quiz_14_En.png",
     "description": "",
     "answerBtnList": [
       "Bulgyo Daejeon",
-      "The Restoration of Korean Buddhism",
+      "Joseonbulgyoyusinlon",
       "Silence of Nim",
       "Chaekundam"
     ],
@@ -156,7 +156,7 @@
     "id": "15",
     "title": "After Manhae's Departure",
     "question": "Choose the type and grade of the medal awarded to Manhae Han Yong-un.\nThe government of the Republic of Korea recognized Manhae Han Yong-un's great contribution to the independence movement and posthumously awarded him this medal on March 1, 1962.",
-    "quizImageURL": "/assets/quiz/quiz_11_En.png",
+    "quizImageURL": "/assets/quiz/quiz_15.png",
 
     "description": "",
     "answerBtnList": [

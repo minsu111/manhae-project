@@ -1,15 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import "./quizResult.scss";
 import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
+import { QuizScoreContext } from "../../context/QuizScoreContext";
 
 const QuizResult = () => {
-  const correctNum = sessionStorage.getItem("score");
+  // const correctNum = sessionStorage.getItem("score");
+  const quizScore = JSON.parse(sessionStorage.getItem("QuizList"));
+  const quizScoreValues = Object.values(quizScore);
+  const correctQuizList = quizScoreValues.filter((object) => object === true);
+  const correctNum = correctQuizList.length;
   const baseFontSize = 3;
   const [fontSize, setFontSize] = useState(baseFontSize);
   const maxFontSize = baseFontSize + 0.4;
   const score = ((correctNum / 15) * 100).toFixed();
-
   const language = sessionStorage.getItem("language");
 
   return (

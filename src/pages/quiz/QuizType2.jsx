@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { QuizScoreContext } from "../../context/QuizScoreContext";
 import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
@@ -18,7 +19,7 @@ const Quiz2 = () => {
   const [fontSize, setFontSize] = useState(baseFontSize);
   const maxFontSize = baseFontSize + 0.4;
   const { id } = useParams();
-
+  const { quizScore, setQuizScore } = useContext(QuizScoreContext);
   const language = sessionStorage.getItem("language");
 
   const quizList =
@@ -28,6 +29,13 @@ const Quiz2 = () => {
   const quizItem = quizList[0];
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const storedQuizScore = sessionStorage.getItem("QuizList");
+    if (storedQuizScore) {
+      setQuizScore(JSON.parse(storedQuizScore));
+    }
+  }, [setQuizScore]);
 
   useEffect(() => {
     const image = new Image();
@@ -49,11 +57,6 @@ const Quiz2 = () => {
 
       setBtnActive(value);
 
-      const currentScore = Number(sessionStorage.getItem("score"));
-      value === quizItem.answer
-        ? sessionStorage.setItem("score", currentScore + 1)
-        : sessionStorage.setItem("score", currentScore);
-
       setTimeout(() => {
         value === quizItem.answer ? setResult("correct") : setResult("wrong");
 
@@ -65,11 +68,22 @@ const Quiz2 = () => {
 
       setTimeout(() => {
         if (value === quizItem.answer) {
+          setQuizScore((prevScore) => {
+            const newScore = { ...prevScore, [id]: true };
+            sessionStorage.setItem("QuizList", JSON.stringify(newScore));
+            return newScore;
+          });
           id === "15"
             ? navigate("/quiz/result")
             : navigate(`/quiz/${Number(id) + 1}`);
           setResult(null);
         } else {
+          setQuizScore((prevScore) => {
+            const newScore = { ...prevScore, [id]: false };
+            sessionStorage.setItem("QuizList", JSON.stringify(newScore));
+            return newScore;
+          });
+          console.log(quizScore);
           setBtnActive(quizItem.answer);
           setResult(null);
           setTimeout(() => {
@@ -147,12 +161,12 @@ const Quiz2 = () => {
                       (id === "6" && language === "En") ||
                       (id === "9" && language === "En") ||
                       (id === "11" && language === "En") ||
-                      (id === "12" && language === "En")
+                      (id === "12" && language === "En") ||
+                      (id === "14" && language === "En")
                         ? " quiz_middle_btn"
                         : "") +
                       ((id === "5" && language === "En") ||
                       (id === "8" && language === "En") ||
-                      (id === "14" && language === "En") ||
                       (id === "15" && language === "En")
                         ? " quiz_long_btn"
                         : "")

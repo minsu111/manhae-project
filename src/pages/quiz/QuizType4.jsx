@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
@@ -7,6 +7,7 @@ import correctAudio from "../../audio/correct.wav";
 import wrongAudio from "../../audio/wrong.wav";
 
 import "./quizType4.scss";
+import { QuizScoreContext } from "../../context/QuizScoreContext";
 
 const QuizBtnList = [
   "프랑스어",
@@ -29,6 +30,7 @@ const QuizBtnListEn = [
 const Quiz4 = () => {
   const [result, setResult] = useState(null);
   const [btnActive, setBtnActive] = useState([]);
+  const { quizScore, setQuizScore } = useContext(QuizScoreContext);
 
   const baseFontSize = 1;
   const [fontSize, setFontSize] = useState(baseFontSize);
@@ -36,6 +38,13 @@ const Quiz4 = () => {
   const language = sessionStorage.getItem("language");
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const storedQuizScore = sessionStorage.getItem("QuizList");
+    if (storedQuizScore) {
+      setQuizScore(JSON.parse(storedQuizScore));
+    }
+  }, [setQuizScore]);
 
   const handleQuizBtn = (e) => {
     if (result === null) {
@@ -71,8 +80,18 @@ const Quiz4 = () => {
 
     setTimeout(() => {
       if (isCorrect) {
+        setQuizScore((prevScore) => {
+          const newScore = { ...prevScore, 7: true };
+          sessionStorage.setItem("QuizList", JSON.stringify(newScore));
+          return newScore;
+        });
         navigate("/quiz/8");
       } else {
+        setQuizScore((prevScore) => {
+          const newScore = { ...prevScore, 7: false };
+          sessionStorage.setItem("QuizList", JSON.stringify(newScore));
+          return newScore;
+        });
         setBtnActive(correctAnswers);
         setResult(null);
         setTimeout(() => {

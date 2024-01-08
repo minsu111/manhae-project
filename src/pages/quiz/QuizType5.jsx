@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
@@ -11,10 +11,12 @@ import QuizList from "../../data/QuizKo.json";
 import QuizListEn from "../../data/QuizEn.json";
 
 import "./quizType5.scss";
+import { QuizScoreContext } from "../../context/QuizScoreContext";
 
 const Quiz5 = () => {
   const [result, setResult] = useState(null);
   const [btnActive, setBtnActive] = useState("");
+  const { quizScore, setQuizScore } = useContext(QuizScoreContext);
 
   const baseFontSize = 1;
   const [fontSize, setFontSize] = useState(baseFontSize);
@@ -30,6 +32,13 @@ const Quiz5 = () => {
   const quizItem = quizList[0];
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const storedQuizScore = sessionStorage.getItem("QuizList");
+    if (storedQuizScore) {
+      setQuizScore(JSON.parse(storedQuizScore));
+    }
+  }, [setQuizScore]);
 
   const handleQuizBtn = (e) => {
     if (result === null) {
@@ -51,9 +60,25 @@ const Quiz5 = () => {
       }, 400);
 
       setTimeout(() => {
-        value === quizItem.answer && navigate(`/quiz/${Number(id) + 1}`);
-        setBtnActive("");
-        setResult(null);
+        if (value === quizItem.answer) {
+          setQuizScore((prevScore) => {
+            const newScore = { ...prevScore, 10: true };
+            sessionStorage.setItem("QuizList", JSON.stringify(newScore));
+            return newScore;
+          });
+          navigate(`/quiz/${Number(id) + 1}`);
+        } else {
+          setQuizScore((prevScore) => {
+            const newScore = { ...prevScore, 10: false };
+            sessionStorage.setItem("QuizList", JSON.stringify(newScore));
+            return newScore;
+          });
+          setBtnActive(quizItem.answer);
+          setResult(null);
+          setTimeout(() => {
+            navigate(`/quiz/${Number(id) + 1}`);
+          }, 2000);
+        }
       }, 3000);
     }
   };
