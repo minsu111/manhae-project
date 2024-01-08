@@ -99,11 +99,6 @@ const Quiz3 = () => {
       answerList.length === correctAnswers.length &&
       answerList.every((value, index) => correctAnswers[index] === value);
 
-    const currentScore = Number(sessionStorage.getItem("score"));
-    isCorrect
-      ? sessionStorage.setItem("score", currentScore + 1)
-      : sessionStorage.setItem("score", currentScore);
-
     setResult(isCorrect ? "correct" : "wrong");
 
     const newAudio = new Audio(isCorrect ? correctAudio : wrongAudio);

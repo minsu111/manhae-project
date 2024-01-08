@@ -1,11 +1,9 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import "./quizResult.scss";
 import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
-import { QuizScoreContext } from "../../context/QuizScoreContext";
 
 const QuizResult = () => {
-  // const correctNum = sessionStorage.getItem("score");
   const quizScore = JSON.parse(sessionStorage.getItem("QuizList"));
   const quizScoreValues = Object.values(quizScore);
   const correctQuizList = quizScoreValues.filter((object) => object === true);

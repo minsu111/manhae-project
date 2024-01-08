@@ -27,12 +27,15 @@ import MedalDetail3 from "./pages/medal/MedalDetail3";
 
 import Quiz from "./pages/quiz/Quiz";
 import QuizResult from "./pages/quiz/QuizResult";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { QuizScoreContext } from "./context/QuizScoreContext";
 
 function App() {
-  sessionStorage.setItem("language", "Ko");
   const [quizScore, setQuizScore] = useState({});
+
+  useEffect(() => {
+    sessionStorage.setItem("language", "Ko");
+  }, []);
 
   return (
     <DndProvider backend={MultiBackend} options={HTML5toTouch}>

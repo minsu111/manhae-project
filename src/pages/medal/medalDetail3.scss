@@ -1,3 +1,5 @@
+@import "../../styles/mixin";
+
 .medal_detail3_container {
   width: 100%;
   height: 100vh;
@@ -85,4 +87,24 @@
 
 .detail3_section3 {
   margin-top: 6%;
+}
+
+@include mobile {
+  .detail3_2_section3 {
+    // height: 50%;
+  }
+
+  .medal_detail3_seciton {
+    height: 50%;
+
+    p {
+      height: 12%;
+    }
+  }
+}
+
+@include web {
+  .medal_detail3_seciton {
+    height: 58%;
+  }
 }
