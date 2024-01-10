@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { LanguageContext } from "../../context/LanguageContext";
+import { QuizScoreContext } from "../../context/QuizScoreContext";
 import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
@@ -7,7 +9,6 @@ import correctAudio from "../../audio/correct.wav";
 import wrongAudio from "../../audio/wrong.wav";
 
 import "./quizType4.scss";
-import { QuizScoreContext } from "../../context/QuizScoreContext";
 
 const QuizBtnList = [
   "프랑스어",
@@ -30,12 +31,12 @@ const QuizBtnListEn = [
 const Quiz4 = () => {
   const [result, setResult] = useState(null);
   const [btnActive, setBtnActive] = useState([]);
-  const { quizScore, setQuizScore } = useContext(QuizScoreContext);
+  const { language } = useContext(LanguageContext);
+  const { setQuizScore } = useContext(QuizScoreContext);
 
   const baseFontSize = 1;
   const [fontSize, setFontSize] = useState(baseFontSize);
   const maxFontSize = baseFontSize + 0.4;
-  const language = sessionStorage.getItem("language");
 
   const navigate = useNavigate();
 

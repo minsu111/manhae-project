@@ -1,12 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { LanguageContext } from "../../context/LanguageContext";
+import { QuizScoreContext } from "../../context/QuizScoreContext";
+
 import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 import correctAudio from "../../audio/correct.wav";
 import wrongAudio from "../../audio/wrong.wav";
 
 import "./quizType3.scss";
-import { QuizScoreContext } from "../../context/QuizScoreContext";
 
 const quizList = [
   {
@@ -44,7 +46,7 @@ const Quiz3 = () => {
   const [answerList, setAnswerList] = useState(
     Array(quizList.length).fill(null)
   );
-  const { quizScore, setQuizScore } = useContext(QuizScoreContext);
+  const { setQuizScore } = useContext(QuizScoreContext);
 
   const [clickedIndex, setClickedIndex] = useState(null);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -54,7 +56,7 @@ const Quiz3 = () => {
   const [fontSize, setFontSize] = useState(baseFontSize);
   const maxFontSize = baseFontSize + 0.4;
 
-  const language = sessionStorage.getItem("language");
+  const { language } = useContext(LanguageContext);
   const question = "question" + language;
 
   const navigate = useNavigate();

@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { QuizScoreContext } from "../../context/QuizScoreContext";
+import { LanguageContext } from "../../context/LanguageContext";
+
 import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 
 import MenuList from "../../data/Menu";
@@ -8,11 +10,10 @@ import MenuList from "../../data/Menu";
 import "./main.scss";
 
 const Main = () => {
-  const sessionLang = sessionStorage.getItem("language");
   const { setQuizScore } = useContext(QuizScoreContext);
+  const { language, setLanguage } = useContext(LanguageContext);
 
-  const [languageType, setLanguageType] = useState(sessionLang);
-  const [btnImgUrl, setBtnImgUrl] = useState("btnImg" + sessionLang);
+  const [btnImgUrl, setBtnImgUrl] = useState("btnImg" + language);
   const navigate = useNavigate();
 
   const goToSection = (path) => {
@@ -22,7 +23,7 @@ const Main = () => {
 
   const handleLanguage = (e) => {
     sessionStorage.setItem("language", e.target.value);
-    setLanguageType(e.target.value);
+    setLanguage(e.target.value);
     setBtnImgUrl("btnImg" + e.target.value);
   };
 
@@ -30,7 +31,7 @@ const Main = () => {
     <div
       className="main_page"
       style={{
-        backgroundImage: `url("/assets/image/mainImg_${languageType}.png")`,
+        backgroundImage: `url("/assets/image/mainImg_${language}.png")`,
       }}
     >
       <div className="main_buttons_section">
@@ -46,7 +47,7 @@ const Main = () => {
             <img
               src={c[btnImgUrl]}
               alt={c.sectionName}
-              style={{ paddingBottom: languageType === "En" && "3.5%" }}
+              style={{ paddingBottom: language === "En" && "3.5%" }}
             />
           </button>
         ))}
@@ -60,11 +61,11 @@ const Main = () => {
                 name="language"
                 value="Ko"
                 onChange={handleLanguage}
-                checked={languageType === "Ko"}
+                checked={language === "Ko"}
               />
               <span
                 style={{
-                  color: languageType === "Ko" ? "#3281BC" : "#534E4E",
+                  color: language === "Ko" ? "#3281BC" : "#534E4E",
                 }}
               >
                 Korean
@@ -79,11 +80,11 @@ const Main = () => {
                 name="language"
                 value="En"
                 onChange={handleLanguage}
-                checked={languageType === "En"}
+                checked={language === "En"}
               />
               <span
                 style={{
-                  color: languageType === "En" ? "#3281BC" : "#534E4E",
+                  color: language === "En" ? "#3281BC" : "#534E4E",
                 }}
               >
                 English

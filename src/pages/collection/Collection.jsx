@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { LanguageContext } from "../../context/LanguageContext";
 import { ToastNotification } from "../../components/common/toast/ToastNotification";
 import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 
@@ -14,7 +15,7 @@ const Collection = () => {
   const [openToast, setOpentToast] = useState(false);
 
   // 다국어 처리
-  const language = sessionStorage.getItem("language");
+  const { language } = useContext(LanguageContext);
   const title = "title" + language;
   const name = "name" + language;
 

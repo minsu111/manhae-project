@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { LanguageContext } from "../../context/LanguageContext";
+import { QuizScoreContext } from "../../context/QuizScoreContext";
 
 import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
@@ -11,17 +13,16 @@ import QuizList from "../../data/QuizKo.json";
 import QuizListEn from "../../data/QuizEn.json";
 
 import "./quizType5.scss";
-import { QuizScoreContext } from "../../context/QuizScoreContext";
 
 const Quiz5 = () => {
   const [result, setResult] = useState(null);
   const [btnActive, setBtnActive] = useState("");
-  const { quizScore, setQuizScore } = useContext(QuizScoreContext);
+  const { language } = useContext(LanguageContext);
+  const { setQuizScore } = useContext(QuizScoreContext);
 
   const baseFontSize = 1;
   const [fontSize, setFontSize] = useState(baseFontSize);
   const maxFontSize = baseFontSize + 0.4;
-  const language = sessionStorage.getItem("language");
 
   const { id } = useParams();
 

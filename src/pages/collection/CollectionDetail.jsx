@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { LanguageContext } from "../../context/LanguageContext";
+
 import TextToSpeech from "../../components/collection/TextToSpeech";
 import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
@@ -21,7 +23,7 @@ const CollectionDetail = () => {
   };
 
   // 다국어 처리
-  const language = sessionStorage.getItem("language");
+  const { language } = useContext(LanguageContext);
   const description = "desc" + language;
   const title = "title" + language;
 

@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useLocation } from "react-router-dom";
+import { LanguageContext } from "../../../context/LanguageContext";
 
 import TTS from "../../../data/TTS";
-import { useLocation } from "react-router-dom";
 import TextToSpeech from "../../collection/TextToSpeech";
 
 const TTSSpeaker = ({ setStopPlay, stopPlay }) => {
-  const language = sessionStorage.getItem("language");
+  const { language } = useContext(LanguageContext);
 
   const location = useLocation();
   const textLang = "text" + language;

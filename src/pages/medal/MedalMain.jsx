@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { LanguageContext } from "../../context/LanguageContext";
 
 import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
@@ -13,7 +14,7 @@ const MedalMain = () => {
   const [openModal, setOpenModal] = useState(false);
   const [iframeLink, setIframeLink] = useState("");
 
-  const language = sessionStorage.getItem("language");
+  const { language } = useContext(LanguageContext);
   const name = "name" + language;
 
   const navigate = useNavigate();

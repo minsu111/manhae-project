@@ -1,7 +1,5 @@
 import { useParams } from "react-router-dom";
 
-import "./quizType.scss";
-
 import Quiz2 from "./QuizType2";
 import Quiz3 from "./QuizType3";
 import Quiz4 from "./QuizType4";

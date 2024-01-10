@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { LanguageContext } from "../../context/LanguageContext";
 
 import { VideoPlayer } from "../../components/commentary/VideoPlayer";
 import { useNavigate } from "react-router-dom";
@@ -17,7 +18,7 @@ const Commentary = () => {
   const [stopPlay, setStopPlay] = useState(false);
 
   // 다국어 처리
-  const language = sessionStorage.getItem("language");
+  const { language } = useContext(LanguageContext);
   const title = "title" + language;
   const video = "video" + language;
   const name = "name" + language;
@@ -133,11 +134,7 @@ const Commentary = () => {
           </div>
         )}
         <div className="play_btn">
-          <TTSSpeaker
-            category={category}
-            setStopPlay={setStopPlay}
-            stopPlay={stopPlay}
-          />
+          <TTSSpeaker setStopPlay={setStopPlay} stopPlay={stopPlay} />
         </div>
       </section>
     </div>

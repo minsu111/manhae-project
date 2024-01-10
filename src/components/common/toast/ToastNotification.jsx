@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
+import { LanguageContext } from "../../../context/LanguageContext";
 
 import "./ToastNotification.scss";
 
 export const ToastNotification = ({ openToast, setOpentToast }) => {
-  const language = sessionStorage.getItem("language");
+  const { language } = useContext(LanguageContext);
 
   useEffect(() => {
     let timer = setTimeout(() => {

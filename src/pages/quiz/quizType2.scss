@@ -1,3 +1,12 @@
+.quiz1_container {
+  width: 90%;
+  height: 100vh;
+  margin-top: -10%;
+  padding: 7% 4% 8% 6%;
+  align-content: center;
+  background-color: white;
+}
+
 .quiz2_all_wrapper {
   width: 100%;
   height: 85%;
@@ -25,6 +34,12 @@
 
   img {
     width: 100%;
+  }
+}
+
+.quiz_9th_title {
+  hr {
+    width: 50vw !important;
   }
 }
 
@@ -65,7 +80,7 @@
     }
   }
 
-  .quiz_10th_question {
+  .quiz_9th_question {
     width: 50vw;
     height: 50%;
     line-height: 180%;
