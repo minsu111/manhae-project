@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLocation } from "react-router-dom";
+import { LanguageContext } from "../../../context/LanguageContext";
 
 import "./sideBar.scss";
 
 const SideBar = () => {
   const location = useLocation();
 
-  const language = sessionStorage.getItem("language");
+  const { language } = useContext(LanguageContext);
 
   let imageUrl = null;
   if (location.pathname.includes("/collection")) {

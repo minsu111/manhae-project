@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { LanguageContext } from "../../context/LanguageContext";
 import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
@@ -8,7 +9,8 @@ const MedalDetail3 = () => {
   const baseFontSize = 1;
   const [fontSize, setFontSize] = useState(baseFontSize);
   const maxFontSize = baseFontSize + 0.4;
-  const language = sessionStorage.getItem("language");
+
+  const { language } = useContext(LanguageContext);
 
   return (
     <div

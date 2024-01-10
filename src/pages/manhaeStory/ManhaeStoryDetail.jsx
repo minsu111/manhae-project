@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import ReactPlayer from "react-player";
+import { LanguageContext } from "../../context/LanguageContext";
 import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 import ManhaeStoryList from "../../data/ManhaeStory";
@@ -14,7 +15,7 @@ const ManhaeStoryDetail = () => {
   const { id } = useParams();
 
   // 다국어 처리
-  const language = sessionStorage.getItem("language");
+  const { language } = useContext(LanguageContext);
   const title = "title" + language;
   const text = "text" + language;
   const videoURL = "video" + language;

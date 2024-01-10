@@ -1,10 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
-import ManhaeStoryList from "../../data/ManhaeStory";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { LanguageContext } from "../../context/LanguageContext";
+import ManhaeStoryList from "../../data/ManhaeStory";
 import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
+import { VideoPlayer } from "../../components/commentary/VideoPlayer";
 
 import "./manhaeStory.scss";
-import { VideoPlayer } from "../../components/commentary/VideoPlayer";
 
 const ManhaeStory = () => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const ManhaeStory = () => {
   const [playIntro, setPlayIntro] = useState(false);
 
   // 다국어 처리
-  const language = sessionStorage.getItem("language");
+  const { language } = useContext(LanguageContext);
   const title = "title" + language;
 
   useEffect(() => {

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { LanguageContext } from "../../context/LanguageContext";
 
 const TextToSpeech = ({ text, setStopPlay, stopPlay }) => {
   const [utterance, setUtterance] = useState(null);
@@ -6,7 +7,7 @@ const TextToSpeech = ({ text, setStopPlay, stopPlay }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   // 다국어 처리
-  const language = sessionStorage.getItem("language");
+  const { language } = useContext(LanguageContext);
 
   const splitTextIntoChunks = (text) => {
     const sentences = text.text.match(/[^.!?]+[.!?]+/g) || [text];

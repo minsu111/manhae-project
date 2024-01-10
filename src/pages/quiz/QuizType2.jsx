@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { QuizScoreContext } from "../../context/QuizScoreContext";
+import { LanguageContext } from "../../context/LanguageContext";
 import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
@@ -20,7 +21,7 @@ const Quiz2 = () => {
   const maxFontSize = baseFontSize + 0.4;
   const { id } = useParams();
   const { quizScore, setQuizScore } = useContext(QuizScoreContext);
-  const language = sessionStorage.getItem("language");
+  const { language } = useContext(LanguageContext);
 
   const quizList =
     language === "Ko"
@@ -111,12 +112,16 @@ const Quiz2 = () => {
       {isLaodinged && (
         <div className="quiz2_all_wrapper">
           <div className="quiz_title_wrapper">
-            <div className={quizTitleClass}>
+            <div
+              className={
+                id === "9" && language === "Ko"
+                  ? "quiz_9th_title quiz2_title_section"
+                  : quizTitleClass
+              }
+            >
               <h1>{quizItem.title}</h1>
               <hr />
-              <p
-                className={id === "9" ? "quiz_10th_question" : "quiz_question"}
-              >
+              <p className={id === "9" ? "quiz_9th_question" : "quiz_question"}>
                 {quizItem.question}
               </p>
             </div>

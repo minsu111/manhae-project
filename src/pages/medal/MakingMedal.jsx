@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useDrop } from "react-dnd";
+import { LanguageContext } from "../../context/LanguageContext";
 import Object from "../../components/medal/Object";
 import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
 import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
@@ -18,7 +19,7 @@ const MakingMedal = () => {
   const maxFontSize = baseFontSize + 0.4;
 
   // 다국어 처리
-  const language = sessionStorage.getItem("language");
+  const { language } = useContext(LanguageContext);
 
   const [subject, setSubject] = useState(
     language === "Ko"

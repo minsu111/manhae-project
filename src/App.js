@@ -27,43 +27,44 @@ import MedalDetail3 from "./pages/medal/MedalDetail3";
 
 import Quiz from "./pages/quiz/Quiz";
 import QuizResult from "./pages/quiz/QuizResult";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { QuizScoreContext } from "./context/QuizScoreContext";
+import { LanguageContext } from "./context/LanguageContext";
 
 function App() {
+  const languageInfo = sessionStorage.getItem("language");
   const [quizScore, setQuizScore] = useState({});
-
-  useEffect(() => {
-    sessionStorage.setItem("language", "Ko");
-  }, []);
+  const [language, setLanguage] = useState(languageInfo ? languageInfo : "Ko");
 
   return (
     <DndProvider backend={MultiBackend} options={HTML5toTouch}>
       <Router>
         <QuizScoreContext.Provider value={{ quizScore, setQuizScore }}>
-          <Layout>
-            <Routes>
-              <Route path="/" element={<Main />} />
-              <Route path="/collection" element={<Collection />} />
-              <Route
-                path="/collection/detail/:id"
-                element={<CollectionDetail />}
-              />
-              <Route path="/commentary" element={<Commentary />} />
-              <Route path="/manhaeStory" element={<ManhaeStory />} />
-              <Route
-                path="/manhaeStory/detail/:id"
-                element={<ManhaeStoryDetail />}
-              />
-              <Route path="/medal" element={<MedalMain />} />
-              <Route path="/medal/1" element={<MedalDetail1 />} />
-              <Route path="/medal/2" element={<MedalDetail2 />} />
-              <Route path="/medal/3" element={<MedalDetail3 />} />
-              <Route path="/medal/making" element={<MakingMedal />} />
-              <Route path="/quiz/:id" element={<Quiz />} />
-              <Route path="/quiz/result" element={<QuizResult />} />
-            </Routes>
-          </Layout>
+          <LanguageContext.Provider value={{ language, setLanguage }}>
+            <Layout>
+              <Routes>
+                <Route path="/" element={<Main />} />
+                <Route path="/collection" element={<Collection />} />
+                <Route
+                  path="/collection/detail/:id"
+                  element={<CollectionDetail />}
+                />
+                <Route path="/commentary" element={<Commentary />} />
+                <Route path="/manhaeStory" element={<ManhaeStory />} />
+                <Route
+                  path="/manhaeStory/detail/:id"
+                  element={<ManhaeStoryDetail />}
+                />
+                <Route path="/medal" element={<MedalMain />} />
+                <Route path="/medal/1" element={<MedalDetail1 />} />
+                <Route path="/medal/2" element={<MedalDetail2 />} />
+                <Route path="/medal/3" element={<MedalDetail3 />} />
+                <Route path="/medal/making" element={<MakingMedal />} />
+                <Route path="/quiz/:id" element={<Quiz />} />
+                <Route path="/quiz/result" element={<QuizResult />} />
+              </Routes>
+            </Layout>
+          </LanguageContext.Provider>
         </QuizScoreContext.Provider>
       </Router>
     </DndProvider>

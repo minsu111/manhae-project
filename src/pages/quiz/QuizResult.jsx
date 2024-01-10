@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { LanguageContext } from "../../context/LanguageContext";
+import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 import "./quizResult.scss";
-import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar";
 
 const QuizResult = () => {
   const quizScore = JSON.parse(sessionStorage.getItem("QuizList"));
@@ -12,7 +13,7 @@ const QuizResult = () => {
   const [fontSize, setFontSize] = useState(baseFontSize);
   const maxFontSize = baseFontSize + 0.4;
   const score = ((correctNum / 15) * 100).toFixed();
-  const language = sessionStorage.getItem("language");
+  const { language } = useContext(LanguageContext);
 
   return (
     <div
