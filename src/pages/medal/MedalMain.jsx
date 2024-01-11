@@ -140,7 +140,9 @@ const MedalMain = () => {
   return (
     <div
       className="medal_main_container"
-      style={{ backgroundImage: 'url("/assets/image/medalMain_bg.png")' }}
+      style={{
+        backgroundImage: `url("/assets/image/medalMain_bg_${language}.png")`,
+      }}
     >
       <div
         className={`section_wrapper_${language}`}
@@ -222,7 +224,7 @@ const MedalMain = () => {
               우방원수 및 그 배우자에게만 수여됩니다.
             </p>
           ) : (
-            <p>
+            <p className="text_shadow_part_En">
               <span className="blue_text">The Grand Order of Mugunghwa</span> is
               awarded exclusively to the President and their spouse or to former
               foreign heads of state and their spouses who have made significant
