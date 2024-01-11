@@ -8,13 +8,13 @@ import TextZoomBar from "../../components/common/buttonBar/textZoom/TextZoomBar"
 import "./medalMain.scss";
 
 const MedalMain = () => {
-  const baseFontSize = 1;
+  const { language } = useContext(LanguageContext);
+  const baseFontSize = language === "Ko" ? 1 : 0.9;
   const [fontSize, setFontSize] = useState(baseFontSize);
   const maxFontSize = baseFontSize + 0.4;
   const [openModal, setOpenModal] = useState(false);
   const [iframeLink, setIframeLink] = useState("");
 
-  const { language } = useContext(LanguageContext);
   const name = "name" + language;
 
   const navigate = useNavigate();
@@ -134,12 +134,6 @@ const MedalMain = () => {
     setIframeLink(link);
   };
 
-  const medalMainSectionClass =
-    language === "Ko" ? "section_wrapper_ko" : "section_wrapper_en";
-
-  const medalTypeClass =
-    language === "Ko" ? "medal_type_desc_ko" : "medal_type_desc_en";
-
   const section1Class = language === "Ko" ? "section1" : "section1 section1_en";
   const section2Class = language === "Ko" ? "section2" : "section2 section2_en";
 
@@ -149,7 +143,7 @@ const MedalMain = () => {
       style={{ backgroundImage: 'url("/assets/image/medalMain_bg.png")' }}
     >
       <div
-        className={medalMainSectionClass}
+        className={`section_wrapper_${language}`}
         style={{ fontSize: `${fontSize}vw` }}
       >
         <div className={section1Class}>
@@ -175,14 +169,18 @@ const MedalMain = () => {
               </p>
             </>
           )}
-          <div className={medalTypeClass}>
+          <div className={`medal_type_desc_${language}`}>
             {MedalList1.map((c, i) => (
-              <div
-                className="medal_type_btn"
-                key={i.name}
-                onClick={() => handleMedalBtn(c.link)}
-              >
-                {c[name]}
+              <div className="medal_type_btn_wrapper">
+                <div
+                  className={`medal_type_btn_${language}`}
+                  onClick={() => handleMedalBtn(c.link)}
+                >
+                  <div key={i.name}>{c[name]}</div>
+                  <div className="arrow_wrapper">
+                    <img src={"/assets/medal/arrow-right.png"} alt={"보기"} />
+                  </div>
+                </div>
               </div>
             ))}
             {openModal && (
@@ -255,13 +253,15 @@ const MedalMain = () => {
           <div className="medal_type_desc2">
             {MedalList2.map((c, i) => (
               <div
-                className="medal_type_btn"
-                key={i.code}
+                className={`medal_type_btn_bottom_${language}`}
                 onClick={() => {
                   navigate(c.link);
                 }}
               >
-                {c[name]}
+                <div key={i.code}>{c[name]}</div>
+                <div className="arrow_wrapper">
+                  <img src={"/assets/medal/arrow-right.png"} alt={"보기"} />
+                </div>
               </div>
             ))}
           </div>
@@ -284,7 +284,7 @@ const MedalMain = () => {
           )}
         </div>
       </div>
-      <Link to="/medal/making" className="medal_making_btn">
+      <Link to="/medal/making" className={`medal_making_btn_${language}`}>
         <img
           src={`/assets/medal/making_medal_btn_${language}.png`}
           alt={"나만의 훈장 만들기"}

@@ -84,3 +84,10 @@
     border: 0.8px solid #000;
   }
 }
+
+@include web {
+  .lang_btn_wrapper {
+    left: 66%;
+    top: 93%;
+  }
+}
