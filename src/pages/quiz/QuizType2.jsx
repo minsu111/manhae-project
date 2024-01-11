@@ -171,9 +171,11 @@ const Quiz2 = () => {
                         ? " quiz_middle_btn"
                         : "") +
                       ((id === "5" && language === "En") ||
-                      (id === "8" && language === "En") ||
-                      (id === "15" && language === "En")
+                      (id === "8" && language === "En")
                         ? " quiz_long_btn"
+                        : "") +
+                      (id === "15" && language === "En"
+                        ? " quiz_15_en_btn"
                         : "")
                     }
                     style={{
