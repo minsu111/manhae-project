@@ -18,7 +18,7 @@ const CollectionDetail = () => {
 
   const { id } = useParams();
 
-  const ClickInnerImg = (subId, e) => {
+  const ClickInnerImg = (subId) => {
     setSubId(subId);
   };
 
@@ -85,7 +85,7 @@ const CollectionDetail = () => {
           )}
         </div>
         <div className="play_btn">
-          <TextToSpeech text={CollectionList[id][description]} />
+          <TextToSpeech text={matchedCollection[description]} />
         </div>
       </div>
       <TextZoomBar

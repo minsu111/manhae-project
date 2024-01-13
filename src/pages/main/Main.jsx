@@ -27,6 +27,9 @@ const Main = () => {
     setBtnImgUrl("btnImg" + e.target.value);
   };
 
+  sessionStorage.removeItem("category");
+  sessionStorage.removeItem("QuizList");
+
   return (
     <div
       className="main_page"
@@ -40,7 +43,6 @@ const Main = () => {
             key={i}
             onClick={() => {
               goToSection(c.path);
-              c.path === "quiz/1" && sessionStorage.removeItem("QuizList");
               setQuizScore({});
             }}
           >
