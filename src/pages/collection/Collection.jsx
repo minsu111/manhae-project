@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { LanguageContext } from "../../context/LanguageContext";
 import { ToastNotification } from "../../components/common/toast/ToastNotification";
 import TTSSpeaker from "../../components/common/speaker/TTSSpeaker";
@@ -10,9 +10,15 @@ import CategoryList from "../../data/Category";
 import "./collection.scss";
 
 const Collection = () => {
-  const [category, setCategory] = useState(1);
+  const storedCategory = sessionStorage.getItem("category");
+
+  const [category, setCategory] = useState(
+    storedCategory ? storedCategory * 1 : 1
+  );
   const [scrollPosition, setScrollPosition] = useState(0);
   const [openToast, setOpentToast] = useState(false);
+
+  const navigate = useNavigate();
 
   // 다국어 처리
   const { language } = useContext(LanguageContext);
@@ -41,13 +47,11 @@ const Collection = () => {
     const menu = sessionStorage.getItem("menu");
     if (menu === "collection") {
       setOpentToast(true);
-      sessionStorage.removeItem("category");
     }
     sessionStorage.removeItem("menu");
 
-    const storedCategory = sessionStorage.getItem("category");
     storedCategory && setCategory(storedCategory * 1);
-  }, []);
+  }, [storedCategory]);
 
   // 디테일 페이지 진입 시 scrollTop 값을 세션스토리지에 저장
   const storeScrollTop = () => {
@@ -57,6 +61,7 @@ const Collection = () => {
   // 스크롤 이벤트 핸들러
   const handleScroll = (e) => {
     setScrollPosition(e.target.scrollTop);
+    console.log(e);
   };
 
   const categoryClass = ` category ${language === "Ko" ? "category_ko" : ""}`;
@@ -100,17 +105,17 @@ const Collection = () => {
           (item) => category === 0 || category === item.category
         ).map((item, i) => (
           <div key={i} className="items">
-            <div className="">
-              <Link
-                to={`/collection/detail/${item.mainId}`}
-                onClick={storeScrollTop}
-              >
-                <img
-                  src={`/assets/thumbnail/${item.thumbImg}`}
-                  alt={item[title]}
-                  className="image"
-                />
-              </Link>
+            <div
+              onClick={() => {
+                navigate(`/collection/detail/${item.mainId}`);
+                storeScrollTop();
+              }}
+            >
+              <img
+                src={`/assets/thumbnail/${item.thumbImg}`}
+                alt={item[title]}
+                className="image"
+              />
               <div className="main_title">{item[title]}</div>
             </div>
           </div>
