@@ -24,8 +24,8 @@
 
   {
     "path": "/medal",
-    "textKo": "대한민국 훈장. 우리나라는 무궁화대훈장을 정점으로 건국훈장, 국민훈장, 무공훈장, 근정훈장. 보국훈장, 수교훈장, 산업훈장, 새마을훈장, 문화훈장, 체육훈장, 과학기술훈장 등 총 12가지의 훈장이 있습니다.\n건국훈장. 건국훈장은 대한민국의 건국에 공로가 뚜렷하거나, 국기를 공고히 함에 기여한 공적이 뚜렷한 자에게 수여됩니다. 그리고 건국훈장은 등급으로 나누어 집니다. 1등급. 대한민국장. 2등급. 대통령장. 3등급. 독립장. 4등급. 애국장. 5등급. 애족장. 훈장만들기.",
-    "textEn": "Order of the Republic of Korea. Our country has a total of 12 orders. starting with the Grand Order of Mugunghwa at the pinnacle. followed by the Order of Merit for National Foundation. Order of Civil Merit. Order of Military Merit. Order of Service Merit. Order of National Security Merit. Order of Diplomatic Service Merit. Order of Industrial Service Merit. Order of Saemaeul Service Merit. Order of Culture Merit. Order of Sport Merit. and the Order of Science and Technology Merit. Order of Merit for National Foundation. The Order of Merit for National Foundation is awarded to individuals who have m ade significant contributions. to the establishment of the Republic of Korea or have played a notable role in solidifying the national flag. Additionally, the Order of Merit for National Foundation is divided into different grades.Grade1. Republic of Korea Medal.Grade2.Presidential Medal.Grade3. Independence Medal.Grade4. Patriotic Medal.Grade5. National Medal.Create Your Own Medal!"
+    "textKo": "대한민국 훈장. 대한민국의 훈장은 수여 대상자의 공적내용, 그 공적이 국가사회에 미친 효과의 정도와 지위 등을 참작하여 수여하는 총 12가지의 훈장 등급 체계를 보유하고 있습니다. 무궁화대훈장. 건국훈장. 국민훈장. 무공훈장. 근정훈장. 보국훈장. 수교훈장. 산업훈장. 새마을훈장. 문화훈장. 체육훈장. 과학기술훈장.  무궁화대훈장은 대통령과 배우자 또는 우리나라의 발전과 안전보장에 기여한 공적이 뚜렷한 전직 우방원수 및 그 배우자에게만 수여됩니다. 건국훈장은 대한민국의 건국에 공로가 뚜렷하거나, 국기를 공고히 함에 기여한 공적이 뚜렷한 자에게 수여됩니다. 그리고 건국훈장은 등급으로 나누어 집니다.  1등급. 대한민국장. 2등급. 대통령장. 3등급. 독립장. 4등급. 애국장. 5등급. 애족장.  만해 한용운이 받은 건국훈장 대한민국장은 대통령이 아닌 인물이 받을 수 있는 최고의 대한민국 훈장으로 평가됩니다. 훈장만들기.",
+    "textEn": "Order of the Republic of Korea. South Korea has a system of 12 different classes of orders and medals, which are conferred considering the merit of the recipients, the impact of their contributions on national society, and their status. Grand Order of Mugunghwa. Order of Merit for National Foundation. Order of Civil Merit. Order of Military Merit. Order of Service Merit. Order of National Security Merit. Order of Diplomatic Service Merit. Order of Industrial Service Merit. Order of Saemaeul Service Merit. Order of Culture Merit. Order of Sport Merit. Order of Science and Technology Merit. The Grand Order of Mugunghwa is awarded exclusively to the President and their spouse or to former foreign heads of state and their spouses who have made significant contributions to the development and security of our country. The Order of Merit for National Foundation is awarded to individuals with distinguished contributions to the establishment of the Republic of Korea, or who have made significant efforts in solidifying the foundation of the state. The Order of Merit for National Foundation is categorized into the following five grades. 1st Class. Republic of Korea Medal. 2nd Class. Presidential Medal. 3rd Class. Independence Medal. 4th Class. Patriotic Medal. 5th Class. National Medal. The Republic of Korea Medal of the Order of Merit for National Foundation, which was awarded to Manhae Han Yong-un, is recognized as the highest honor of the Republic of Korea orders that can be received by a non-presidential figure. Creating a Medal."
   },
   {
     "path": "/medal/1",
@@ -65,8 +65,8 @@
   },
   {
     "path": "/quiz/4",
-    "textKo": "삼일운동의 선봉에 서서. 왼쪽 그림은 일본에 나라를 빼앗긴 우리 민족의 독립을 선언하기 위해 민족대표들이 모여서 독립선언서를 발표하려고 하는 모습입니다. 모임을 가진 장소와 모인 인원을 맞춰 보세요! 1. 태화관, 32인. 2. 탑골공원, 33인. 3. 태화관, 33인. 4. 탑골공원, 32인.",
-    "textEn": "Standing at the forefront of the March 1st Movement. The picture on the left shows representatives of our nation gathered to declare independence from Japan after our country was annexed. Try to match the location and the number of people who gathered for the meeting! 1. Taehwagwan, 32 people. 2. Tapgol Park, 33 people. 3. Taehwagwan, 33 people. 4. Tapgol Park, 32 people."
+    "textKo": "삼일운동의 선봉에 서서. 왼쪽 그림은 일본에 나라를 빼앗긴 우리 민족의 독립을 선언하기 위해 민족대표들이 모여서 독립선언서를 발표하려고 하는 모습입니다. 모임을 가진 장소와 모인 인원을 맞춰 보세요! 1. 태화관, 33인. 2. 탑골공원, 33인. 3. 태화관, 29인. 4. 탑골공원, 29인.",
+    "textEn": "Standing at the forefront of the March 1st Movement. The picture on the left shows representatives of our nation gathered to declare independence from Japan after our country was annexed. Try to match the location and the number of people who gathered for the meeting! 1. Taehwagwan, 33 people. 2. Tapgol Park, 33 people. 3. Taehwagwan, 29 people. 4. Tapgol Park, 29 people."
   },
   {
     "path": "/quiz/5",
@@ -106,7 +106,7 @@
   {
     "path": "/quiz/12",
     "textKo": "뜻을 세우다. 다음에서 설명하는 만해 한용운과 관련된 저서를 골라보세요. 유교, 불교, 도교에서 마음 수양에 필요한 중요한 어록을 모은 심신 수양서입니다.  만해 한용운은 이 책을 읽고 새롭게 해석하여 책을 내게 됩니다. 채근담.  2. 불교대전.  3. 자치통감.  4. 조선불교유신론.",
-    "textEn": "Set an Aim in Life. Select the work related to Manhae Han Yong-un described below. This is a book on mental and physical cultivation that compiles important sayings necessary for mind cultivation from Confucianism, Buddhism, and Taoism. Manhae Han Yong-un read this book and published his own interpretation of it. 1. Chaekundam.  2. Boolgyo Daejeon.  3. Jachitonggam.  4. The Restoration of Korean Buddhism."
+    "textEn": "Set an Aim in Life. Select the work related to Manhae Han Yong-un described below. This is a book on mental and physical cultivation that compiles important sayings necessary for mind cultivation from Confucianism, Buddhism, and Taoism. Manhae Han Yong-un read this book and published his own interpretation of it. 1. Chaekundam.  2. Boolgyo Daejeon.  3. Jachitonggam.  4.Joseonbulgyoyusinlon."
   },
   {
     "path": "/quiz/13",

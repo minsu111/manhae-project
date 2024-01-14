@@ -40,13 +40,13 @@ const Commentary = () => {
     {
       code: 0,
       nameKo: "소장품 해설",
-      nameEn: "commentary",
+      nameEn: "Commentary",
       contents: VideoList,
     },
     {
       code: 1,
       nameKo: "만해기념관",
-      nameEn: "Manhae Memorial Hall",
+      nameEn: "Manhae Museum",
       contents: YouTubeList,
     },
     { code: 2, nameKo: "다큐멘터리", nameEn: "Documentary", contents: DocList },
