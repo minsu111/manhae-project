@@ -34,7 +34,6 @@
 > 4K 및 모바일 가로 화면 기준 반응형 웹으로 구현되었으며, 영문 버전을 제공합니다.
 
 
-
 | 소장품 감상 |  소장품 감상 디테일   |
 | :-------------------------------------------: | :------------: |
 | <img width="1440" alt="만해_소장품감상_스크린샷" src="https://github.com/minsu111/manhae-project/assets/124219344/fbc4e317-52ad-4d73-8cef-f3fd68438b44"> | <img width="1440" alt="만해_소장품감상_스크린샷1" src="https://github.com/minsu111/manhae-project/assets/124219344/54394cc3-2544-4872-96cc-cb8173dca302"> |  
@@ -47,4 +46,38 @@
 | 전시 연계 퀴즈  |   전시 연계 퀴즈 디테일  |  
 | <img width="1440" alt="만해_전시연계퀴즈_퀴즈" src="https://github.com/minsu111/manhae-project/assets/124219344/7a3cb23a-623b-47ca-aae0-c2e503bdee51"> |   <img width="1440" alt="만해_전시연계퀴즈_결과" src="https://github.com/minsu111/manhae-project/assets/124219344/0db510ad-ff44-4e2b-a0dd-c5d57805964c">  |
 
+### 영문 ver 예시
+
+| Create Your Own Medal |  Exhibition Related Quiz   |
+| :-------------------------------------------: | :------------: |
+| <img width="1440" alt="만해_나만의훈장만들기_영문" src="https://github.com/minsu111/manhae-project/assets/124219344/db74830f-07ee-45c2-97c7-ec9487660ce0"> | <img width="1440" alt="만해_전시연계퀴즈_영문1" src="https://github.com/minsu111/manhae-project/assets/124219344/4f3f0b3d-fa68-4fd4-9319-297d0fa62dff"> |  
+
 ---
+
+## 주요 기능
+### 🌟 기념관 소장품 관람
+- 약 300여개의 소장품 고화질 이미지 및 설명 제공
+- 목록에서 소장품 클릭 시, 디테일 페이지 내에서 해당 소장품의 속지 이미지 함께 확인 가능
+  
+### 🌟 나만의 훈장 만들기
+- Drag and Drop을 활용한 훈장 커스텀 콘텐츠 제공
+
+### 🌟 전시 연계 퀴즈
+- 4지선다형, OX 퀴즈 등 전시 내용 관련 총 15개의 퀴즈 게임 제공
+- 퀴즈 완료 후 맞힌 개수 및 점수 확인 가능
+
+### 🌟 텍스트 음성 재생
+- SpeechSynthesis API를 활용한 TTS(Text-To-Speech) 기능 제공
+- 모든 화면의 국문/영문 텍스트는 화면 우측 하단 재생 버튼을 눌러 음성으로 청취할 수 있음
+
+<!-- ### 🌟 국문/영문 언어 설정
+- 
+
+### 🌟 텍스트 확대/축소
+- 
+--!>
+
+<!-- ## 아키텍처
+### 디렉터리 구조 --!>
+
+
