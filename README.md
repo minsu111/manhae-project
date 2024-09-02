@@ -29,30 +29,6 @@
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
 ---
-## 화면 구성
-
-> 4K 및 모바일 가로 화면 기준 반응형 웹으로 구현되었으며, 영문 버전을 제공합니다.
-
-
-| 소장품 감상 |  소장품 감상 디테일   |
-| :-------------------------------------------: | :------------: |
-| <img width="1440" alt="만해_소장품감상_스크린샷" src="https://github.com/minsu111/manhae-project/assets/124219344/fbc4e317-52ad-4d73-8cef-f3fd68438b44"> | <img width="1440" alt="만해_소장품감상_스크린샷1" src="https://github.com/minsu111/manhae-project/assets/124219344/54394cc3-2544-4872-96cc-cb8173dca302"> |  
-| 소장품 해설  |   소장품 해설 영상 모달  |  
-| <img width="1440" alt="만해_소장품해설_스크린샷" src="https://github.com/minsu111/manhae-project/assets/124219344/5155390f-0057-4143-b7d3-5f15b3d84f58"> |  <img width="1440" alt="만해_소장품해설_스크린샷2" src="https://github.com/minsu111/manhae-project/assets/124219344/b7b7b063-9c34-418f-94c6-255f4f2f4af2">   |
-| 만해에게 듣는 지혜  |   만해에게 듣는 지혜 디테일  |  
-| <img width="1440" alt="만해_만해에게듣는지혜_스크린샷" src="https://github.com/minsu111/manhae-project/assets/124219344/c74686ba-db40-41cd-8fe1-e41710ed5997"> |  <img width="1440" alt="만해_만해에게듣는지혜_스크린샷1" src="https://github.com/minsu111/manhae-project/assets/124219344/e56ae49a-4128-4e30-bea1-a8fa0309c081">   |
-| 나만의 훈장 만들기  |   나만의 훈장 만들기 디테일  |  
-| <img width="1440" alt="만해_나만의훈장만들기_스크린샷" src="https://github.com/minsu111/manhae-project/assets/124219344/2db07787-bb0a-4bac-84c0-93c1a9893486"> |  <img width="1440" alt="만해_나만의훈장만들기_3" src="https://github.com/minsu111/manhae-project/assets/124219344/2002327a-1798-4679-80b8-41658a84101e">   |
-| 전시 연계 퀴즈  |   전시 연계 퀴즈 디테일  |  
-| <img width="1440" alt="만해_전시연계퀴즈_퀴즈" src="https://github.com/minsu111/manhae-project/assets/124219344/7a3cb23a-623b-47ca-aae0-c2e503bdee51"> |   <img width="1440" alt="만해_전시연계퀴즈_결과" src="https://github.com/minsu111/manhae-project/assets/124219344/0db510ad-ff44-4e2b-a0dd-c5d57805964c">  |
-
-### 영문 ver 예시
-
-| Create Your Own Medal |  Exhibition Related Quiz   |
-| :-------------------------------------------: | :------------: |
-| <img width="1440" alt="만해_나만의훈장만들기_영문" src="https://github.com/minsu111/manhae-project/assets/124219344/db74830f-07ee-45c2-97c7-ec9487660ce0"> | <img width="1440" alt="만해_전시연계퀴즈_영문1" src="https://github.com/minsu111/manhae-project/assets/124219344/4f3f0b3d-fa68-4fd4-9319-297d0fa62dff"> |  
-
----
 
 ## 주요 기능(담당 기능)
 ### 🌟 기념관 소장품 관람
@@ -77,6 +53,33 @@
 ### 🌟 텍스트 확대/축소
 - 
 --!>
+
+---
+
+## 화면 구성
+
+> 4K 및 모바일 가로 화면 기준 반응형 웹으로 구현되었으며, 영문 버전을 제공합니다.
+
+
+| 소장품 감상 |  소장품 감상 디테일   |
+| :-------------------------------------------: | :------------: |
+| <img width="1440" alt="만해_소장품감상_스크린샷" src="https://github.com/minsu111/manhae-project/assets/124219344/fbc4e317-52ad-4d73-8cef-f3fd68438b44"> | <img width="1440" alt="만해_소장품감상_스크린샷1" src="https://github.com/minsu111/manhae-project/assets/124219344/54394cc3-2544-4872-96cc-cb8173dca302"> |  
+| 소장품 해설  |   소장품 해설 영상 모달  |  
+| <img width="1440" alt="만해_소장품해설_스크린샷" src="https://github.com/minsu111/manhae-project/assets/124219344/5155390f-0057-4143-b7d3-5f15b3d84f58"> |  <img width="1440" alt="만해_소장품해설_스크린샷2" src="https://github.com/minsu111/manhae-project/assets/124219344/b7b7b063-9c34-418f-94c6-255f4f2f4af2">   |
+| 만해에게 듣는 지혜  |   만해에게 듣는 지혜 디테일  |  
+| <img width="1440" alt="만해_만해에게듣는지혜_스크린샷" src="https://github.com/minsu111/manhae-project/assets/124219344/c74686ba-db40-41cd-8fe1-e41710ed5997"> |  <img width="1440" alt="만해_만해에게듣는지혜_스크린샷1" src="https://github.com/minsu111/manhae-project/assets/124219344/e56ae49a-4128-4e30-bea1-a8fa0309c081">   |
+| 나만의 훈장 만들기  |   나만의 훈장 만들기 디테일  |  
+| <img width="1440" alt="만해_나만의훈장만들기_스크린샷" src="https://github.com/minsu111/manhae-project/assets/124219344/2db07787-bb0a-4bac-84c0-93c1a9893486"> |  <img width="1440" alt="만해_나만의훈장만들기_3" src="https://github.com/minsu111/manhae-project/assets/124219344/2002327a-1798-4679-80b8-41658a84101e">   |
+| 전시 연계 퀴즈  |   전시 연계 퀴즈 디테일  |  
+| <img width="1440" alt="만해_전시연계퀴즈_퀴즈" src="https://github.com/minsu111/manhae-project/assets/124219344/7a3cb23a-623b-47ca-aae0-c2e503bdee51"> |   <img width="1440" alt="만해_전시연계퀴즈_결과" src="https://github.com/minsu111/manhae-project/assets/124219344/0db510ad-ff44-4e2b-a0dd-c5d57805964c">  |
+
+### 영문 ver 예시
+
+| Create Your Own Medal |  Exhibition Related Quiz   |
+| :-------------------------------------------: | :------------: |
+| <img width="1440" alt="만해_나만의훈장만들기_영문" src="https://github.com/minsu111/manhae-project/assets/124219344/db74830f-07ee-45c2-97c7-ec9487660ce0"> | <img width="1440" alt="만해_전시연계퀴즈_영문1" src="https://github.com/minsu111/manhae-project/assets/124219344/4f3f0b3d-fa68-4fd4-9319-297d0fa62dff"> |  
+
+---
 
 <!-- ## 아키텍처
 ### 디렉터리 구조 --!>
