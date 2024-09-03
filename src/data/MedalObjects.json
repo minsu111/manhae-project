@@ -3,8 +3,8 @@
     "id": 1,
     "url": "/assets/medal/medal_object_02.png",
     "location": "",
-    "top": 20,
-    "left": 8.3,
+    "top": 30,
+    "left": 31.5,
     "width": 9,
     "groupId": 1
   },
@@ -12,8 +12,8 @@
     "id": 2,
     "url": "/assets/medal/medal_object_03.png",
     "location": "",
-    "top": 20,
-    "left": 8.3,
+    "top": 28,
+    "left": 31.5,
     "width": 9,
     "groupId": 1
   },
@@ -21,8 +21,8 @@
     "id": 3,
     "url": "/assets/medal/medal_object_04.png",
     "location": "",
-    "top": 20,
-    "left": 8,
+    "top": 30,
+    "left": 30.5,
     "width": 9.5,
     "groupId": 1
   },
