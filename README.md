@@ -68,7 +68,7 @@
 | 전시 연계 퀴즈  |   전시 연계 퀴즈 디테일  |  
 | <img width="1440" alt="만해_전시연계퀴즈_퀴즈" src="https://github.com/minsu111/manhae-project/assets/124219344/7a3cb23a-623b-47ca-aae0-c2e503bdee51"> |   <img width="1440" alt="만해_전시연계퀴즈_결과" src="https://github.com/minsu111/manhae-project/assets/124219344/0db510ad-ff44-4e2b-a0dd-c5d57805964c">  |
 
-### 영문 ver 예시
+### 영문 ver.
 
 | Create Your Own Medal |  Exhibition Related Quiz   |
 | :-------------------------------------------: | :------------: |
